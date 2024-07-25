@@ -22,7 +22,7 @@ import { SkillComponent } from './components/skill/skill.component';
     SkillComponent,
   ],
   templateUrl: './app.component.html',
-  host: { class: "h-screen w-screen flex flex-col justify-center items-center" }
+  host: { class: "flex flex-col py-12 items-center" }
 })
 export class AppComponent {
   title = 'angular';
