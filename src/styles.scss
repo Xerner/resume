@@ -1,12 +1,11 @@
+@import "./styles/page.scss";
+
 /* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.letter-page {
-  width: 8.5in;
-  height: 11in;
-}
+
 
 .chip {
   padding: 0.25rem 0.66rem;
