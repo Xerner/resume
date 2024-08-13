@@ -1,18 +1,17 @@
 @import "./styles/page.scss";
+@import "./styles/background.scss";
+@import "./styles/typography.scss";
 
 /* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-.chip {
-  padding: 0.25rem 0.66rem;
-  border-radius: 1rem;
-}
-
 // 1 inch
+
+// hr {
+//   border-color: white;
+// }
 
 .p-1in {
   padding: 1in;

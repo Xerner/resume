@@ -8,11 +8,14 @@ import { InfoBlockComponent } from "../info-block/info-block.component";
 import { InfoEntryComponent } from "../info-entry/info-entry.component";
 import { LetterPageComponent } from "../page/letter-page.component";
 import { SkillComponent } from "../skill/skill.component";
+import { LanguageChipComponent } from "../language-chip/language-chip.component";
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule,
     RouterOutlet,
     LetterPageComponent,
     HeaderComponent,
@@ -20,6 +23,7 @@ import { SkillComponent } from "../skill/skill.component";
     InfoEntryComponent,
     MatIconModule,
     SkillComponent,
+    LanguageChipComponent,
   ],
   templateUrl: './app.component.html',
 })
@@ -43,5 +47,9 @@ export class AppComponent {
 
   onResize() {
 
+  }
+
+  onPrint() {
+    window.print();
   }
 }

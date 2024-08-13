@@ -3,23 +3,27 @@
     // width: 8.5in;
     // height: 11in;
     aspect-ratio: 0.77272727272727272727272727272727;
-    max-width: 8.5in;
-    max-height: 11in;
+    width: 8.5in;
+    height: 11in;
     width: 100%;
     background-color: white;
-    padding: 0.25in;
+    padding: 0;
+    margin: 0;
   }
 
   .pages-container {
-    @apply h-screen w-full flex flex-col py-12 gap-6 items-center bg-slate-300 overflow-scroll;
+    @apply h-screen w-full flex flex-col py-12 gap-6 justify-center items-center bg-slate-300;
   }
 }
 
 @media print {
-  // @page {
-  //   size: letter; /* DIN A4 standard, Europe */
-  //   margin: 0;
-  // }
+  @page {
+    size: letter; /* DIN A4 standard, Europe */
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 
   .letter-page {
     width: 8.5in;
