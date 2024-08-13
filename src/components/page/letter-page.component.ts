@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-letter-page',
@@ -6,14 +6,4 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   standalone: true,
 })
 export class LetterPageComponent {
-  @ViewChild("page", { static: true }) page!: ElementRef<HTMLDivElement>;
-
-  ngOnInit() {
-
-  }
-
-  onResize() {
-    var width = this.page.nativeElement.clientWidth;
-    var height = this.page.nativeElement.clientHeight;
-  }
 }

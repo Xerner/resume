@@ -1,4 +1,4 @@
-import { Component, HostBinding } from "@angular/core";
+import { Component } from "@angular/core";
 import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { RouterOutlet } from "@angular/router";
@@ -30,6 +30,7 @@ import { CommonModule } from "@angular/common";
 export class AppComponent {
   title = 'angular';
   DateTime = DateTime;
+  readonly PAGE_ASPECT_RATIO = 8 / 11.5;
 
   constructor(
     matIconRegistry: MatIconRegistry,
@@ -45,8 +46,19 @@ export class AppComponent {
     );
   }
 
-  onResize() {
+  ngOnInit(): void {
+    // window.addEventListener('resize', this.onResize.bind(this));
+    // this.onResize();
+  }
 
+  onResize() {
+    var pages = document.getElementsByClassName('letter-page');
+    var aspectRatio = this.PAGE_ASPECT_RATIO;
+    for (let i = 0; i < pages.length; i++) {
+      const page = pages[i] as HTMLElement;
+      var pageWidth = page.offsetWidth;
+      page.style.height = `${pageWidth / aspectRatio}px`;
+    }
   }
 
   onPrint() {
