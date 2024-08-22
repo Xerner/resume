@@ -4,9 +4,7 @@
       {{ title() }}
     </div>
     @if (image()) {
-      <div class="h-6 w-auto">
-        <img [src]="image()" alt="Company Logo" />
-      </div>
+      <img class="h-6 w-auto" [src]="image()" alt="Company Logo" />
     }
   </div>
   <div class="flex justify-between text-sm text-slate-500">

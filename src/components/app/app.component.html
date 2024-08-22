@@ -27,7 +27,7 @@
   </div>
 
   <!-- Pages -->
-  <div class="pages-container grow">
+  <div class="pages-container grow pb-20">
     <app-letter-page class="shadow-2xl">
       <div class="flex justify-between h-full">
         <!-- Main content -->
@@ -40,6 +40,7 @@
               location="Warren, MI"
               commute="Onsite"
               [startDate]="DateTime.utc(2023, 6, 1)"
+              image="assets/universal-logistics-logo.png"
             >
               Develop, unit test, and maintain features across the entire stack
               for a logistics ERP web app with ASP.net, Angular, and SQL.
@@ -48,65 +49,53 @@
               CI/CD
             </app-info-entry>
 
-          <app-info-entry
-            title="TRACK Rotational Program"
-            company="General Motors"
-            location="Warren, MI"
-            [startDate]="DateTime.utc(2022, 1, 1)"
-            [endDate]="DateTime.utc(2023, 6, 1)"
-            commute="Hybrid"
-            image="assets/gm-logo.png"
-          >
-            <app-sub-entry
-              title="Platform System Engineer"
-              [startDate]="DateTime.utc(2023, 5, 1)"
-              [endDate]="DateTime.utc(2023, 6, 1)"
-            >
-              Communicated, drove, and managed platform level goals for the autonomous driving compute platform
-            </app-sub-entry>
-
-            <app-sub-entry
-              title=" Subsystem Validation Engineer"
-              [startDate]="DateTime.utc(2023, 1, 1)"
-              [endDate]="DateTime.utc(2023, 5, 1)"
-            >
-              Automated vehicle interface J2534 (CAN) validation and reporting
-              based on provided ARXML documents through a Python application
-              that I architected.
-            </app-sub-entry>
-
-            <app-sub-entry
-              title="Performance Test Engineer"
-              [startDate]="DateTime.utc(2022, 6, 1)"
-              [endDate]="DateTime.utc(2023, 1, 1)"
-            >
-              Achieved end-to-end performance testing with pythons unittest
-              framework. Integrated testing into the CI/CD pipeline to automate
-              testing on vehicle data upload.
-            </app-sub-entry>
-
-            <app-sub-entry
-              title="Assistant Technical Project Manager"
+            <app-info-entry
+              title="TRACK Rotational Program"
+              company="General Motors"
+              location="Warren, MI"
               [startDate]="DateTime.utc(2022, 1, 1)"
-              [endDate]="DateTime.utc(2022, 6, 1)"
+              [endDate]="DateTime.utc(2023, 6, 1)"
+              commute="Hybrid"
+              image="assets/gm-logo.png"
             >
-              Collaborated with Ultra Cruises safety teams to analyze and
-              reported gaps in current and expected operational design domain
-            </app-sub-entry>
-          </app-info-entry>
+              <app-sub-entry
+                title="Platform System Engineer"
+                [startDate]="DateTime.utc(2023, 5, 1)"
+                [endDate]="DateTime.utc(2023, 6, 1)"
+              >
+                Communicated, drove, and managed platform level goals for the
+                autonomous driving compute platform
+              </app-sub-entry>
 
-          <app-info-entry
-            title="Senior Technologist"
-            company="Mahle Filtering Systems"
-            location="Troy, MI"
-            [startDate]="DateTime.utc(2018, 9, 1)"
-            [endDate]="DateTime.utc(2022, 1, 1)"
-            commute="Hybrid"
-            image="assets/mahle-logo.png"
-          >
-            Developed and maintained a automated testing for carbon canisters.
-            Analyzed and reported KPI data to management.
-          </app-info-entry>
+              <app-sub-entry
+                title=" Subsystem Validation Engineer"
+                [startDate]="DateTime.utc(2023, 1, 1)"
+                [endDate]="DateTime.utc(2023, 5, 1)"
+              >
+                Automated vehicle interface J2534 (CAN) validation and reporting
+                based on provided ARXML documents through a Python application
+                that I architected.
+              </app-sub-entry>
+
+              <app-sub-entry
+                title="Performance Test Engineer"
+                [startDate]="DateTime.utc(2022, 6, 1)"
+                [endDate]="DateTime.utc(2023, 1, 1)"
+              >
+                Achieved end-to-end performance testing with pythons unittest
+                framework. Integrated testing into the CI/CD pipeline to
+                automate testing on vehicle data upload.
+              </app-sub-entry>
+
+              <app-sub-entry
+                title="Assistant Technical Project Manager"
+                [startDate]="DateTime.utc(2022, 1, 1)"
+                [endDate]="DateTime.utc(2022, 6, 1)"
+              >
+                Collaborated with Ultra Cruises safety teams to analyze and
+                reported gaps in current and expected operational design domain
+              </app-sub-entry>
+            </app-info-entry>
 
             <app-info-entry
               title="Senior Technologist"
@@ -115,6 +104,7 @@
               [startDate]="DateTime.utc(2018, 9, 1)"
               [endDate]="DateTime.utc(2022, 1, 1)"
               commute="Hybrid"
+              image="assets/mahle-logo.png"
             >
               Developed and maintained a automated testing for carbon canisters.
               Analyzed and reported KPI data to management.
@@ -129,6 +119,7 @@
               [startDate]="DateTime.utc(2016, 9, 1)"
               [endDate]="DateTime.utc(2021, 4, 1)"
               commute="Onsite"
+              image="assets/oakland-university-logo-and-bear.png"
             >
               Notable Classes<br />Algorithms, data structures, software
               engineering, and database management, artificial intelligence, and
