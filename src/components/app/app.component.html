@@ -48,43 +48,65 @@
               CI/CD
             </app-info-entry>
 
-            <app-info-entry
-              title=" Subsystem Validation Engineer"
-              company="General Motors | TRACK Rotational Program"
-              location="Warren, MI"
-              [startDate]="DateTime.utc(2023, 1, 1)"
+          <app-info-entry
+            title="TRACK Rotational Program"
+            company="General Motors"
+            location="Warren, MI"
+            [startDate]="DateTime.utc(2022, 1, 1)"
+            [endDate]="DateTime.utc(2023, 6, 1)"
+            commute="Hybrid"
+            image="assets/gm-logo.png"
+          >
+            <app-sub-entry
+              title="Platform System Engineer"
+              [startDate]="DateTime.utc(2023, 5, 1)"
               [endDate]="DateTime.utc(2023, 6, 1)"
-              commute="Hybrid"
+            >
+              Communicated, drove, and managed platform level goals for the autonomous driving compute platform
+            </app-sub-entry>
+
+            <app-sub-entry
+              title=" Subsystem Validation Engineer"
+              [startDate]="DateTime.utc(2023, 1, 1)"
+              [endDate]="DateTime.utc(2023, 5, 1)"
             >
               Automated vehicle interface J2534 (CAN) validation and reporting
               based on provided ARXML documents through a Python application
               that I architected.
-            </app-info-entry>
+            </app-sub-entry>
 
-            <app-info-entry
+            <app-sub-entry
               title="Performance Test Engineer"
-              company="General Motors | TRACK Rotational Program"
-              location="Warren, MI"
               [startDate]="DateTime.utc(2022, 6, 1)"
               [endDate]="DateTime.utc(2023, 1, 1)"
-              commute="Hybrid"
             >
               Achieved end-to-end performance testing with pythons unittest
               framework. Integrated testing into the CI/CD pipeline to automate
               testing on vehicle data upload.
-            </app-info-entry>
+            </app-sub-entry>
 
-            <app-info-entry
+            <app-sub-entry
               title="Assistant Technical Project Manager"
-              company="General Motors | TRACK Rotational Program"
-              location="Warren, MI"
               [startDate]="DateTime.utc(2022, 1, 1)"
               [endDate]="DateTime.utc(2022, 6, 1)"
-              commute="Hybrid"
             >
               Collaborated with Ultra Cruises safety teams to analyze and
               reported gaps in current and expected operational design domain
-            </app-info-entry>
+            </app-sub-entry>
+          </app-info-entry>
+
+          <app-info-entry
+            title="Senior Technologist"
+            company="Mahle Filtering Systems"
+            location="Troy, MI"
+            [startDate]="DateTime.utc(2018, 9, 1)"
+            [endDate]="DateTime.utc(2022, 1, 1)"
+            commute="Hybrid"
+            image="assets/mahle-logo.png"
+          >
+            Developed and maintained a automated testing for carbon canisters.
+            Analyzed and reported KPI data to management.
+          </app-info-entry>
 
             <app-info-entry
               title="Senior Technologist"

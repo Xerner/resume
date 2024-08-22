@@ -10,6 +10,7 @@ import { LetterPageComponent } from "../page/letter-page.component";
 import { SkillComponent } from "../skill/skill.component";
 import { LanguageChipComponent } from "../language-chip/language-chip.component";
 import { CommonModule } from "@angular/common";
+import { SubEntryComponent } from "../sub-entry/sub-entry.component";
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ import { CommonModule } from "@angular/common";
     HeaderComponent,
     InfoBlockComponent,
     InfoEntryComponent,
+    SubEntryComponent,
     MatIconModule,
     SkillComponent,
     LanguageChipComponent,
