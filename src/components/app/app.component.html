@@ -33,7 +33,10 @@
         <!-- Main content -->
         <div class="p-4 text-sm" style="width: 68%">
           <app-header></app-header>
+
+          <!-- Work -->
           <app-info-block title="Employment History" icon="work">
+            <!-- Universal Logistics developer -->
             <app-info-entry
               title="Full Stack Developer, DevOps Engineer"
               company="Universal Logistics Holdings"
@@ -42,13 +45,43 @@
               [startDate]="DateTime.utc(2023, 6, 1)"
               image="assets/universal-logistics-logo.png"
             >
-              Develop, unit test, and maintain features across the entire stack
-              for a logistics ERP web app with ASP.net, Angular, and SQL.
-              Develop DevOp processes to automate SQL database migrations with
-              GoCD. Integrate Jira with the teams Git workflow with Python and
-              CI/CD
+              <div class="flex gap-1">
+                <div class="text-primary font-medium pr-2">Languages</div>
+                <app-chip language="C#" [isSmall]="true"></app-chip>
+                <app-chip language="TypeScript" [isSmall]="true"></app-chip>
+                <app-chip language="SCSS"[isSmall]="true"></app-chip>
+                <app-chip language="SQL" [isSmall]="true"></app-chip>
+                <app-chip language="Shell" color="black" [isSmall]="true"></app-chip>
+                <app-chip language="Shell" color="black" [isSmall]="true"></app-chip>
+              </div>
+
+              <div class="flex gap-1">
+                <div class="text-primary font-medium pr-2">Frameworks</div>
+                <app-chip language="C#" [isSmall]="true">ASP.Net</app-chip>
+                <app-chip color="black" [isSmall]="true"></app-chip>
+                <app-chip color="black" [isSmall]="true"></app-chip>
+                <app-chip color="black" [isSmall]="true"></app-chip>
+                <app-chip color="black" [isSmall]="true"></app-chip>
+                <app-chip color="black" [isSmall]="true"></app-chip>
+              </div>
+
+              <ul class="list-disc">
+                <li>
+                  Develop, unit test, and maintain features across a C# ASP.net,
+                  Angular, and SQL application stack for a logistics ERP web app
+                </li>
+                <li>
+                  Automated SQL database migrations with a custom SQL change
+                  tracker and a build pipeline
+                </li>
+                <li>
+                  Architected and drove the teams transition to deploying with
+                  docker containers
+                </li>
+              </ul>
             </app-info-entry>
 
+            <!-- GM TRACK -->
             <app-info-entry
               title="TRACK Rotational Program"
               company="General Motors"
@@ -63,28 +96,44 @@
                 [startDate]="DateTime.utc(2023, 5, 1)"
                 [endDate]="DateTime.utc(2023, 6, 1)"
               >
-                Communicated, drove, and managed platform level goals for the
-                autonomous driving compute platform
+                <ul class="list-disc">
+                  <li>Communicated and managed platform level goals</li>
+                </ul>
               </app-sub-entry>
 
               <app-sub-entry
-                title=" Subsystem Validation Engineer"
+                title="Signal Validation Engineer"
                 [startDate]="DateTime.utc(2023, 1, 1)"
                 [endDate]="DateTime.utc(2023, 5, 1)"
               >
-                Automated vehicle interface J2534 (CAN) validation and reporting
-                based on provided ARXML documents through a Python application
-                that I architected.
+                <ul class="list-disc">
+                  <li>
+                    Architected, developed, and documented a validation and
+                    reporting application for J2534 (CAN) signals.
+                  </li>
+                  <li>
+                    Rigorously documented to ensure maintainability and
+                    reliability.
+                  </li>
+                </ul>
               </app-sub-entry>
 
               <app-sub-entry
-                title="Performance Test Engineer"
+                title="Software Performance Test Engineer"
                 [startDate]="DateTime.utc(2022, 6, 1)"
                 [endDate]="DateTime.utc(2023, 1, 1)"
               >
-                Achieved end-to-end performance testing with pythons unittest
-                framework. Integrated testing into the CI/CD pipeline to
-                automate testing on vehicle data upload.
+                <ul class="list-disc">
+                  <li>
+                    Researched and integrated a platform-level performance
+                    testing framework into the teams codebase and CI/CD
+                    pipeline.
+                  </li>
+                  <li>
+                    Ensured maintainability and reliability with documentation
+                    and unit testing.
+                  </li>
+                </ul>
               </app-sub-entry>
 
               <app-sub-entry
@@ -92,11 +141,17 @@
                 [startDate]="DateTime.utc(2022, 1, 1)"
                 [endDate]="DateTime.utc(2022, 6, 1)"
               >
-                Collaborated with Ultra Cruises safety teams to analyze and
-                reported gaps in current and expected operational design domain
+                <ul class="list-disc">
+                  <li>
+                    Collaborated with teams across Ultra Cruise to analyze and
+                    reported gaps in current and expected operational design
+                    domains.
+                  </li>
+                </ul>
               </app-sub-entry>
             </app-info-entry>
 
+            <!-- Senior Technologist -->
             <app-info-entry
               title="Senior Technologist"
               company="Mahle Filtering Systems"
@@ -106,11 +161,20 @@
               commute="Hybrid"
               image="assets/mahle-logo.png"
             >
-              Developed and maintained a automated testing for carbon canisters.
-              Analyzed and reported KPI data to management.
+              <ul class="list-disc">
+                <li>
+                  Developed and maintained a automated testing for carbon
+                  canisters.
+                </li>
+                <li>
+                  Worked with management to automate, analyze, and report
+                  employee key performance indicator (KPI) data.
+                </li>
+              </ul>
             </app-info-entry>
           </app-info-block>
 
+          <!-- School -->
           <app-info-block title="Education" icon="school">
             <app-info-entry
               title="Bachelor of Computer Science"
@@ -121,142 +185,108 @@
               commute="Onsite"
               image="assets/oakland-university-logo-and-bear.png"
             >
-              Notable Classes<br />Algorithms, data structures, software
+              Notable Classes: Algorithms, data structures, software
               engineering, and database management, artificial intelligence, and
               advanced system administration
             </app-info-entry>
           </app-info-block>
-
-          <!-- <app-info-block title="Extra-Curricular Activities" icon="grass">
-    Event Organizer at OU League of Legends Club, Auburn Hills
-  September 2019 — April 2020
-  FIRST Robotics at Adams Highscool
-  September 2012 — May 201
-        </app-info-block> -->
         </div>
-        <!-- Side bar -->
-        <div class="bg-indigo-7 text-primary relative" style="width: 31%">
-          <!-- <div class="grid grid-cols-3 absolute -left-3 w-3 bg-slate-500 h-full">
-          <div class="bg-indigo-1"></div>
-          <div class="bg-indigo-2"></div>
-          <div class="bg-indigo-3"></div>
-          <div class="bg-indigo-4"></div>
-          <div class="bg-indigo-5"></div>
-          <div class="bg-indigo-6"></div>
-          <div class="bg-indigo-7"></div>
-        </div> -->
 
+        <!-- Side bar -->
+        <div
+          class="bg-gradient-to-b from-indigo-50 to-indigo-200 border-indigo-300 border-l-2 text-primary flex flex-col gap-3 p-4"
+          style="width: 31%"
+        >
           <!-- Info -->
-          <ul class="text-xs text-right p-4 bg-indigo-1 text-primary">
-            <li class="flex justify-between">
-              <span class="font-medium">Info</span>
-              <span>Fraser MI, 48026</span>
-            </li>
-            <li>+1 (248) 882-7006</li>
-            <li>
-              <a href="mailto:kennethmead784@gmail.com" class="text-link">{{
-                "kennethmead784@gmail.com"
-              }}</a>
-            </li>
-          </ul>
+          <div>
+            <div class="font-medium mb-2">Info</div>
+            <ul class="text-xs">
+              <li>Fraser MI, 48026</li>
+              <li>+1 (248) 882-7006</li>
+              <li>
+                <a href="mailto:kennethmead784@gmail.com" class="text-link">{{
+                  "kennethmead784@gmail.com"
+                }}</a>
+              </li>
+            </ul>
+          </div>
 
           <!-- Links -->
-          <ul class="text-xs text-right p-4 bg-indigo-2 text-primary">
-            <li class="text-link flex justify-between">
-              <span class="font-medium">Links</span>
-              <span>
-                <a href="https://www.kennethmead.dev/" target="_blank"
-                  >kennethmead.dev</a
+          <div>
+            <div class="font-medium mb-2">Links</div>
+            <ul class="text-xs text-right">
+              <li class="text-link">
+                <span>
+                  <a href="https://www.kennethmead.dev/" target="_blank"
+                    >kennethmead.dev</a
+                  >
+                </span>
+              </li>
+              <li class="text-link">
+                <a href="https://www.resume.kennethmead.dev/" target="_blank"
+                  >resume.kennethmead.dev</a
                 >
-              </span>
-            </li>
-            <li class="text-link">
-              <a href="https://www.resume.kennethmead.dev/" target="_blank"
-                >resume.kennethmead.dev</a
-              >
-            </li>
-            <li class="text-link">
-              <a
-                href="https://www.color-slicer.kennethmead.dev/"
-                target="_blank"
-                >color-slicer.kennethmead.dev</a
-              >
-            </li>
-            <li class="text-link">
-              <a
-                href="https://www.bitbucket-dashboard.kennethmead.dev/"
-                target="_blank"
-                >bitbucket-dashboard.kennethmead.dev</a
-              >
-            </li>
+              </li>
+              <li class="text-link">
+                <a
+                  href="https://www.color-slicer.kennethmead.dev/"
+                  target="_blank"
+                  >color-slicer.kennethmead.dev</a
+                >
+              </li>
+              <li class="text-link">
+                <a
+                  href="https://www.bitbucket-dashboard.kennethmead.dev/"
+                  target="_blank"
+                  >bitbucket-dashboard.kennethmead.dev</a
+                >
+              </li>
 
-            <hr class="border-indigo-4 border-dashed my-1" />
-
-            <li class="text-link">
-              <a href="https://github.com/xerner" target="_blank"
-                >github.com/xerner</a
-              >
-            </li>
-            <li class="text-link">
-              <a href="www.linkedin.com/in/kennethmead784" target="_blank"
-                >linkedin.com/kennethmead784</a
-              >
-            </li>
-          </ul>
+              <li class="text-link">
+                <a href="https://github.com/xerner" target="_blank"
+                  >github.com/xerner</a
+                >
+              </li>
+              <li class="text-link">
+                <a href="www.linkedin.com/in/kennethmead784" target="_blank"
+                  >linkedin.com/kennethmead784</a
+                >
+              </li>
+            </ul>
+          </div>
 
           <!-- Languages -->
-          <div class="p-4 bg-indigo-3 text-primary">
+          <div>
             <div class="font-medium mb-2">Languages</div>
             <div class="flex flex-wrap gap-x-1 gap-y-1">
-              <app-language-chip
-                language="TypeScript"
-                version="v5.5"
-              ></app-language-chip>
-              <app-language-chip
-                language="JavaScript"
-                color="black"
-              ></app-language-chip>
-              <app-language-chip
-                language="C#"
-                version="v10"
-              ></app-language-chip>
-              <app-language-chip
-                language="Python"
-                version="v3.11"
-              ></app-language-chip>
-              <app-language-chip
-                language="SQL"
-                color="black"
-              ></app-language-chip>
-              <app-language-chip language="C"></app-language-chip>
-              <app-language-chip language="Java"></app-language-chip>
-              <app-language-chip
-                language="Shell"
-                color="black"
-              ></app-language-chip>
-              <app-language-chip
-                language="SCSS"
-                color="black"
-              ></app-language-chip>
+              <app-chip language="TypeScript" version="v5.5"></app-chip>
+              <app-chip language="JavaScript" color="black"></app-chip>
+              <app-chip language="C#" version="v10"></app-chip>
+              <app-chip language="Python" version="v3.11"></app-chip>
+              <app-chip language="SQL"></app-chip>
+              <app-chip language="C"></app-chip>
+              <app-chip language="Java"></app-chip>
+              <app-chip language="Shell" color="black"></app-chip>
+              <app-chip language="SCSS"></app-chip>
             </div>
           </div>
 
           <!-- Frameworks -->
-          <div class="p-4 bg-indigo-4 text-primary">
+          <div>
             <div class="font-medium mb-2">Frameworks</div>
             <div class="flex flex-col gap-y-1 text-xs">
-              <app-skill level="5">Angular v18</app-skill>
-              <app-skill level="3">React v17</app-skill>
-              <app-skill level="5">.NET Core v8</app-skill>
-              <app-skill level="4">ASP.NET Core v6</app-skill>
-              <app-skill level="4">NUnit v4.1</app-skill>
-              <app-skill level="3">SignalR v2.4</app-skill>
-              <app-skill level="3">Entity Framework v6</app-skill>
+              <app-skill level="5">Angular 18</app-skill>
+              <app-skill level="3">React 17</app-skill>
+              <app-skill level="5">.NET 8</app-skill>
+              <app-skill level="4">ASP.NET 6</app-skill>
+              <app-skill level="4">NUnit 4.1</app-skill>
+              <app-skill level="3">SignalR 2.4</app-skill>
+              <app-skill level="3">Entity Framework 6</app-skill>
             </div>
           </div>
 
           <!-- Software Skills -->
-          <div class="p-4 bg-indigo-5 text-primary">
+          <div>
             <div class="font-medium mb-2">Software Skills</div>
             <div class="flex flex-col gap-y-1 text-xs">
               <app-skill level="5">Git</app-skill>
@@ -272,26 +302,26 @@
           </div>
 
           <!-- People Skills -->
-          <ul class="text-right text-xs p-4 bg-indigo-6 text-primary">
-            <li class="flex justify-between">
-              <span class="font-medium">People Skills</span>
-              <span>Communication</span>
-            </li>
-            <li>Leadership</li>
-            <li>Teamwork</li>
-            <li>Problem Solving</li>
-            <li>Time Management</li>
-            <li>Adaptability</li>
-          </ul>
+          <div>
+            <div class="font-medium mb-2">People Skills</div>
+            <ul class="text-xs">
+              <li>Communication</li>
+              <li>Leadership</li>
+              <li>Teamwork</li>
+              <li>Problem Solving</li>
+              <li>Time Management</li>
+              <li>Adaptability</li>
+            </ul>
+          </div>
 
           <!-- Hobbies -->
-          <ul class="text-right text-xs p-4 text-primary">
-            <li class="flex justify-between">
-              <span class="font-medium">Hobbies</span>
-              <span>Making Apps/Games</span>
-            </li>
-            <li>3D Printing</li>
-          </ul>
+          <div>
+            <div class="font-medium mb-2">Hobbies</div>
+            <ul class="text-xs">
+              <li>Making Apps/Games</li>
+              <li>3D Printing</li>
+            </ul>
+          </div>
         </div>
       </div>
     </app-letter-page>

@@ -1,5 +1,10 @@
 export const DEFAULT_COLOR = "#DDDDDD";
 export const languageColors: Record<string, string> = {
+  // custom
+  "SASS": "#CF649A",
+  "SCSS": "#CF649A",
+  "SQL": "#0078D4",
+
   "Mercury": "#ff2b2b",
   "TypeScript": "#2b7489",
   "PureBasic": "#5a6986",

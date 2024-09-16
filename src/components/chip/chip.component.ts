@@ -3,19 +3,24 @@ import { Component, computed, input } from '@angular/core';
 import { DEFAULT_COLOR, languageColors } from '../../settings/languageColors';
 
 @Component({
-  selector: 'app-language-chip',
+  selector: 'app-chip',
   standalone: true,
   imports: [
     CommonModule,
   ],
-  templateUrl: "./language-chip.component.html",
+  templateUrl: "./chip.component.html",
 })
-export class LanguageChipComponent {
-  language = input.required<keyof typeof languageColors>();
+export class ChipComponent {
+  language = input<keyof typeof languageColors | null>(null);
   version = input<string>();
   color = input<string>("white");
+  isSmall = input<boolean>(false);
   backgroundColor = computed<string>(() => {
-    var color = languageColors[this.language()];
+    var language = this.language();
+    if (language == null) {
+      return DEFAULT_COLOR;
+    }
+    var color = languageColors[this.language()!];
     if (color) {
       return color;
     }

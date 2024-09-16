@@ -8,7 +8,7 @@ import { InfoBlockComponent } from "../info-block/info-block.component";
 import { InfoEntryComponent } from "../info-entry/info-entry.component";
 import { LetterPageComponent } from "../page/letter-page.component";
 import { SkillComponent } from "../skill/skill.component";
-import { LanguageChipComponent } from "../language-chip/language-chip.component";
+import { ChipComponent } from "../chip/chip.component";
 import { CommonModule } from "@angular/common";
 import { SubEntryComponent } from "../sub-entry/sub-entry.component";
 
@@ -25,7 +25,7 @@ import { SubEntryComponent } from "../sub-entry/sub-entry.component";
     SubEntryComponent,
     MatIconModule,
     SkillComponent,
-    LanguageChipComponent,
+    ChipComponent,
   ],
   templateUrl: './app.component.html',
 })
