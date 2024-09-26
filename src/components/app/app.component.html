@@ -38,14 +38,14 @@
           <app-info-block title="Employment History" icon="work">
             <!-- Universal Logistics developer -->
             <app-info-entry
-              title="Full Stack Developer, DevOps Engineer"
+              title="Full Stack Developer, DevOps Architect"
               company="Universal Logistics Holdings"
               location="Warren, MI"
               commute="Onsite"
               [startDate]="DateTime.utc(2023, 6, 1)"
               image="assets/universal-logistics-logo.png"
             >
-              <div class="flex gap-1">
+              <!-- <div class="flex gap-1">
                 <div class="text-primary font-medium pr-2">Languages</div>
                 <app-chip language="C#" [isSmall]="true"></app-chip>
                 <app-chip language="TypeScript" [isSmall]="true"></app-chip>
@@ -59,7 +59,7 @@
                 <div class="text-primary font-medium pr-2">Frameworks</div>
                 <app-chip language="C#" [isSmall]="true">ASP.Net</app-chip>
                 <app-chip color="black" [isSmall]="true">Storybook</app-chip>
-              </div>
+              </div> -->
 
               <ul class="list-disc">
                 <li>
@@ -67,12 +67,19 @@
                   Angular, and SQL application stack for a logistics ERP web app
                 </li>
                 <li>
-                  Automated SQL database migrations with a custom SQL change
-                  tracker and a build pipeline
+                  Re-architected the applications legacy payment system
                 </li>
                 <li>
-                  Architected and drove the teams transition to deploying with
-                  docker containers
+                  Created an SQL change tracker to automate migrations (database first approach)
+                </li>
+                <li>
+                  Architected the CI/CD pipeline for deploying with docker containers
+                </li>
+                <li>
+                  Lead code reviews and mentored junior developers
+                </li>
+                <li>
+                  Took part in technical debt review, refinement, and code etiquette enforcement
                 </li>
               </ul>
             </app-info-entry>
@@ -181,9 +188,7 @@
               commute="Onsite"
               image="assets/oakland-university-logo-and-bear.png"
             >
-              Notable Classes: Algorithms, data structures, software
-              engineering, and database management, artificial intelligence, and
-              advanced system administration
+              Notable Classes: Algorithms, data structures, database management, artificial intelligence, advanced system administration
             </app-info-entry>
           </app-info-block>
         </div>
