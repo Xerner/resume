@@ -3,13 +3,14 @@ import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { DateTime } from "luxon";
 import { HeaderComponent } from "../header/header.component";
-import { InfoBlockComponent } from "../info-block/info-block.component";
-import { InfoEntryComponent } from "../info-entry/info-entry.component";
+import { OccupationTypeComponent } from "../occupation-type/occupation-type.component";
+import { OccupationComponent } from "../occupation/occupation.component";
 import { LetterPageComponent } from "../page/letter-page.component";
 import { SkillComponent } from "../skill/skill.component";
-import { ChipComponent } from "../chip/chip.component";
+import { LanguageChipComponent } from "../language-chip/language-chip.component";
 import { CommonModule } from "@angular/common";
-import { SubEntryComponent } from "../sub-entry/sub-entry.component";
+import { DataService } from "../../services/data.service";
+import { JobComponent } from "../job/job.component";
 
 @Component({
   selector: 'app-root',
@@ -18,12 +19,12 @@ import { SubEntryComponent } from "../sub-entry/sub-entry.component";
     CommonModule,
     LetterPageComponent,
     HeaderComponent,
-    InfoBlockComponent,
-    InfoEntryComponent,
-    SubEntryComponent,
+    OccupationTypeComponent,
+    OccupationComponent,
     MatIconModule,
     SkillComponent,
-    ChipComponent,
+    LanguageChipComponent,
+    JobComponent,
   ],
   templateUrl: './app.component.html',
 })
@@ -35,6 +36,7 @@ export class AppComponent {
   constructor(
     matIconRegistry: MatIconRegistry,
     domSanitizer: DomSanitizer,
+    protected dataService: DataService,
   ) {
     matIconRegistry.addSvgIcon(
       'linkedin',

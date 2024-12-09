@@ -34,162 +34,39 @@
         <div class="p-4 text-sm" style="width: 68%">
           <app-header></app-header>
 
-          <!-- Work -->
-          <app-info-block title="Employment History" icon="work">
-            <!-- Universal Logistics developer -->
-            <app-info-entry
-              title="Full Stack Developer, DevOps Architect"
-              company="Universal Logistics Holdings"
-              location="Warren, MI"
-              commute="Onsite"
-              [startDate]="DateTime.utc(2023, 6, 1)"
-              image="assets/universal-logistics-logo.png"
-            >
-              <!-- <div class="flex gap-1">
-                <div class="text-primary font-medium pr-2">Languages</div>
-                <app-chip language="C#" [isSmall]="true"></app-chip>
-                <app-chip language="TypeScript" [isSmall]="true"></app-chip>
-                <app-chip language="SCSS"[isSmall]="true"></app-chip>
-                <app-chip language="SQL" [isSmall]="true"></app-chip>
-                <app-chip language="Shell" color="black" [isSmall]="true"></app-chip>
-                <app-chip language="Shell" color="black" [isSmall]="true"></app-chip>
-              </div>
-
-              <div class="flex gap-1">
-                <div class="text-primary font-medium pr-2">Frameworks</div>
-                <app-chip language="C#" [isSmall]="true">ASP.Net</app-chip>
-                <app-chip color="black" [isSmall]="true">Storybook</app-chip>
-              </div> -->
-
-              <ul class="list-disc">
-                <li>
-                  Develop, unit test, and maintain features across a C# ASP.net,
-                  Angular, and SQL application stack for a logistics ERP web app
-                </li>
-                <li>
-                  Re-architected the applications legacy payment system
-                </li>
-                <li>
-                  Created an SQL change tracker to automate migrations (database first approach)
-                </li>
-                <li>
-                  Architected the CI/CD pipeline for deploying with docker containers
-                </li>
-                <li>
-                  Lead code reviews and mentored junior developers
-                </li>
-                <li>
-                  Took part in technical debt review, refinement, and code etiquette enforcement
-                </li>
-              </ul>
-            </app-info-entry>
-
-            <!-- GM TRACK -->
-            <app-info-entry
-              title="TRACK Rotational Program"
-              company="General Motors"
-              location="Warren, MI"
-              [startDate]="DateTime.utc(2022, 1, 1)"
-              [endDate]="DateTime.utc(2023, 6, 1)"
-              commute="Hybrid"
-              image="assets/gm-logo.png"
-            >
-              <app-sub-entry
-                title="Platform System Engineer"
-                [startDate]="DateTime.utc(2023, 5, 1)"
-                [endDate]="DateTime.utc(2023, 6, 1)"
-              >
-                <ul class="list-disc">
-                  <li>Communicated and managed platform level goals</li>
-                </ul>
-              </app-sub-entry>
-
-              <app-sub-entry
-                title="Signal Validation Engineer"
-                [startDate]="DateTime.utc(2023, 1, 1)"
-                [endDate]="DateTime.utc(2023, 5, 1)"
-              >
-                <ul class="list-disc">
-                  <li>
-                    Architected, developed, and documented a validation and
-                    reporting application for J2534 (CAN) signals.
-                  </li>
-                  <li>
-                    Rigorously documented to ensure maintainability and
-                    reliability.
-                  </li>
-                </ul>
-              </app-sub-entry>
-
-              <app-sub-entry
-                title="Software Performance Test Engineer"
-                [startDate]="DateTime.utc(2022, 6, 1)"
-                [endDate]="DateTime.utc(2023, 1, 1)"
-              >
-                <ul class="list-disc">
-                  <li>
-                    Researched and integrated a platform-level performance
-                    testing framework into the teams codebase and CI/CD
-                    pipeline.
-                  </li>
-                  <li>
-                    Ensured maintainability and reliability with documentation
-                    and unit testing.
-                  </li>
-                </ul>
-              </app-sub-entry>
-
-              <app-sub-entry
-                title="Assistant Technical Project Manager"
-                [startDate]="DateTime.utc(2022, 1, 1)"
-                [endDate]="DateTime.utc(2022, 6, 1)"
-              >
-                <ul class="list-disc">
-                  <li>
-                    Collaborated with teams across Ultra Cruise to analyze and
-                    reported gaps in current and expected operational design
-                    domains.
-                  </li>
-                </ul>
-              </app-sub-entry>
-            </app-info-entry>
-
-            <!-- Senior Technologist -->
-            <app-info-entry
-              title="Senior Technologist"
-              company="Mahle Filtering Systems"
-              location="Troy, MI"
-              [startDate]="DateTime.utc(2018, 9, 1)"
-              [endDate]="DateTime.utc(2022, 1, 1)"
-              commute="Hybrid"
-              image="assets/mahle-logo.png"
+          @for (occupationType of dataService.occupationTypes(); track $index) {
+          <app-occupation-type [occupationType]="occupationType">
+            @for (occupation of dataService.filterOccupations(occupationType);
+            track $index) {
+            <app-occupation
+              [occupation]="occupation"
+              [ngClass]="{
+                'mb-3': dataService.hasParent(occupation) === false && dataService.hasChildren(occupation) === false,
+                'pl-3 mt-2 text-sm': dataService.hasParent(occupation),
+              }"
             >
               <ul class="list-disc">
+                @for (job of dataService.filterJobs(occupation); track $index) {
                 <li>
-                  Automated processing test data for carbon canisters GWC/BWC tests
+                  <app-job [job]="job">
+                    <!-- @for (skill of dataService.skills(); track $index) {
+                    <app-skill
+                      [skill]="skill"
+                    >
+                    @for (language of dataService.languages(); track $index) {
+                      <app-chip
+                        [language]="language"
+                      >
+                    }
+                  } -->
+                  </app-job>
                 </li>
-                <li>
-                  Worked with management to automate, analyze, and report
-                  employee key performance indicator (KPI) data.
-                </li>
+                }
               </ul>
-            </app-info-entry>
-          </app-info-block>
-
-          <!-- School -->
-          <app-info-block title="Education" icon="school">
-            <app-info-entry
-              title="Bachelor of Computer Science"
-              company="Oakland University"
-              location="Auburn Hills, MI"
-              [startDate]="DateTime.utc(2016, 9, 1)"
-              [endDate]="DateTime.utc(2021, 4, 1)"
-              commute="Onsite"
-              image="assets/oakland-university-logo-and-bear.png"
-            >
-              Notable Classes: Algorithms, data structures, database management, artificial intelligence, advanced system administration
-            </app-info-entry>
-          </app-info-block>
+            </app-occupation>
+            }
+          </app-occupation-type>
+          }
         </div>
 
         <!-- Side bar -->
@@ -199,7 +76,6 @@
         >
           <!-- Info -->
           <div>
-            <div class="font-medium mb-2">Info</div>
             <ul class="text-xs">
               <li>Fraser MI, 48026</li>
               <li>+1 (248) 882-7006</li>
@@ -259,15 +135,15 @@
           <div>
             <div class="font-medium mb-2">Languages</div>
             <div class="flex flex-wrap gap-x-1 gap-y-1">
-              <app-chip language="TypeScript" version="v5.5"></app-chip>
-              <app-chip language="JavaScript" color="black"></app-chip>
-              <app-chip language="C#" version="v10"></app-chip>
-              <app-chip language="Python" version="v3.11"></app-chip>
-              <app-chip language="SQL"></app-chip>
-              <app-chip language="C"></app-chip>
-              <app-chip language="Java"></app-chip>
-              <app-chip language="Shell" color="black"></app-chip>
-              <app-chip language="SCSS"></app-chip>
+              <app-language-chip [language]="dataService.getLanguage('TypeScript')" version="v5.5"></app-language-chip>
+              <app-language-chip [language]="dataService.getLanguage('JavaScript')" color="black"></app-language-chip>
+              <app-language-chip [language]="dataService.getLanguage('C#')" version="v10"></app-language-chip>
+              <app-language-chip [language]="dataService.getLanguage('Python')" version="v3.11"></app-language-chip>
+              <app-language-chip [language]="dataService.getLanguage('SQL')"></app-language-chip>
+              <app-language-chip [language]="dataService.getLanguage('C')"></app-language-chip>
+              <app-language-chip [language]="dataService.getLanguage('Java')"></app-language-chip>
+              <app-language-chip [language]="dataService.getLanguage('Shell')" color="black"></app-language-chip>
+              <app-language-chip [language]="dataService.getLanguage('SCSS')"></app-language-chip>
             </div>
           </div>
 

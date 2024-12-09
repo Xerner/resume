@@ -1,6 +1,6 @@
 import { IOccupationType, OccupationType } from "../models/IOccupationType";
 
-export const INFO_BLOCKS: IOccupationType[] = [
+export const OCCUPATION_TYPES: IOccupationType[] = [
   {
     title: OccupationType.Employment,
     icon: "work",

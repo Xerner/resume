@@ -2,7 +2,7 @@ import { DateTime } from "luxon";
 import { IOccupation } from "../models/IOccupation";
 import { OccupationType } from "../models/IOccupationType";
 
-export const INFO_ENTRIES: IOccupation[] = [
+export const OCCUPATIONS: IOccupation[] = [
   {
     id: "7078AFDD-5BC8-4831-90B5-E427273D583E",
     type: OccupationType.Employment,
@@ -25,27 +25,61 @@ export const INFO_ENTRIES: IOccupation[] = [
     image: "assets/gm-logo.png",
   },
   {
-    id: "4798E060-30BC-4E65-B200-9B7CF9090DFC",
+    id: "F0B86406-B303-4DE2-9F58-F384C54B9329",
     parentId: "8CBBCA55-06CF-4638-86B5-58F54F782563",
     type: OccupationType.Employment,
-    title: "Platform System Engineer",
+    title: "Signal Validation Engineer",
     company: "General Motors",
     location: "Warren, MI",
     commute: "Hybrid",
-    startDate: DateTime.utc(2023, 5, 1),
-    endDate: DateTime.utc(2023, 6, 1),
+    startDate: DateTime.utc(2023, 1, 1),
+    endDate: DateTime.utc(2023, 5, 1),
     image: "assets/gm-logo.png",
   },
   {
-    id: "4798E060-30BC-4E65-B200-9B7CF9090DFC",
+    id: "7B9CD2A8-F374-4CF3-871A-EEEBDA326C14",
     parentId: "8CBBCA55-06CF-4638-86B5-58F54F782563",
     type: OccupationType.Employment,
-    title: "Platform System Engineer",
+    title: "Software Performance Test Engineer",
     company: "General Motors",
     location: "Warren, MI",
     commute: "Hybrid",
-    startDate: DateTime.utc(2023, 5, 1),
-    endDate: DateTime.utc(2023, 6, 1),
+    startDate: DateTime.utc(2022, 7, 1),
+    endDate: DateTime.utc(2023, 1, 1),
     image: "assets/gm-logo.png",
   },
+  {
+    id: "85DA0D72-94C4-4A0D-A224-CAEF40ED6B09",
+    parentId: "8CBBCA55-06CF-4638-86B5-58F54F782563",
+    type: OccupationType.Employment,
+    title: "Assistant Technical Project Manager",
+    company: "General Motors",
+    location: "Warren, MI",
+    commute: "Hybrid",
+    startDate: DateTime.utc(2022, 1, 1),
+    endDate: DateTime.utc(2022, 7, 1),
+    image: "assets/gm-logo.png",
+  },
+  {
+    id: "1B14C1B3-469B-4E97-A371-F359A6F96670",
+    type: OccupationType.Employment,
+    title: "Senior Technologist",
+    company: "Mahle Filtering Systems",
+    location: "Troy, MI",
+    commute: "Onsite",
+    startDate: DateTime.utc(2018, 9, 1),
+    endDate: DateTime.utc(2022, 1, 1),
+    image: "assets/mahle-logo.png",
+  },
+  {
+    id: "59C0B158-7068-45F1-A437-0D7BE1BE34ED",
+    type: OccupationType.Education,
+    title: "Bachelor of Computer Science",
+    company: "Oakland University",
+    location: "Auburn Hills, MI",
+    commute: "Onsite",
+    startDate: DateTime.utc(2016, 9, 1),
+    endDate: DateTime.utc(2021, 4, 1),
+    image: "assets/oakland-university-logo-and-bear.png",
+  }
 ]

@@ -8,7 +8,7 @@
   [style]="style()"
 >
   <ng-content />
-  {{ language() }}
+  {{ language()?.name ?? 'Unknown' }}
   @if (version()) {<span style="font-size: 0.75em">
     {{ version() }}
   </span>

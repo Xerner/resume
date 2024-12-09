@@ -1,0 +1,7 @@
+<div class="flex gap-x-3">
+  <mat-icon class="min-w-6">{{ occupationType().icon }}</mat-icon>
+  <div class="flex flex-col grow">
+    <div class="text-lg font-semibold">{{ occupationType().title }}</div>
+    <ng-content></ng-content>
+  </div>
+</div>
