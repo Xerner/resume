@@ -1,23 +1,23 @@
 <div class="mb-3">
   <div class="flex justify-between items-center">
     <div class="text-lg font-medium">
-      {{ title() }}
+      {{ info().title }}
     </div>
-    @if (image()) {
-      <img class="h-6 w-auto" [src]="image()" alt="Company Logo" />
+    @if (info().image) {
+      <img class="h-6 w-auto" [src]="info().image" alt="Company Logo" />
     }
   </div>
   <div class="flex justify-between text-sm text-slate-500">
     <div>
-      {{ company() }}
+      {{ info().company }}
     </div>
-    <div>{{ commute() }} &nbsp; | &nbsp; {{ location() }}</div>
+    <div>{{ info().commute }} &nbsp; | &nbsp; {{ info().location }}</div>
   </div>
   <div class="flex justify-between text-sm text-slate-500">
     <div>
-      {{ startDate().toFormat(dateFormat) }} - @if (endDate() == null) { Present
+      {{ info().startDate.toFormat(dateFormat) }} - @if (info().endDate == null) { Present
       } @else {
-      {{ endDate()!.toFormat(dateFormat) }}
+      {{ info().endDate!.toFormat(dateFormat) }}
       }
     </div>
   </div>

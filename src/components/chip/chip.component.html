@@ -7,11 +7,10 @@
   }"
   [style]="style()"
 >
-  <ng-content>
-    {{ language() }}
-    @if (version()) {<span style="font-size: 0.75em">
-      {{ version() }}
-    </span>
-    }
-  </ng-content>
+  <ng-content />
+  {{ language() }}
+  @if (version()) {<span style="font-size: 0.75em">
+    {{ version() }}
+  </span>
+  }
 </div>

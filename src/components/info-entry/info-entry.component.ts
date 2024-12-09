@@ -1,7 +1,6 @@
 import { Component, input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { DateTime } from 'luxon';
-import { Commute } from '../../models/CommuteType';
+import { IOccupation } from '../../models/IOccupation';
 
 @Component({
   selector: 'app-info-entry',
@@ -12,12 +11,6 @@ import { Commute } from '../../models/CommuteType';
   ],
 })
 export class InfoEntryComponent {
-  title = input.required<string>();
-  location = input.required<string>();
-  company = input.required<string>();
-  commute = input.required<Commute>();
-  startDate = input.required<DateTime>();
-  endDate = input<DateTime | null>(null);
-  image = input<string>("");
+  info = input.required<IOccupation>();
   dateFormat = "MMMM yyyy";
 }

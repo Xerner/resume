@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
-import { RouterOutlet } from "@angular/router";
 import { DateTime } from "luxon";
 import { HeaderComponent } from "../header/header.component";
 import { InfoBlockComponent } from "../info-block/info-block.component";
@@ -17,7 +16,6 @@ import { SubEntryComponent } from "../sub-entry/sub-entry.component";
   standalone: true,
   imports: [
     CommonModule,
-    RouterOutlet,
     LetterPageComponent,
     HeaderComponent,
     InfoBlockComponent,
