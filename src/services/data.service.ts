@@ -3,11 +3,13 @@ import { OCCUPATIONS } from '../data/occupations';
 import { IOccupation } from '../models/IOccupation';
 import { IOccupationType, OccupationType } from '../models/IOccupationType';
 import { OCCUPATION_TYPES } from '../data/occupation-types';
-import { JOBS } from '../data/occupation-details';
+import { JOBS } from '../data/jobs';
 import { IJob } from '../models/IJob';
 import { DateTime, Duration } from 'luxon';
-import { LANGUAGES } from '../data/languages';
-import { ILanguage } from '../models/ILanguage';
+import { SKILLS } from '../data/skills';
+import { ISkill } from '../models/ISkill';
+import { IJobSkill } from '../models/IOccupationLanguage';
+import { JOB_SKILLS } from '../data/job-skills';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +18,8 @@ export class DataService {
   occupations = signal<IOccupation[]>(this.sortOccupationsByParent(OCCUPATIONS));
   occupationTypes = signal<IOccupationType[]>(OCCUPATION_TYPES);
   jobs = signal<IJob[]>(JOBS);
-  languages = signal<ILanguage[]>(LANGUAGES);
+  skills = signal<ISkill[]>(SKILLS);
+  jobSkills = signal<IJobSkill[]>(JOB_SKILLS);
   totalProfessionalExperience = computed<string>(() => this.getTotalProfessionalExperience());
 
   filterOccupations(occupationType: IOccupationType) {
@@ -47,8 +50,8 @@ export class DataService {
     return this.occupations().some(o => o.parentId === occupation.id);
   }
 
-  getLanguage(name: string): ILanguage | null {
-    return this.languages().find(language => language.name === name) ?? null;
+  getSkill(name: string): ISkill | null {
+    return this.skills().find(language => language.name === name) ?? null;
   }
 
   private getTotalProfessionalExperience() {
@@ -84,5 +87,16 @@ export class DataService {
       str.push(`${months} ${monthsText}`);
     }
     return str.join(" ");
+  }
+
+  filterSkills(job: IJob) {
+    var skills = this.jobSkills().filter(skill => skill.jobId === job.id);
+    return this.skills().filter(skill => skills.some(s => s.skillId === skill.name));
+  }
+
+  getSkillsForOccupation(occupation: IOccupation) {
+    var jobs = this.filterJobs(occupation);
+    var skills = jobs.map(job => this.filterSkills(job));
+    return skills.flat();
   }
 }

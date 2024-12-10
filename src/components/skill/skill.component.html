@@ -1,13 +1,16 @@
-<div class="flex justify-between">
-  <ng-content />
-  <div class="flex gap-x-1">
-    @for (level of levelArr(); track $index) {
-      @if (level === 1) {
-        <div class="skill basis-1/5 bg-orange-400"></div>
-      }
-      @else {
-        <div class="skill basis-1/5 bg-orange-100"></div>
-      }
-    }
-  </div>
+<div
+  class="inline flex gap-1 items-center"
+  [matTooltip]="skill()?.name ?? ''"
+>
+  @if (skill()?.icon) {
+    <img style="height: 1.5em; width: 1.5em;" [src]="skill()?.icon" [alt]="" />
+  }
+  <span class="font-light">
+    {{ skill()?.name ?? 'Unknown' }}
+  </span>
+  @if (version()) {
+    <span style="font-size: 0.75em">
+      {{ version() }}
+    </span>
+  }
 </div>

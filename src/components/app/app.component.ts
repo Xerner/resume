@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
+import { MatTooltipModule } from "@angular/material/tooltip";
 import { DomSanitizer } from "@angular/platform-browser";
 import { DateTime } from "luxon";
 import { HeaderComponent } from "../header/header.component";
@@ -7,10 +8,10 @@ import { OccupationTypeComponent } from "../occupation-type/occupation-type.comp
 import { OccupationComponent } from "../occupation/occupation.component";
 import { LetterPageComponent } from "../page/letter-page.component";
 import { SkillComponent } from "../skill/skill.component";
-import { LanguageChipComponent } from "../language-chip/language-chip.component";
 import { CommonModule } from "@angular/common";
 import { DataService } from "../../services/data.service";
 import { JobComponent } from "../job/job.component";
+import { SkillLevelComponent } from "../skill-level/skill-level.component";
 
 @Component({
   selector: 'app-root',
@@ -23,9 +24,10 @@ import { JobComponent } from "../job/job.component";
     OccupationComponent,
     MatIconModule,
     SkillComponent,
-    LanguageChipComponent,
     JobComponent,
-  ],
+    SkillLevelComponent,
+    MatTooltipModule,
+],
   templateUrl: './app.component.html',
 })
 export class AppComponent {

@@ -1,0 +1,50 @@
+import { ISkill } from "../models/ISkill";
+import { SkillType } from "../models/SkillType";
+
+export const DEFAULT_LANGUAGE_COLOR = "#DDDDDD";
+export const SKILLS: ISkill[] = [
+  { name: "SASS",                type: SkillType.Language, icon: "assets/icons/sass.png"               , color: "#CF649A", },
+  { name: "SCSS",                type: SkillType.Language, icon: "assets/icons/sass.png"               , color: "#CF649A", },
+  { name: "SQL",                 type: SkillType.Language, icon: "assets/icons/sql-server.png"         , color: "#0078D4", },
+  { name: "TypeScript",          type: SkillType.Language, icon: "assets/icons/typescript.png"         , color: "#2b7489", },
+  { name: "Jupyter Notebook",    type: SkillType.Language, icon: "assets/icons/Jupyter Notebook.png"   , color: "#DA5B0B", },
+  { name: "Shell",               type: SkillType.Language, icon: "assets/icons/bash.png"               , color: "#89e051", },
+  { name: "Visual Basic",        type: SkillType.Language, icon: "assets/icons/visual-basic.png"       , color: "#945db7", },
+  { name: "Java",                type: SkillType.Language, icon: "assets/icons/java.png"               , color: "#b07219", },
+  { name: "HTML",                type: SkillType.Language, icon: "assets/icons/html.png"               , color: "#e44b23", },
+  { name: "C",                   type: SkillType.Language, icon: "assets/icons/c.png"                  , color: "#555555", },
+  { name: "Arduino",             type: SkillType.Language, icon: "assets/icons/arduino.png"            , color: "#bd79d1", },
+  { name: "C#",                  type: SkillType.Language, icon: "assets/icons/c-sharp.png"            , color: "#178600", },
+  { name: "CSS",                 type: SkillType.Language, icon: "assets/icons/css.png"                , color: "#563d7c", },
+  { name: "LaTeX",               type: SkillType.Language, icon: "assets/icons/tex.png"                , color: "#3D6117", },
+  { name: "JavaScript",          type: SkillType.Language, icon: "assets/icons/javascript.png"         , color: "#f1e05a", },
+  { name: "Python",              type: SkillType.Language, icon: "assets/icons/python.png"             , color: "#3572A5", },
+  { name: "Game Maker Language", type: SkillType.Language, icon: "assets/icons/game-maker-language.png", color: "#8fb200", },
+
+  { name: "Angular",          type: SkillType.Framework, icon: "assets/icons/angular.png" },
+  { name: "React",            type: SkillType.Framework, icon: "assets/icons/react.png" },
+  { name: "Storybook",        type: SkillType.Framework, icon: "assets/icons/storybook.png" },
+  { name: ".Net",             type: SkillType.Framework, icon: "assets/icons/dotnet.png" },
+  { name: "ASP.Net",          type: SkillType.Framework, icon: "assets/icons/net-core.png" },
+  { name: "NUnit",            type: SkillType.Framework, icon: "assets/icons/nunit.png" },
+  { name: "SignalR",          type: SkillType.Framework, icon: "assets/icons/signalr.png" },
+  { name: "EntityFramework",  type: SkillType.Framework, icon: "assets/icons/net-core.png" },
+  { name: "J2534",            type: SkillType.Tool, icon: "assets/icons/signal-icon.png" },
+
+  { name: "Docker",           type: SkillType.Tool, icon: "assets/icons/docker.png" },
+  { name: "Git",              type: SkillType.Tool, icon: "assets/icons/git.png" },
+  { name: "Jira",             type: SkillType.Tool, icon: "assets/icons/jira.png" },
+  { name: "Unity",            type: SkillType.Tool, icon: "assets/icons/unity.png" },
+  { name: "Microsoft Office", type: SkillType.Tool, icon: "assets/icons/msoffice.png" },
+  { name: "GoCD",             type: SkillType.Tool, icon: "assets/icons/go-cd.png" },
+  { name: "Blender",          type: SkillType.Tool, icon: "assets/icons/blender.webp" },
+  { name: "Linux",            type: SkillType.Tool, icon: "assets/icons/linux.png" },
+  { name: "Bitbucket",        type: SkillType.Tool, icon: "assets/icons/bitbucket.svg" },
+
+  { name: "Communication",     type: SkillType.Social, icon: "assets/icons/" },
+  { name: "Leadership",        type: SkillType.Social, icon: "assets/icons/" },
+  { name: "Teamwork",          type: SkillType.Social, icon: "assets/icons/" },
+  { name: "Critical Thinking", type: SkillType.Social, icon: "assets/icons/" },
+  { name: "Time Management",   type: SkillType.Social, icon: "assets/icons/" },
+  { name: "Adaptability",      type: SkillType.Social, icon: "assets/icons/" },
+]

@@ -1,5 +1,5 @@
-export interface IJob_Skill {
-  occupationId: string;
-  skill: string;
-  version: string;
+export interface IJobSkill {
+  jobId: string;
+  skillId: string;
+  version?: string;
 }
