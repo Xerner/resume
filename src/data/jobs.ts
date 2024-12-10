@@ -52,13 +52,13 @@ export const JOBS: IJob[] = [
     description: "Automated processing test data for carbon canisters GWC/BWC tests"
   },
   {
+    id: "71636935-EE2C-4D8C-BE41-963EFC58C30D",
+    occupationId: "1B14C1B3-469B-4E97-A371-F359A6F96670",
+    description: "Created proof of concept and mockups for a new work request processing application"
+  },
+  {
     id: "171F43AA-AF86-4B4F-BBE9-D95A776B19F1",
     occupationId: "1B14C1B3-469B-4E97-A371-F359A6F96670",
     description: "Worked with management to automate, analyze, and report employee key performance indicator (KPI) data."
-  },
-  {
-    id: "764836DD-D207-4AB6-B572-C6B0EDEC5164",
-    occupationId: "59C0B158-7068-45F1-A437-0D7BE1BE34ED",
-    description: "Notable Classes: Algorithms, data structures, database management, artificial intelligence, advanced system administration"
   }
 ];

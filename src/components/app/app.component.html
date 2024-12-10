@@ -1,201 +1,237 @@
 <div class="h-full flex flex-col">
-
   <!-- Print Button -->
   <div class="xs:w-full xs:flex xs:justify-end p-4 noprint">
-    <button
-      (click)="onPrint()"
-      matTooltip="Print"
-      class="p-2 xs:p-4 bg-slate-700 rounded-xl flex justify-center items-center"
-    >
-      <!-- Print Icon -->
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        [ngClass]="{
-          'w-12 h-12': true,
-          'xs:w-4 xs:h-4': true,
-          'sm:w-6 sm:h-6': true,
-          'md:w-8 md:h-8': true,
-          'lg:w-10 lg:h-10': true,
-          'xl:w-12 xl:h-12': true
-        }"
-        viewBox="0 -960 960 960"
-        fill="#e8eaed"
-      >
-        <path
-          d="M640-640v-120H320v120h-80v-200h480v200h-80Zm-480 80h640-640Zm560 100q17 0 28.5-11.5T760-500q0-17-11.5-28.5T720-540q-17 0-28.5 11.5T680-500q0 17 11.5 28.5T720-460Zm-80 260v-160H320v160h320Zm80 80H240v-160H80v-240q0-51 35-85.5t85-34.5h560q51 0 85.5 34.5T880-520v240H720v160Zm80-240v-160q0-17-11.5-28.5T760-560H200q-17 0-28.5 11.5T160-520v160h80v-80h480v80h80Z"
-        />
-      </svg>
-    </button>
+    <app-print-button></app-print-button>
   </div>
 
   <!-- Pages -->
   <div class="pages-container grow pb-20">
-    <app-letter-page class="shadow-2xl">
-      <div class="flex justify-between h-full">
-        <!-- Main content -->
-        <div class="p-4 text-sm" style="width: 68%">
-          <app-header></app-header>
+    <app-letter-page class="shadow-2xl flex justify-between">
+      <!-- Main content -->
+      <div class="text-sm w-[70%] flex flex-col">
+        <app-header
+          class="p-4 border-indigo-300 print:bg-none bg-gradient-to-r from-orange-50 to-transparent border-b border-orange-200"
+        ></app-header>
 
-          @for (occupationType of dataService.occupationTypes(); track $index) {
-          <app-occupation-type [occupationType]="occupationType">
-            @for (occupation of dataService.filterOccupations(occupationType);
-            track $index) {
-            <app-occupation
-              [occupation]="occupation"
+        <!-- Occupation Types -->
+        @for (occupationType of dataService.occupationTypes(); track $index) {
+        <app-occupation-type
+          [occupationType]="occupationType"
+          class="p-4 border-indigo-300 flex flex-col gap-2"
+        >
+          <!-- Occupations -->
+          @for (occupation of dataService.filterOccupations(occupationType);
+          track $index) {
+          <app-occupation
+            [occupation]="occupation"
+            [ngClass]="{
+                'ml-3 text-sm': dataService.hasParent(occupation),
+                'flex flex-col gap-1': true,
+              }"
+          >
+            <!-- Jobs -->
+            <ul class="list-disc ml-4">
+              @for (job of dataService.filterJobs(occupation); track $index) {
+              <li>
+                <app-job [job]="job" class="text-xs"> </app-job>
+              </li>
+              }
+            </ul>
+
+            <!-- Skills -->
+            @let languages = dataService.getSkillsForOccupation(occupation,
+            SkillType.Language); @let frameworks =
+            dataService.getSkillsForOccupation(occupation, SkillType.Framework);
+            @let tools = dataService.getSkillsForOccupation(occupation,
+            SkillType.Tool); @if (languages.length > 0 || frameworks.length > 0
+            || tools.length > 0) {
+            <div
               [ngClass]="{
-                'mb-3': dataService.hasParent(occupation) === false && dataService.hasChildren(occupation) === false,
-                'pl-3 mt-2 text-sm': dataService.hasParent(occupation),
+                'flex flex-col divide-y divide-indigo-100 divide-dotted text-[0.66rem] print:bg-none bg-gradient-to-r from-orange-50 to-transparent': true,
+                '-mx-4': dataService.hasParent(occupation) === false,
+                '-ml-7 -mr-4': dataService.hasParent(occupation),
               }"
             >
-              <ul class="list-disc">
-                @for (job of dataService.filterJobs(occupation); track $index) {
-                <li>
-                  <app-job [job]="job" class="text-xs">
-                    <div class="flex flex-wrap gap-1">
-                      @for (skill of dataService.filterSkills(job); track $index) {
-                      <app-skill [skill]="skill" class="text-xs"></app-skill>
-                      }
-                    </div>
-                  </app-job>
-                </li>
-                }
-              </ul>
-            </app-occupation>
+              @if (languages.length > 0) {
+              <div class="flex p-1 pl-2">
+                <div class="text-xs w-20">Languages</div>
+                <div class="grow flex flex-wrap gap-1 items-center">
+                  @for (skill of languages; track $index) {
+                  <app-skill [skill]="skill"></app-skill>
+                  }
+                </div>
+              </div>
+              } @if (frameworks.length > 0) {
+              <div class="flex p-1 pl-2">
+                <div class="text-xs w-20">Frameworks</div>
+                <div class="grow flex flex-wrap gap-1 items-center">
+                  @for (skill of frameworks; track $index) {
+                  <app-skill [skill]="skill"></app-skill>
+                  }
+                </div>
+              </div>
+              } @if (tools.length > 0) {
+              <div class="flex p-1 pl-2">
+                <div class="text-xs w-20">Tools</div>
+                <div class="grow flex flex-wrap gap-1 items-center">
+                  @for (skill of tools; track $index) {
+                  <app-skill [skill]="skill"></app-skill>
+                  }
+                </div>
+              </div>
+              }
+            </div>
             }
-          </app-occupation-type>
+          </app-occupation>
           }
+        </app-occupation-type>
+        }
+      </div>
+
+      <!-- Side bar -->
+      <div
+        class="w-[30%] print:bg-none bg-gradient-to-b from-transparent to-indigo-100 border-indigo-300 border-l-2 text-primary flex flex-col gap-3 p-4"
+      >
+        <!-- Info -->
+        <div>
+          <ul class="text-xs">
+            <li>Fraser MI, 48026</li>
+            <li>+1 (248) 882-7006</li>
+            <li>
+              <a href="mailto:kennethmead784@gmail.com" class="text-link">{{
+                "kennethmead784@gmail.com"
+              }}</a>
+            </li>
+          </ul>
         </div>
 
-        <!-- Side bar -->
-        <div
-          class="bg-gradient-to-b from-indigo-50 to-indigo-200 border-indigo-300 border-l-2 text-primary flex flex-col gap-3 p-4"
-          style="width: 31%"
-        >
-          <!-- Info -->
-          <div>
-            <ul class="text-xs">
-              <li>Fraser MI, 48026</li>
-              <li>+1 (248) 882-7006</li>
-              <li>
-                <a href="mailto:kennethmead784@gmail.com" class="text-link">{{
-                  "kennethmead784@gmail.com"
-                }}</a>
-              </li>
-            </ul>
+        <!-- Education -->
+        <div>
+          <div class="font-medium mb-2">Education</div>
+          <div class="text-xs flex flex-col gap-3">
+            <img
+              src="assets/icons/oakland-university-logo-and-bear.png"
+              alt="ou-icon"
+            />
+            <div>Bachelors of Computer Science</div>
           </div>
+        </div>
 
-          <!-- Links -->
-          <div>
-            <div class="font-medium mb-2">Links</div>
-            <ul class="text-xs text-right">
-              <li class="text-link">
-                <span>
-                  <a href="https://www.kennethmead.dev/" target="_blank"
-                    >kennethmead.dev</a
-                  >
-                </span>
-              </li>
-              <li class="text-link">
-                <a href="https://www.resume.kennethmead.dev/" target="_blank"
-                  >resume.kennethmead.dev</a
+        <!-- Links -->
+        <div>
+          <div class="font-medium mb-2">Links</div>
+          <ul class="text-xs text-right">
+            <li class="text-link">
+              <span>
+                <a href="https://www.kennethmead.dev/" target="_blank"
+                  >kennethmead.dev</a
                 >
-              </li>
-              <li class="text-link">
-                <a
-                  href="https://www.color-slicer.kennethmead.dev/"
-                  target="_blank"
-                  >color-slicer.kennethmead.dev</a
-                >
-              </li>
-              <li class="text-link">
-                <a
-                  href="https://www.bitbucket-dashboard.kennethmead.dev/"
-                  target="_blank"
-                  >bitbucket-dashboard.kennethmead.dev</a
-                >
-              </li>
+              </span>
+            </li>
+            <li class="text-link">
+              <a href="https://www.resume.kennethmead.dev/" target="_blank"
+                >resume.kennethmead.dev</a
+              >
+            </li>
+            <li class="text-link">
+              <a
+                href="https://www.color-slicer.kennethmead.dev/"
+                target="_blank"
+                >color-slicer.kennethmead.dev</a
+              >
+            </li>
+            <li class="text-link">
+              <a
+                href="https://www.bitbucket-dashboard.kennethmead.dev/"
+                target="_blank"
+                >bitbucket-dashboard.kennethmead.dev</a
+              >
+            </li>
 
-              <li class="text-link">
-                <a href="https://github.com/xerner" target="_blank"
-                  >github.com/xerner</a
-                >
-              </li>
-              <li class="text-link">
-                <a href="www.linkedin.com/in/kennethmead784" target="_blank"
-                  >linkedin.com/kennethmead784</a
-                >
-              </li>
-            </ul>
-          </div>
+            <li class="text-link">
+              <a href="https://github.com/xerner" target="_blank"
+                >github.com/xerner</a
+              >
+            </li>
+            <li class="text-link">
+              <a href="www.linkedin.com/in/kennethmead784" target="_blank"
+                >linkedin.com/kennethmead784</a
+              >
+            </li>
+          </ul>
+        </div>
 
-          <!-- Languages -->
-          <div>
-            <div class="font-medium mb-2">Languages</div>
-            <div class="flex flex-wrap gap-x-1 gap-y-1 text-sm">
-              <app-skill [skill]="dataService.getSkill('TypeScript')" version="v5.5"></app-skill>
-              <app-skill [skill]="dataService.getSkill('JavaScript')"></app-skill>
-              <app-skill [skill]="dataService.getSkill('C#')" version="v10"></app-skill>
-              <app-skill [skill]="dataService.getSkill('Python')" version="v3.11"></app-skill>
-              <app-skill [skill]="dataService.getSkill('SQL')"></app-skill>
-              <app-skill [skill]="dataService.getSkill('C')"></app-skill>
-              <app-skill [skill]="dataService.getSkill('Java')"></app-skill>
-              <app-skill [skill]="dataService.getSkill('Shell')"></app-skill>
-              <app-skill [skill]="dataService.getSkill('SCSS')"></app-skill>
-            </div>
+        <!-- Languages -->
+        <div>
+          <div class="font-medium mb-2">Languages</div>
+          <div class="grid grid-cols-2 gap-1 text-sm">
+            @for (language of
+            dataService.getAllSkillsOfType(SkillType.Language); track $index) {
+            <app-skill [skill]="language" class="text-xs"></app-skill>
+            }
+            <!-- <app-skill
+              [skill]="dataService.getSkill('TypeScript')"
+              version="v5.5"
+            ></app-skill>
+            <app-skill [skill]="dataService.getSkill('JavaScript')"></app-skill>
+            <app-skill
+              [skill]="dataService.getSkill('C#')"
+              version="v10"
+            ></app-skill>
+            <app-skill
+              [skill]="dataService.getSkill('Python')"
+              version="v3.11"
+            ></app-skill>
+            <app-skill [skill]="dataService.getSkill('SQL')"></app-skill>
+            <app-skill [skill]="dataService.getSkill('C')"></app-skill>
+            <app-skill [skill]="dataService.getSkill('Java')"></app-skill>
+            <app-skill [skill]="dataService.getSkill('Shell')"></app-skill>
+            <app-skill [skill]="dataService.getSkill('SCSS')"></app-skill> -->
           </div>
+        </div>
 
-          <!-- Frameworks -->
-          <div>
-            <div class="font-medium mb-2">Frameworks</div>
-            <div class="flex flex-col gap-y-1 text-xs">
-              <app-skill-level level="5">Angular 18</app-skill-level>
-              <app-skill-level level="3">React 17</app-skill-level>
-              <app-skill-level level="5">Storybook</app-skill-level>
-              <app-skill-level level="5">.NET 8</app-skill-level>
-              <app-skill-level level="4">ASP.NET 6</app-skill-level>
-              <app-skill-level level="4">NUnit 4.1</app-skill-level>
-              <app-skill-level level="3">SignalR 2.4</app-skill-level>
-              <app-skill-level level="3">Entity Framework 6</app-skill-level>
-            </div>
+        <!-- Frameworks -->
+        <div>
+          <div class="font-medium mb-2">Frameworks</div>
+          <div class="grid grid-cols-2 gap-1 text-sm">
+            @for (language of
+            dataService.getAllSkillsOfType(SkillType.Framework); track $index) {
+            <app-skill [skill]="language" class="text-xs"></app-skill>
+            }
           </div>
+        </div>
 
-          <!-- Software Skills -->
-          <div>
-            <div class="font-medium mb-2">Software Skills</div>
-            <div class="flex flex-col gap-y-1 text-xs">
-              <app-skill-level level="5">Git</app-skill-level>
-              <app-skill-level level="5">Jira</app-skill-level>
-              <app-skill-level level="5">Unity 2023</app-skill-level>
-              <app-skill-level level="5">Microsoft Office</app-skill-level>
-              <app-skill-level level="5">Model-View-Controller (MVC)</app-skill-level>
-              <app-skill-level level="5">Microservices</app-skill-level>
-              <app-skill-level level="4">GoCD (CI/CD)</app-skill-level>
-              <app-skill-level level="3">Blender v3</app-skill-level>
-              <app-skill-level level="3">Linux</app-skill-level>
-            </div>
+        <!-- Software Skills -->
+        <div>
+          <div class="font-medium mb-2">Tools</div>
+          <div class="grid grid-cols-2 gap-1 text-sm">
+            @for (language of dataService.getAllSkillsOfType(SkillType.Tool);
+            track $index) {
+            <app-skill [skill]="language" class="text-xs"></app-skill>
+            }
           </div>
+        </div>
 
-          <!-- People Skills -->
-          <div>
-            <div class="font-medium mb-2">People Skills</div>
-            <ul class="text-xs">
-              <li>Communication</li>
-              <li>Leadership</li>
-              <li>Teamwork</li>
-              <li>Problem Solving</li>
-              <li>Time Management</li>
-              <li>Adaptability</li>
-            </ul>
-          </div>
+        <!-- People Skills -->
+        <div>
+          <div class="font-medium mb-2">People Skills</div>
+          <ul class="text-xs">
+            <li>Communication</li>
+            <li>Leadership</li>
+            <li>Teamwork</li>
+            <li>Problem Solving</li>
+            <li>Time Management</li>
+            <li>Adaptability</li>
+          </ul>
+        </div>
 
-          <!-- Hobbies -->
-          <div>
-            <div class="font-medium mb-2">Hobbies</div>
-            <ul class="text-xs">
-              <li>Making Apps/Games</li>
-              <li>3D Printing</li>
-            </ul>
-          </div>
+        <!-- Hobbies -->
+        <div>
+          <div class="font-medium mb-2">Hobbies</div>
+          <ul class="text-xs">
+            <li>Making Apps/Games</li>
+            <li>3D Printing</li>
+          </ul>
         </div>
       </div>
     </app-letter-page>

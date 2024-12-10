@@ -10,6 +10,7 @@ import { SKILLS } from '../data/skills';
 import { ISkill } from '../models/ISkill';
 import { IJobSkill } from '../models/IOccupationLanguage';
 import { JOB_SKILLS } from '../data/job-skills';
+import { SkillType } from '../models/SkillType';
 
 @Injectable({
   providedIn: 'root'
@@ -94,9 +95,22 @@ export class DataService {
     return this.skills().filter(skill => skills.some(s => s.skillId === skill.name));
   }
 
-  getSkillsForOccupation(occupation: IOccupation) {
+  getSkillsForOccupation(occupation: IOccupation, type: SkillType) {
     var jobs = this.filterJobs(occupation);
-    var skills = jobs.map(job => this.filterSkills(job));
-    return skills.flat();
+    var skills = jobs
+      .map(job => this.filterSkills(job))
+      .flat()
+      .filter(skill => skill.type === type)
+      .reduce((accumulator: ISkill[], skill) => accumulator.some(s => s.name === skill.name) ? accumulator : [...accumulator, skill], []);
+    return skills;
+  }
+
+  getAllSkillsOfType(type: SkillType) {
+    var skills = this.jobSkills()
+      .map(skill => this.getSkill(skill.skillId))
+      .filter(skill => skill !== null)
+      .filter(skill => skill.type === type)
+      .reduce((accumulator: ISkill[], skill) => accumulator.some(s => s.name === skill.name) ? accumulator : [...accumulator, skill], []);
+    return skills;
   }
 }

@@ -12,6 +12,8 @@ import { CommonModule } from "@angular/common";
 import { DataService } from "../../services/data.service";
 import { JobComponent } from "../job/job.component";
 import { SkillLevelComponent } from "../skill-level/skill-level.component";
+import { PrintButtonComponent } from "../print-button/print-button.component";
+import { SkillType } from "../../models/SkillType";
 
 @Component({
   selector: 'app-root',
@@ -27,10 +29,12 @@ import { SkillLevelComponent } from "../skill-level/skill-level.component";
     JobComponent,
     SkillLevelComponent,
     MatTooltipModule,
+    PrintButtonComponent
 ],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  SkillType = SkillType;
   title = 'angular';
   DateTime = DateTime;
   readonly PAGE_ASPECT_RATIO = 8 / 11.5;
@@ -50,11 +54,6 @@ export class AppComponent {
     );
   }
 
-  ngOnInit(): void {
-    // window.addEventListener('resize', this.onResize.bind(this));
-    // this.onResize();
-  }
-
   onResize() {
     var pages = document.getElementsByClassName('letter-page');
     var aspectRatio = this.PAGE_ASPECT_RATIO;
@@ -63,9 +62,5 @@ export class AppComponent {
       var pageWidth = page.offsetWidth;
       page.style.height = `${pageWidth / aspectRatio}px`;
     }
-  }
-
-  onPrint() {
-    window.print();
   }
 }

@@ -5,8 +5,8 @@ export const OCCUPATION_TYPES: IOccupationType[] = [
     title: OccupationType.Employment,
     icon: "work",
   },
-  {
-    title: OccupationType.Education,
-    icon: "school",
-  },
+  // {
+  //   title: OccupationType.Education,
+  //   icon: "school",
+  // },
 ];
