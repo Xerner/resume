@@ -1,11 +1,10 @@
 <div
   class="inline flex gap-1 items-center"
-  [matTooltip]="skill()?.name ?? ''"
 >
   @if (showIcon() && skill()?.icon) {
     <img style="height: 1.5em; width: 1.5em;" [src]="skill()?.icon" [alt]="" />
   }
-  <span class="font-light">
+  <span>
     {{ skill()?.name ?? 'Unknown' }}
   </span>
   @if (version()) {

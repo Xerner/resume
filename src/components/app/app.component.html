@@ -20,7 +20,12 @@
             icon="work"
             class="p-4 border-slate-300 flex flex-col gap-2"
           >
-            <ng-container [ngTemplateOutletContext]="{ occupations: dataService.filterOccupations(OccupationType.Employment).slice(0, 5) }"
+            <ng-container
+              [ngTemplateOutletContext]="{
+                occupations: dataService
+                  .filterOccupations(OccupationType.Employment)
+                  .slice(0, 5)
+              }"
               [ngTemplateOutlet]="occupationsTemplate"
             ></ng-container>
           </app-occupation-type>
@@ -45,7 +50,7 @@
 
           <!-- Education -->
           <div>
-            <div class="font-medium mb-2">Education</div>
+            <div class="font-medium mb-2 border-b border-dotted">Education</div>
             <div class="text-xs flex flex-col gap-3">
               <img
                 src="assets/icons/oakland-university-logo-and-bear.png"
@@ -60,7 +65,7 @@
 
           <!-- Links -->
           <div>
-            <div class="font-medium mb-2">Links</div>
+            <div class="font-medium mb-2 border-b border-dotted">Links</div>
             <ul class="text-xs text-right">
               <li class="text-link">
                 <span>
@@ -104,7 +109,7 @@
 
           <!-- Languages -->
           <div>
-            <div class="font-medium mb-2">Languages</div>
+            <div class="font-medium mb-2 border-b border-dotted">Languages</div>
             <div class="grid grid-cols-2 gap-1 text-sm">
               @for (language of
               dataService.getAllSkillsOfType(SkillType.Language); track $index)
@@ -134,7 +139,9 @@
 
           <!-- Frameworks -->
           <div>
-            <div class="font-medium mb-2">Frameworks</div>
+            <div class="font-medium mb-2 border-b border-dotted">
+              Frameworks
+            </div>
             <div class="grid grid-cols-2 gap-1 text-sm">
               @for (language of
               dataService.getAllSkillsOfType(SkillType.Framework); track $index)
@@ -146,7 +153,7 @@
 
           <!-- Software Skills -->
           <div>
-            <div class="font-medium mb-2">Tools</div>
+            <div class="font-medium mb-2 border-b border-dotted">Tools</div>
             <div class="grid grid-cols-2 gap-1 text-sm">
               @for (language of dataService.getAllSkillsOfType(SkillType.Tool);
               track $index) {
@@ -157,7 +164,9 @@
 
           <!-- People Skills -->
           <div>
-            <div class="font-medium mb-2">People Skills</div>
+            <div class="font-medium mb-2 border-b border-dotted">
+              People Skills
+            </div>
             <ul class="text-xs">
               <li>Communication</li>
               <li>Leadership</li>
@@ -170,7 +179,7 @@
 
           <!-- Hobbies -->
           <div>
-            <div class="font-medium mb-2">Hobbies</div>
+            <div class="font-medium mb-2 border-b border-dotted">Hobbies</div>
             <ul class="text-xs">
               <li>Making Apps/Games</li>
               <li>3D Printing</li>
@@ -181,9 +190,32 @@
     </app-letter-page>
 
     <app-letter-page class="shadow-2xl">
-      <ng-container [ngTemplateOutletContext]="{ occupations: dataService.filterOccupations(OccupationType.Employment).slice(5) }"
-              [ngTemplateOutlet]="occupationsTemplate"
-            ></ng-container>
+      <!-- also work -->
+      <div class="p-4">
+        <ng-container
+          [ngTemplateOutletContext]="{
+            occupations: dataService
+              .filterOccupations(OccupationType.Employment)
+              .slice(5)
+          }"
+          [ngTemplateOutlet]="occupationsTemplate"
+        ></ng-container>
+      </div>
+
+      <!-- Personal Projects -->
+      <app-occupation-type
+        [occupationType]="OccupationType.Personal"
+        icon="work"
+        class="border-slate-300 flex flex-col gap-2 border-t-2 p-4"
+      >
+      TODO
+        <ng-container
+          [ngTemplateOutletContext]="{
+            occupations: dataService.filterOccupations(OccupationType.Personal)
+          }"
+          [ngTemplateOutlet]="occupationsTemplate"
+        ></ng-container>
+      </app-occupation-type>
     </app-letter-page>
   </div>
 </div>
@@ -221,7 +253,7 @@
       @if (languages.length > 0) {
       <div class="flex p-1 pl-2">
         <div class="text-xs w-20">Languages</div>
-        <div class="grow flex flex-wrap gap-1 items-center">
+        <div class="grow flex flex-wrap gap-1 items-center font-light">
           @for (skill of languages; track $index) {
           <div class="flex">
             <app-skill [skill]="skill"></app-skill>
@@ -235,7 +267,7 @@
       } @if (frameworks.length > 0) {
       <div class="flex p-1 pl-2">
         <div class="text-xs w-20">Frameworks</div>
-        <div class="grow flex flex-wrap gap-1 items-center">
+        <div class="grow flex flex-wrap gap-1 items-center font-light">
           @for (skill of frameworks; track $index) {
           <div class="flex">
             <app-skill [skill]="skill"></app-skill>
@@ -249,7 +281,7 @@
       } @if (tools.length > 0) {
       <div class="flex p-1 pl-2">
         <div class="text-xs w-20">Tools</div>
-        <div class="grow flex flex-wrap gap-1 items-center">
+        <div class="grow flex flex-wrap gap-1 items-center font-light">
           @for (skill of tools; track $index) {
           <div class="flex">
             <app-skill [skill]="skill"></app-skill>

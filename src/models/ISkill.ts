@@ -3,7 +3,7 @@ import { SkillType } from "./SkillType";
 export interface ISkill {
   name: string;
   type: SkillType;
-  icon: string;
+  icon?: string;
   color?: string;
   description?: string;
 }
