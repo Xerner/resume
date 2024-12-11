@@ -14,6 +14,7 @@ import { JobComponent } from "../job/job.component";
 import { SkillLevelComponent } from "../skill-level/skill-level.component";
 import { PrintButtonComponent } from "../print-button/print-button.component";
 import { SkillType } from "../../models/SkillType";
+import { OccupationType } from "../../models/OccupationType";
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,6 @@ import { SkillType } from "../../models/SkillType";
     MatIconModule,
     SkillComponent,
     JobComponent,
-    SkillLevelComponent,
     MatTooltipModule,
     PrintButtonComponent
 ],
@@ -35,6 +35,7 @@ import { SkillType } from "../../models/SkillType";
 })
 export class AppComponent {
   SkillType = SkillType;
+  OccupationType = OccupationType;
   title = 'angular';
   DateTime = DateTime;
   readonly PAGE_ASPECT_RATIO = 8 / 11.5;

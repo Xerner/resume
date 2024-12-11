@@ -7,7 +7,7 @@
     // max-height: 11in;
     // width: 100%;
     background-color: white;
-    margin: 0;
+    margin: 0.25in;
     padding: 0;
   }
 
@@ -21,7 +21,7 @@
     size: letter; /* DIN A4 standard, Europe */
     width: 8.5in;
     height: 11in;
-    margin: 0;
+    margin: 0.25in;
     padding: 0;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
@@ -31,8 +31,8 @@
     width: 8.5in;
     height: 11in;
     background-color: white;
-    padding: 0;
     margin: 0;
+    padding: 0;
     page-break-after: always;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;

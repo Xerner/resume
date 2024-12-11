@@ -15,4 +15,5 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 export class SkillComponent {
   skill = input<ISkill | null>(null);
   version = input<string>();
+  showIcon = input<boolean>(false);
 }

@@ -1,6 +1,6 @@
 import { DateTime } from "luxon"
 import { Commute } from "./CommuteType";
-import { OccupationType } from "./IOccupationType";
+import { OccupationType } from "./OccupationType";
 
 export interface IOccupation {
   id: string;

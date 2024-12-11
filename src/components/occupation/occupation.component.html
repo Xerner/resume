@@ -1,9 +1,13 @@
-<div>
+<div [ngClass]="{
+  'border-b': true,
+  'border-dotted border-b-2': hasParent(),
+}">
   <div class="flex justify-between items-center">
     <div
       [ngClass]="{
-    'text-lg font-semibold': hasParent() === false,
-    'text-md font-medium': hasParent(),
+    'text-lg': hasParent() === false,
+    'text-md': hasParent(),
+    'font-medium': true,
   }"
     >
       {{ occupation().title }}

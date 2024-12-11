@@ -6,170 +6,112 @@
 
   <!-- Pages -->
   <div class="pages-container grow pb-20">
-    <app-letter-page class="shadow-2xl flex justify-between">
-      <!-- Main content -->
-      <div class="text-sm w-[70%] flex flex-col">
-        <app-header
-          class="p-4 border-indigo-300 print:bg-none bg-gradient-to-r from-orange-50 to-transparent border-b border-orange-200"
-        ></app-header>
+    <app-letter-page class="shadow-2xl">
+      <div class="flex justify-between w-full h-full">
+        <!-- Main content -->
+        <div class="text-sm w-[70%] flex flex-col">
+          <app-header
+            class="p-4 border-slate-300 print:bg-none border-b border-slate-200"
+          ></app-header>
 
-        <!-- Occupation Types -->
-        @for (occupationType of dataService.occupationTypes(); track $index) {
-        <app-occupation-type
-          [occupationType]="occupationType"
-          class="p-4 border-indigo-300 flex flex-col gap-2"
-        >
-          <!-- Occupations -->
-          @for (occupation of dataService.filterOccupations(occupationType);
-          track $index) {
-          <app-occupation
-            [occupation]="occupation"
-            [ngClass]="{
-                'ml-3 text-sm': dataService.hasParent(occupation),
-                'flex flex-col gap-1': true,
-              }"
+          <!-- Work -->
+          <app-occupation-type
+            [occupationType]="OccupationType.Employment"
+            icon="work"
+            class="p-4 border-slate-300 flex flex-col gap-2"
           >
-            <!-- Jobs -->
-            <ul class="list-disc ml-4">
-              @for (job of dataService.filterJobs(occupation); track $index) {
+            <ng-container [ngTemplateOutletContext]="{ occupations: dataService.filterOccupations(OccupationType.Employment).slice(0, 5) }"
+              [ngTemplateOutlet]="occupationsTemplate"
+            ></ng-container>
+          </app-occupation-type>
+        </div>
+
+        <!-- Side bar -->
+        <div
+          class="w-[30%] print:bg-none border-slate-300 border-l-2 text-primary flex flex-col gap-3 p-4"
+        >
+          <!-- Info -->
+          <div>
+            <ul class="text-xs">
+              <li>Fraser MI, 48026</li>
+              <li>+1 (248) 882-7006</li>
               <li>
-                <app-job [job]="job" class="text-xs"> </app-job>
+                <a href="mailto:kennethmead784@gmail.com" class="text-link">{{
+                  "kennethmead784@gmail.com"
+                }}</a>
               </li>
-              }
             </ul>
-
-            <!-- Skills -->
-            @let languages = dataService.getSkillsForOccupation(occupation,
-            SkillType.Language); @let frameworks =
-            dataService.getSkillsForOccupation(occupation, SkillType.Framework);
-            @let tools = dataService.getSkillsForOccupation(occupation,
-            SkillType.Tool); @if (languages.length > 0 || frameworks.length > 0
-            || tools.length > 0) {
-            <div
-              [ngClass]="{
-                'flex flex-col divide-y divide-indigo-100 divide-dotted text-[0.66rem] print:bg-none bg-gradient-to-r from-orange-50 to-transparent': true,
-                '-mx-4': dataService.hasParent(occupation) === false,
-                '-ml-7 -mr-4': dataService.hasParent(occupation),
-              }"
-            >
-              @if (languages.length > 0) {
-              <div class="flex p-1 pl-2">
-                <div class="text-xs w-20">Languages</div>
-                <div class="grow flex flex-wrap gap-1 items-center">
-                  @for (skill of languages; track $index) {
-                  <app-skill [skill]="skill"></app-skill>
-                  }
-                </div>
-              </div>
-              } @if (frameworks.length > 0) {
-              <div class="flex p-1 pl-2">
-                <div class="text-xs w-20">Frameworks</div>
-                <div class="grow flex flex-wrap gap-1 items-center">
-                  @for (skill of frameworks; track $index) {
-                  <app-skill [skill]="skill"></app-skill>
-                  }
-                </div>
-              </div>
-              } @if (tools.length > 0) {
-              <div class="flex p-1 pl-2">
-                <div class="text-xs w-20">Tools</div>
-                <div class="grow flex flex-wrap gap-1 items-center">
-                  @for (skill of tools; track $index) {
-                  <app-skill [skill]="skill"></app-skill>
-                  }
-                </div>
-              </div>
-              }
-            </div>
-            }
-          </app-occupation>
-          }
-        </app-occupation-type>
-        }
-      </div>
-
-      <!-- Side bar -->
-      <div
-        class="w-[30%] print:bg-none bg-gradient-to-b from-transparent to-indigo-100 border-indigo-300 border-l-2 text-primary flex flex-col gap-3 p-4"
-      >
-        <!-- Info -->
-        <div>
-          <ul class="text-xs">
-            <li>Fraser MI, 48026</li>
-            <li>+1 (248) 882-7006</li>
-            <li>
-              <a href="mailto:kennethmead784@gmail.com" class="text-link">{{
-                "kennethmead784@gmail.com"
-              }}</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Education -->
-        <div>
-          <div class="font-medium mb-2">Education</div>
-          <div class="text-xs flex flex-col gap-3">
-            <img
-              src="assets/icons/oakland-university-logo-and-bear.png"
-              alt="ou-icon"
-            />
-            <div>Bachelors of Computer Science</div>
           </div>
-        </div>
 
-        <!-- Links -->
-        <div>
-          <div class="font-medium mb-2">Links</div>
-          <ul class="text-xs text-right">
-            <li class="text-link">
-              <span>
-                <a href="https://www.kennethmead.dev/" target="_blank"
-                  >kennethmead.dev</a
+          <!-- Education -->
+          <div>
+            <div class="font-medium mb-2">Education</div>
+            <div class="text-xs flex flex-col gap-3">
+              <img
+                src="assets/icons/oakland-university-logo-and-bear.png"
+                alt="ou-icon"
+              />
+              <div>
+                <div>Oakland University, Auburn Hills MI</div>
+                <div>Bachelors of Computer Science</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div>
+            <div class="font-medium mb-2">Links</div>
+            <ul class="text-xs text-right">
+              <li class="text-link">
+                <span>
+                  <a href="https://www.kennethmead.dev/" target="_blank"
+                    >kennethmead.dev</a
+                  >
+                </span>
+              </li>
+              <li class="text-link">
+                <a href="https://www.resume.kennethmead.dev/" target="_blank"
+                  >resume.kennethmead.dev</a
                 >
-              </span>
-            </li>
-            <li class="text-link">
-              <a href="https://www.resume.kennethmead.dev/" target="_blank"
-                >resume.kennethmead.dev</a
-              >
-            </li>
-            <li class="text-link">
-              <a
-                href="https://www.color-slicer.kennethmead.dev/"
-                target="_blank"
-                >color-slicer.kennethmead.dev</a
-              >
-            </li>
-            <li class="text-link">
-              <a
-                href="https://www.bitbucket-dashboard.kennethmead.dev/"
-                target="_blank"
-                >bitbucket-dashboard.kennethmead.dev</a
-              >
-            </li>
+              </li>
+              <li class="text-link">
+                <a
+                  href="https://www.color-slicer.kennethmead.dev/"
+                  target="_blank"
+                  >color-slicer.kennethmead.dev</a
+                >
+              </li>
+              <li class="text-link">
+                <a
+                  href="https://www.bitbucket-dashboard.kennethmead.dev/"
+                  target="_blank"
+                  >bitbucket-dashboard.kennethmead.dev</a
+                >
+              </li>
 
-            <li class="text-link">
-              <a href="https://github.com/xerner" target="_blank"
-                >github.com/xerner</a
-              >
-            </li>
-            <li class="text-link">
-              <a href="www.linkedin.com/in/kennethmead784" target="_blank"
-                >linkedin.com/kennethmead784</a
-              >
-            </li>
-          </ul>
-        </div>
+              <li class="text-link">
+                <a href="https://github.com/xerner" target="_blank"
+                  >github.com/xerner</a
+                >
+              </li>
+              <li class="text-link">
+                <a href="www.linkedin.com/in/kennethmead784" target="_blank"
+                  >linkedin.com/kennethmead784</a
+                >
+              </li>
+            </ul>
+          </div>
 
-        <!-- Languages -->
-        <div>
-          <div class="font-medium mb-2">Languages</div>
-          <div class="grid grid-cols-2 gap-1 text-sm">
-            @for (language of
-            dataService.getAllSkillsOfType(SkillType.Language); track $index) {
-            <app-skill [skill]="language" class="text-xs"></app-skill>
-            }
-            <!-- <app-skill
+          <!-- Languages -->
+          <div>
+            <div class="font-medium mb-2">Languages</div>
+            <div class="grid grid-cols-2 gap-1 text-sm">
+              @for (language of
+              dataService.getAllSkillsOfType(SkillType.Language); track $index)
+              {
+              <app-skill [skill]="language" class="text-xs"></app-skill>
+              }
+              <!-- <app-skill
               [skill]="dataService.getSkill('TypeScript')"
               version="v5.5"
             ></app-skill>
@@ -187,53 +129,140 @@
             <app-skill [skill]="dataService.getSkill('Java')"></app-skill>
             <app-skill [skill]="dataService.getSkill('Shell')"></app-skill>
             <app-skill [skill]="dataService.getSkill('SCSS')"></app-skill> -->
+            </div>
           </div>
-        </div>
 
-        <!-- Frameworks -->
-        <div>
-          <div class="font-medium mb-2">Frameworks</div>
-          <div class="grid grid-cols-2 gap-1 text-sm">
-            @for (language of
-            dataService.getAllSkillsOfType(SkillType.Framework); track $index) {
-            <app-skill [skill]="language" class="text-xs"></app-skill>
-            }
+          <!-- Frameworks -->
+          <div>
+            <div class="font-medium mb-2">Frameworks</div>
+            <div class="grid grid-cols-2 gap-1 text-sm">
+              @for (language of
+              dataService.getAllSkillsOfType(SkillType.Framework); track $index)
+              {
+              <app-skill [skill]="language" class="text-xs"></app-skill>
+              }
+            </div>
           </div>
-        </div>
 
-        <!-- Software Skills -->
-        <div>
-          <div class="font-medium mb-2">Tools</div>
-          <div class="grid grid-cols-2 gap-1 text-sm">
-            @for (language of dataService.getAllSkillsOfType(SkillType.Tool);
-            track $index) {
-            <app-skill [skill]="language" class="text-xs"></app-skill>
-            }
+          <!-- Software Skills -->
+          <div>
+            <div class="font-medium mb-2">Tools</div>
+            <div class="grid grid-cols-2 gap-1 text-sm">
+              @for (language of dataService.getAllSkillsOfType(SkillType.Tool);
+              track $index) {
+              <app-skill [skill]="language" class="text-xs"></app-skill>
+              }
+            </div>
           </div>
-        </div>
 
-        <!-- People Skills -->
-        <div>
-          <div class="font-medium mb-2">People Skills</div>
-          <ul class="text-xs">
-            <li>Communication</li>
-            <li>Leadership</li>
-            <li>Teamwork</li>
-            <li>Problem Solving</li>
-            <li>Time Management</li>
-            <li>Adaptability</li>
-          </ul>
-        </div>
+          <!-- People Skills -->
+          <div>
+            <div class="font-medium mb-2">People Skills</div>
+            <ul class="text-xs">
+              <li>Communication</li>
+              <li>Leadership</li>
+              <li>Teamwork</li>
+              <li>Problem Solving</li>
+              <li>Time Management</li>
+              <li>Adaptability</li>
+            </ul>
+          </div>
 
-        <!-- Hobbies -->
-        <div>
-          <div class="font-medium mb-2">Hobbies</div>
-          <ul class="text-xs">
-            <li>Making Apps/Games</li>
-            <li>3D Printing</li>
-          </ul>
+          <!-- Hobbies -->
+          <div>
+            <div class="font-medium mb-2">Hobbies</div>
+            <ul class="text-xs">
+              <li>Making Apps/Games</li>
+              <li>3D Printing</li>
+            </ul>
+          </div>
         </div>
       </div>
     </app-letter-page>
+
+    <app-letter-page class="shadow-2xl">
+      <ng-container [ngTemplateOutletContext]="{ occupations: dataService.filterOccupations(OccupationType.Employment).slice(5) }"
+              [ngTemplateOutlet]="occupationsTemplate"
+            ></ng-container>
+    </app-letter-page>
   </div>
 </div>
+
+<ng-template #occupationsTemplate let-occupations="occupations">
+  <!-- Occupations -->
+  @for (occupation of occupations.slice(0, 5); track $index) {
+  <app-occupation
+    [occupation]="occupation"
+    [ngClass]="{
+    'ml-3 text-sm': dataService.hasParent(occupation),
+    'flex flex-col gap-1': true,
+  }"
+  >
+    <!-- Jobs -->
+    <ul class="list-disc ml-4">
+      @for (job of dataService.filterJobs(occupation); track $index) {
+      <li>
+        <app-job [job]="job" class="text-xs"> </app-job>
+      </li>
+      }
+    </ul>
+
+    <!-- Skills -->
+    @let languages = dataService.getSkillsForOccupation(occupation,
+    SkillType.Language); @let frameworks =
+    dataService.getSkillsForOccupation(occupation, SkillType.Framework); @let
+    tools = dataService.getSkillsForOccupation(occupation, SkillType.Tool); @if
+    (languages.length > 0 || frameworks.length > 0 || tools.length > 0) {
+    <div
+      [ngClass]="{
+    'flex flex-col divide-y divide-slate-100 divide-dotted text-[0.66rem]': true,
+  }"
+    >
+      @if (languages.length > 0) {
+      <div class="flex p-1 pl-2">
+        <div class="text-xs w-20">Languages</div>
+        <div class="grow flex flex-wrap gap-1 items-center">
+          @for (skill of languages; track $index) {
+          <div class="flex">
+            <app-skill [skill]="skill"></app-skill>
+            @if ($index < languages.length - 1) {
+            <span>,</span>
+            }
+          </div>
+          }
+        </div>
+      </div>
+      } @if (frameworks.length > 0) {
+      <div class="flex p-1 pl-2">
+        <div class="text-xs w-20">Frameworks</div>
+        <div class="grow flex flex-wrap gap-1 items-center">
+          @for (skill of frameworks; track $index) {
+          <div class="flex">
+            <app-skill [skill]="skill"></app-skill>
+            @if ($index < frameworks.length - 1) {
+            <span>,</span>
+            }
+          </div>
+          }
+        </div>
+      </div>
+      } @if (tools.length > 0) {
+      <div class="flex p-1 pl-2">
+        <div class="text-xs w-20">Tools</div>
+        <div class="grow flex flex-wrap gap-1 items-center">
+          @for (skill of tools; track $index) {
+          <div class="flex">
+            <app-skill [skill]="skill"></app-skill>
+            @if ($index < tools.length - 1) {
+            <span>,</span>
+            }
+          </div>
+          }
+        </div>
+      </div>
+      }
+    </div>
+    }
+  </app-occupation>
+  }
+</ng-template>

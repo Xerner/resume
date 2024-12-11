@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { IOccupationType } from '../../models/IOccupationType';
+import { OccupationType } from '../../models/OccupationType';
 
 @Component({
   selector: 'app-occupation-type',
@@ -11,5 +11,6 @@ import { IOccupationType } from '../../models/IOccupationType';
   ],
 })
 export class OccupationTypeComponent {
-  occupationType = input.required<IOccupationType>();
+  occupationType = input.required<OccupationType>();
+  icon = input.required<string>();
 }

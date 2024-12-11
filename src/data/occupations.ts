@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
 import { IOccupation } from "../models/IOccupation";
-import { OccupationType } from "../models/IOccupationType";
+import { OccupationType } from "../models/OccupationType";
 
 export const OCCUPATIONS: IOccupation[] = [
   {
