@@ -1,0 +1,57 @@
+@for (occupation of occupations(); track $index) {
+<app-occupation
+  [occupation]="occupation"
+  [ngClass]="{
+    'ml-3 text-sm': dataService.hasParent(occupation),
+    'flex flex-col gap-1': true,
+  }"
+>
+  @if (occupation.url) {
+  <a href="{{ occupation.url }}" target="_blank" class="text-link text-xs">{{
+    occupation.url
+  }}</a>
+  }
+  <!-- Jobs -->
+  @let jobs = dataService.filterJobs(occupation); @if (jobs.length === 1) {
+  <app-job [job]="jobs[0]" class="text-xs"> </app-job>
+  } @else if (jobs.length > 0) {
+  <ul class="list-disc ml-4">
+    @for (job of jobs; track $index) {
+    <li>
+      <app-job [job]="job" class="text-xs"> </app-job>
+    </li>
+    }
+  </ul>
+  }
+
+  <!-- Skills -->
+  <div
+    [ngClass]="{
+    'flex flex-col divide-y divide-slate-100 divide-dotted text-[0.66rem]': true,
+  }"
+  >
+    <app-skills
+      title="Languages"
+      [skills]="
+        dataService.getSkillsForOccupation(occupation, SkillType.Language)
+      "
+    ></app-skills>
+    <app-skills
+      title="Frameworks"
+      [skills]="
+        dataService.getSkillsForOccupation(occupation, SkillType.Framework)
+      "
+    ></app-skills>
+    <app-skills
+      title="Tools"
+      [skills]="dataService.getSkillsForOccupation(occupation, SkillType.Tool)"
+    ></app-skills>
+    <app-skills
+      title="Concepts"
+      [skills]="
+        dataService.getSkillsForOccupation(occupation, SkillType.Concept)
+      "
+    ></app-skills>
+  </div>
+</app-occupation>
+}

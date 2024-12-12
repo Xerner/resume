@@ -44,11 +44,16 @@ export const SKILLS: ISkill[] = [
   { name: "Visual Studio",    type: SkillType.Tool, icon: "assets/icons/visual-studio.png" },
   { name: "VS Code",          type: SkillType.Tool, icon: "assets/icons/vs-code.png" },
   { name: "SSMS",             type: SkillType.Tool, icon: "assets/icons/ssms.png" },
+  { name: "Service Workers",  type: SkillType.Tool },
+  { name: "Chart.js",  type: SkillType.Tool },
 
-  { name: "Communication",     type: SkillType.Social, icon: "assets/icons/" },
-  { name: "Leadership",        type: SkillType.Social, icon: "assets/icons/" },
-  { name: "Teamwork",          type: SkillType.Social, icon: "assets/icons/" },
-  { name: "Critical Thinking", type: SkillType.Social, icon: "assets/icons/" },
-  { name: "Time Management",   type: SkillType.Social, icon: "assets/icons/" },
-  { name: "Adaptability",      type: SkillType.Social, icon: "assets/icons/" },
+  { name: "Communication",     type: SkillType.Social },
+  { name: "Leadership",        type: SkillType.Social },
+  { name: "Teamwork",          type: SkillType.Social },
+  { name: "Critical Thinking", type: SkillType.Social },
+  { name: "Time Management",   type: SkillType.Social },
+  { name: "Adaptability",      type: SkillType.Social },
+
+  { name: "Machine Learning",      type: SkillType.Concept },
+  { name: "Kmeans",      type: SkillType.Concept },
 ]

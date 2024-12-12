@@ -27,10 +27,17 @@ export class OccupationComponent {
   getDurationAtOccupation() {
     const startDate = this.occupation().startDate;
     let endDate = this.occupation().endDate;
+    if (startDate === undefined) {
+      return "";
+    }
     if (endDate === undefined) {
       endDate = DateTime.now();
     }
     const duration = endDate.diff(startDate, ['years', 'months']);
     return this.dataService.formatDuration(duration);
+  }
+
+  hasSlash(str: string) {
+    return str.includes("/");
   }
 }

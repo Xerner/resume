@@ -1,7 +1,9 @@
-<div [ngClass]="{
+<div
+  [ngClass]="{
   'border-b': true,
   'border-dotted border-b-2': hasParent(),
-}">
+}"
+>
   <div class="flex justify-between items-center">
     <div
       [ngClass]="{
@@ -12,22 +14,31 @@
     >
       {{ occupation().title }}
     </div>
-    @if (occupation().image && hasParent() == false) {
-    <img class="h-6 w-auto" [src]="occupation().image" alt="Company Logo" />
+    @if (occupation().image !== undefined && hasParent() == false) {
+      @if (hasSlash(occupation().image!)) {
+        <img class="h-6 w-auto" [src]="occupation().image" alt="Company Logo" />
+      } @else {
+        <mat-icon class="h-6 w-auto">{{ occupation().image }}</mat-icon>
+      }
     }
   </div>
   <div class="flex justify-between text-xs text-blue-700">
     <div>
-      {{ occupation().startDate.toFormat(dateFormat) }} - @if
+      @if (occupation().startDate == undefined && occupation().endDate ==
+      undefined) { } @else {
+      {{ occupation().startDate?.toFormat(dateFormat) }} - @if
       (occupation().endDate == null) { Present, } @else {
       {{ occupation().endDate!.toFormat(dateFormat) }}, }
       {{ duration() }}
+      }
     </div>
-    <div>
-      {{ occupation().company }}, {{ occupation().location }}&nbsp; | &nbsp;{{
-        occupation().commute
-      }}
-    </div>
+    @if (occupation().company || occupation().location || occupation().commute) {
+      <div>
+        {{ occupation().company }}@if (occupation().location) { , {{ occupation().location }} }&nbsp; | &nbsp;{{
+          occupation().commute
+        }}
+      </div>
+    }
   </div>
 </div>
 <ng-content />

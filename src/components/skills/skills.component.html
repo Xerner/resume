@@ -1,0 +1,15 @@
+@if (skills().length > 0) {
+<div class="flex p-1 pl-2">
+  <div class="text-xs w-20">{{ title() }}</div>
+  <div class="grow flex flex-wrap gap-1 items-center font-light">
+    @for (skill of skills(); track $index) {
+    <div class="flex">
+      <app-skill [skill]="skill"></app-skill>
+      @if ($index < skills().length - 1) {
+      <span>,</span>
+      }
+    </div>
+    }
+  </div>
+</div>
+}

@@ -81,5 +81,41 @@ export const OCCUPATIONS: IOccupation[] = [
     startDate: DateTime.utc(2016, 9, 1),
     endDate: DateTime.utc(2021, 4, 1),
     image: "assets/icons/oakland-university-logo-and-bear.png",
-  }
+  },
+  {
+    id: "429616D7-8BCA-43A2-BA3A-C817728F7905",
+    type: OccupationType.Personal,
+    title: "Gologo",
+    url: "https://github.com/Xerner/Gologo",
+  },
+  {
+    id: "FFEA4FF4-1801-4A92-8A8C-1975E8E90261",
+    type: OccupationType.Personal,
+    title: "Smart City Dashboard",
+    url: "https://github.com/Jaren-Taylor/Smart-City-Dashboard",
+  },
+  {
+    id: "9B397841-00AE-4CB0-99C6-A18090904F42",
+    type: OccupationType.Personal,
+    title: "Color Slicer",
+    url: "https://www.color-slicer.kennethmead.dev",
+  },
+  {
+    id: "74C56F46-0DA6-4372-8E28-0CBE64A3F172",
+    type: OccupationType.Personal,
+    title: "Bitbucket Dashboard",
+    url: "https://www.bitbucket-dashboard.kennethmead.dev",
+  },
+  {
+    id: "2A64DECE-E5A8-476B-89BD-5C67BFB8144E",
+    type: OccupationType.Personal,
+    title: "Budget Projection Dashboard",
+    url: "https://www.budget-projection.kennethmead.dev",
+  },
+  // {
+  //   id: "29254BEF-4991-4BD3-BCCB-0F123893F4F3",
+  //   type: OccupationType.Personal,
+  //   title: "Resume",
+  //   url: "https://www.resume.kennethmead.dev",
+  // },
 ]

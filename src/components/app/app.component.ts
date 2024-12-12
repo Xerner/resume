@@ -15,6 +15,7 @@ import { SkillLevelComponent } from "../skill-level/skill-level.component";
 import { PrintButtonComponent } from "../print-button/print-button.component";
 import { SkillType } from "../../models/SkillType";
 import { OccupationType } from "../../models/OccupationType";
+import { OccupationsComponent } from "../occupations/occupations.component";
 
 @Component({
   selector: 'app-root',
@@ -29,7 +30,8 @@ import { OccupationType } from "../../models/OccupationType";
     SkillComponent,
     JobComponent,
     MatTooltipModule,
-    PrintButtonComponent
+    PrintButtonComponent,
+    OccupationsComponent
 ],
   templateUrl: './app.component.html',
 })

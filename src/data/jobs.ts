@@ -60,5 +60,35 @@ export const JOBS: IJob[] = [
     id: "171F43AA-AF86-4B4F-BBE9-D95A776B19F1",
     occupationId: "1B14C1B3-469B-4E97-A371-F359A6F96670",
     description: "Worked with management to automate, analyze, and report employee key performance indicator (KPI) data."
+  },
+  {
+    id: "328F8A20-8A7C-4BB0-9E91-9160268B7A55",
+    occupationId: "9B397841-00AE-4CB0-99C6-A18090904F42",
+    description: "A web app for slicing images into different layers based on the presence of colors in the image"
+  },
+  {
+    id: "51C7EB29-EEAD-4934-AF90-DA31048D8A25",
+    occupationId: "74C56F46-0DA6-4372-8E28-0CBE64A3F172",
+    description: "A dashboard displaying time related info on Bitbucket PRs, and a Git commit graph similar to Githubs"
+  },
+  {
+    id: "BCDBDF65-5671-40C0-9B56-9A4D51399EC0",
+    occupationId: "2A64DECE-E5A8-476B-89BD-5C67BFB8144E",
+    description: "Displays spending over time, and projected future spending based on known costs and income"
+  },
+  {
+    id: "D24AA061-8AA6-444F-A6A6-0282DFFB8C7A",
+    occupationId: "29254BEF-4991-4BD3-BCCB-0F123893F4F3",
+    description: "My resume! Built in HTML to be viewed and printable like a normal letter sized PDF document"
+  },
+  {
+    id: "797AE482-0232-475D-AB41-16040C52F7C4",
+    occupationId: "429616D7-8BCA-43A2-BA3A-C817728F7905",
+    description: "A prototype full-stack space shooter game built with its own game engine with the browsers canvas API, angular, a C# back-end, and SQL database"
+  },
+  {
+    id: "67F4B72A-14B4-4DA6-84EA-F921F8A14ED8",
+    occupationId: "FFEA4FF4-1801-4A92-8A8C-1975E8E90261",
+    description: "A city building game with simulation traffic and pedestrians that gives the player feedback on their city's efficiency"
   }
 ];

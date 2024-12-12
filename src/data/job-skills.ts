@@ -68,8 +68,47 @@ export const JOB_SKILLS: IJobSkill[] = [
   // Mahle work request mockup
   { jobId: "71636935-EE2C-4D8C-BE41-963EFC58C30D", skillId: "VS Code" },
   { jobId: "71636935-EE2C-4D8C-BE41-963EFC58C30D", skillId: "React" },
+  { jobId: "71636935-EE2C-4D8C-BE41-963EFC58C30D", skillId: "Javascript" },
 
-  // Mahle KPI stuff
+  // Mahle carbon canister stuff
   { jobId: "171F43AA-AF86-4B4F-BBE9-D95A776B19F1", skillId: "Microsoft Office" },
   { jobId: "171F43AA-AF86-4B4F-BBE9-D95A776B19F1", skillId: "Visual Basic" },
+
+  // color slicer
+  { jobId: "328F8A20-8A7C-4BB0-9E91-9160268B7A55", skillId: "TypeScript" },
+  { jobId: "328F8A20-8A7C-4BB0-9E91-9160268B7A55", skillId: "Angular" },
+  { jobId: "328F8A20-8A7C-4BB0-9E91-9160268B7A55", skillId: "Kmeans" },
+  { jobId: "328F8A20-8A7C-4BB0-9E91-9160268B7A55", skillId: "Machine Learning" },
+  { jobId: "328F8A20-8A7C-4BB0-9E91-9160268B7A55", skillId: "Service Workers" },
+
+  // bitbucket dashboard
+  { jobId: "51C7EB29-EEAD-4934-AF90-DA31048D8A25", skillId: "TypeScript" },
+  { jobId: "51C7EB29-EEAD-4934-AF90-DA31048D8A25", skillId: "Angular" },
+  { jobId: "51C7EB29-EEAD-4934-AF90-DA31048D8A25", skillId: "Bitbucket" },
+  { jobId: "51C7EB29-EEAD-4934-AF90-DA31048D8A25", skillId: "Docker" },
+
+  // budget projection
+  { jobId: "BCDBDF65-5671-40C0-9B56-9A4D51399EC0", skillId: "TypeScript" },
+  { jobId: "BCDBDF65-5671-40C0-9B56-9A4D51399EC0", skillId: "Angular" },
+  { jobId: "BCDBDF65-5671-40C0-9B56-9A4D51399EC0", skillId: "Chart.js" },
+  { jobId: "BCDBDF65-5671-40C0-9B56-9A4D51399EC0", skillId: "Docker" },
+
+  // resume
+  { jobId: "D24AA061-8AA6-444F-A6A6-0282DFFB8C7A", skillId: "TypeScript" },
+  { jobId: "D24AA061-8AA6-444F-A6A6-0282DFFB8C7A", skillId: "Angular" },
+  { jobId: "D24AA061-8AA6-444F-A6A6-0282DFFB8C7A", skillId: "React" },
+  { jobId: "D24AA061-8AA6-444F-A6A6-0282DFFB8C7A", skillId: "Docker" },
+
+  // gologo
+  { jobId: "797AE482-0232-475D-AB41-16040C52F7C4", skillId: "TypeScript" },
+  { jobId: "797AE482-0232-475D-AB41-16040C52F7C4", skillId: "Angular" },
+  { jobId: "797AE482-0232-475D-AB41-16040C52F7C4", skillId: "TailwindCss" },
+  { jobId: "797AE482-0232-475D-AB41-16040C52F7C4", skillId: "C#" },
+  { jobId: "797AE482-0232-475D-AB41-16040C52F7C4", skillId: "ASP.Net" },
+  { jobId: "797AE482-0232-475D-AB41-16040C52F7C4", skillId: "Entity Framework" },
+  { jobId: "797AE482-0232-475D-AB41-16040C52F7C4", skillId: "SQL" },
+
+  // gologo
+  { jobId: "67F4B72A-14B4-4DA6-84EA-F921F8A14ED8", skillId: "Unity" },
+  { jobId: "67F4B72A-14B4-4DA6-84EA-F921F8A14ED8", skillId: "C#" },
 ]

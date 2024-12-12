@@ -1,9 +1,11 @@
+@let employmentOccupations =
+dataService.filterOccupations(OccupationType.Employment);
+
 <!-- Print Button -->
 <div class="hidden sm:block lg:block xl:block absolute p-4 noprint">
   <app-print-button></app-print-button>
 </div>
 
-<!-- Pages -->
 <app-letter-page class="shadow-2xl flex justify-between m-auto mb-20">
   <!-- Main content -->
   <div class="text-sm w-[70%] flex flex-col">
@@ -17,14 +19,9 @@
       icon="work"
       class="p-4 border-slate-300 flex flex-col gap-2"
     >
-      <ng-container
-        [ngTemplateOutletContext]="{
-          occupations: dataService
-            .filterOccupations(OccupationType.Employment)
-            .slice(0, 5)
-        }"
-        [ngTemplateOutlet]="occupationsTemplate"
-      ></ng-container>
+      <app-occupations
+        [occupations]="employmentOccupations.slice(0, 5)"
+      ></app-occupations>
     </app-occupation-type>
   </div>
 
@@ -63,7 +60,17 @@
     <!-- Links -->
     <div>
       <div class="font-medium mb-2 border-b border-dotted">Links</div>
-      <ul class="text-xs text-right">
+      <ul class="text-[0.7em] text-right">
+        <li class="text-link">
+          <a href="https://github.com/xerner" target="_blank"
+            >github.com/xerner</a
+          >
+        </li>
+        <li class="text-link">
+          <a href="www.linkedin.com/in/kennethmead784" target="_blank"
+            >linkedin.com/kennethmead784</a
+          >
+        </li>
         <li class="text-link">
           <span>
             <a href="https://www.kennethmead.dev/" target="_blank"
@@ -86,17 +93,6 @@
             href="https://www.bitbucket-dashboard.kennethmead.dev/"
             target="_blank"
             >bitbucket-dashboard.kennethmead.dev</a
-          >
-        </li>
-
-        <li class="text-link">
-          <a href="https://github.com/xerner" target="_blank"
-            >github.com/xerner</a
-          >
-        </li>
-        <li class="text-link">
-          <a href="www.linkedin.com/in/kennethmead784" target="_blank"
-            >linkedin.com/kennethmead784</a
           >
         </li>
       </ul>
@@ -178,107 +174,18 @@
 </app-letter-page>
 
 <app-letter-page class="shadow-2xl flex flex-col m-auto">
-  <div class="p-4">
-    <ng-container
-      [ngTemplateOutletContext]="{
-        occupations: dataService
-          .filterOccupations(OccupationType.Employment)
-          .slice(5)
-      }"
-      [ngTemplateOutlet]="occupationsTemplate"
-    ></ng-container>
-  </div>
+  <app-occupations
+    class="p-4"
+    [occupations]="employmentOccupations.slice(5)"
+  ></app-occupations>
 
   <app-occupation-type
     [occupationType]="OccupationType.Personal"
     icon="work"
     class="border-slate-300 flex flex-col gap-2 border-t-2 p-4"
   >
-    TODO
-    <ng-container
-      [ngTemplateOutletContext]="{
-        occupations: dataService.filterOccupations(OccupationType.Personal)
-      }"
-      [ngTemplateOutlet]="occupationsTemplate"
-    ></ng-container>
+    <app-occupations
+      [occupations]="dataService.filterOccupations(OccupationType.Personal)"
+    ></app-occupations>
   </app-occupation-type>
 </app-letter-page>
-
-<ng-template #occupationsTemplate let-occupations="occupations">
-  <!-- Occupations -->
-  @for (occupation of occupations.slice(0, 5); track $index) {
-  <app-occupation
-    [occupation]="occupation"
-    [ngClass]="{
-    'ml-3 text-sm': dataService.hasParent(occupation),
-    'flex flex-col gap-1': true,
-  }"
-  >
-    <!-- Jobs -->
-    <ul class="list-disc ml-4">
-      @for (job of dataService.filterJobs(occupation); track $index) {
-      <li>
-        <app-job [job]="job" class="text-xs"> </app-job>
-      </li>
-      }
-    </ul>
-
-    <!-- Skills -->
-    @let languages = dataService.getSkillsForOccupation(occupation,
-    SkillType.Language); @let frameworks =
-    dataService.getSkillsForOccupation(occupation, SkillType.Framework); @let
-    tools = dataService.getSkillsForOccupation(occupation, SkillType.Tool); @if
-    (languages.length > 0 || frameworks.length > 0 || tools.length > 0) {
-    <div
-      [ngClass]="{
-    'flex flex-col divide-y divide-slate-100 divide-dotted text-[0.66rem]': true,
-  }"
-    >
-      @if (languages.length > 0) {
-      <div class="flex p-1 pl-2">
-        <div class="text-xs w-20">Languages</div>
-        <div class="grow flex flex-wrap gap-1 items-center font-light">
-          @for (skill of languages; track $index) {
-          <div class="flex">
-            <app-skill [skill]="skill"></app-skill>
-            @if ($index < languages.length - 1) {
-            <span>,</span>
-            }
-          </div>
-          }
-        </div>
-      </div>
-      } @if (frameworks.length > 0) {
-      <div class="flex p-1 pl-2">
-        <div class="text-xs w-20">Frameworks</div>
-        <div class="grow flex flex-wrap gap-1 items-center font-light">
-          @for (skill of frameworks; track $index) {
-          <div class="flex">
-            <app-skill [skill]="skill"></app-skill>
-            @if ($index < frameworks.length - 1) {
-            <span>,</span>
-            }
-          </div>
-          }
-        </div>
-      </div>
-      } @if (tools.length > 0) {
-      <div class="flex p-1 pl-2">
-        <div class="text-xs w-20">Tools</div>
-        <div class="grow flex flex-wrap gap-1 items-center font-light">
-          @for (skill of tools; track $index) {
-          <div class="flex">
-            <app-skill [skill]="skill"></app-skill>
-            @if ($index < tools.length - 1) {
-            <span>,</span>
-            }
-          </div>
-          }
-        </div>
-      </div>
-      }
-    </div>
-    }
-  </app-occupation>
-  }
-</ng-template>
