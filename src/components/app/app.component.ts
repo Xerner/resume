@@ -5,13 +5,10 @@ import { DomSanitizer } from "@angular/platform-browser";
 import { DateTime } from "luxon";
 import { HeaderComponent } from "../header/header.component";
 import { OccupationTypeComponent } from "../occupation-type/occupation-type.component";
-import { OccupationComponent } from "../occupation/occupation.component";
 import { LetterPageComponent } from "../page/letter-page.component";
 import { SkillComponent } from "../skill/skill.component";
 import { CommonModule } from "@angular/common";
 import { DataService } from "../../services/data.service";
-import { JobComponent } from "../job/job.component";
-import { SkillLevelComponent } from "../skill-level/skill-level.component";
 import { PrintButtonComponent } from "../print-button/print-button.component";
 import { SkillType } from "../../models/SkillType";
 import { OccupationType } from "../../models/OccupationType";
@@ -25,10 +22,8 @@ import { OccupationsComponent } from "../occupations/occupations.component";
     LetterPageComponent,
     HeaderComponent,
     OccupationTypeComponent,
-    OccupationComponent,
     MatIconModule,
     SkillComponent,
-    JobComponent,
     MatTooltipModule,
     PrintButtonComponent,
     OccupationsComponent

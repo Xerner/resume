@@ -13,13 +13,11 @@
   }
   <!-- Jobs -->
   @let jobs = dataService.filterJobs(occupation); @if (jobs.length === 1) {
-  <app-job [job]="jobs[0]" class="text-xs"> </app-job>
+    <div class="text-xs">{{ jobs[0].description }}</div>
   } @else if (jobs.length > 0) {
-  <ul class="list-disc ml-4">
+  <ul class="list-disc ml-4 text-xs">
     @for (job of jobs; track $index) {
-    <li>
-      <app-job [job]="job" class="text-xs"> </app-job>
-    </li>
+    <li>{{ job.description }}</li>
     }
   </ul>
   }
