@@ -1,7 +1,8 @@
 <div
   [ngClass]="{
-  'border-b': true,
-  'border-dotted border-b-2': hasParent(),
+  'mb-1': true,
+  'border-b': hasUnderline(),
+  'border-dotted border-b-2': hasParent() && hasUnderline(),
 }"
 >
   <div class="flex justify-between items-center">
@@ -14,13 +15,12 @@
     >
       {{ occupation().title }}
     </div>
-    @if (occupation().image !== undefined && hasParent() == false) {
-      @if (hasSlash(occupation().image!)) {
-        <img class="h-6 w-auto" [src]="occupation().image" alt="Company Logo" />
-      } @else {
-        <mat-icon class="h-6 w-auto">{{ occupation().image }}</mat-icon>
-      }
-    }
+    @if (occupation().image !== undefined && hasParent() == false) { @if
+    (hasSlash(occupation().image!)) {
+    <img class="h-6 w-auto" [src]="occupation().image" alt="Company Logo" />
+    } @else {
+    <mat-icon class="h-6 w-auto">{{ occupation().image }}</mat-icon>
+    } }
   </div>
   <div class="flex justify-between text-xs text-blue-700">
     <div>
@@ -32,12 +32,12 @@
       {{ duration() }}
       }
     </div>
-    @if (occupation().company || occupation().location || occupation().commute) {
-      <div>
-        {{ occupation().company }}@if (occupation().location) { , {{ occupation().location }} }&nbsp; | &nbsp;{{
-          occupation().commute
-        }}
-      </div>
+    @if (occupation().company || occupation().location || occupation().commute)
+    {
+    <div>
+      {{ occupation().company }}@if (occupation().location) {, {{ occupation().location }} }@if
+      (occupation().commute) {&nbsp; | &nbsp;{{ occupation().commute }}}
+    </div>
     }
   </div>
 </div>

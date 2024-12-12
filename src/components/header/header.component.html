@@ -1,10 +1,31 @@
 <div class="flex items-center gap-x-5">
   <div class="w-20 h-20">
-    <img src="assets/profile-pic-square.jpg" alt="profile picture" class="object-cover rounded-lg">
+    <img
+      src="assets/profile-pic-square.jpg"
+      alt="profile picture"
+      class="object-cover rounded-lg"
+    />
   </div>
   <div>
     <div class="text-4xl font-semibold">Kenneth Mead</div>
     <div class="font-medium">Fullstack Software Engineer, DevOps Architect</div>
-    <div>{{ dataService.totalProfessionalExperience() }} of Professional Experience</div>
+    <div>
+      {{ dataService.totalProfessionalExperience() }} of Professional Experience
+    </div>
   </div>
+  <div class="grow"></div>
+  <ul class="text-xs text-primary">
+    <li>Fraser MI, 48026</li>
+    <li>+1 (248) 882-7006</li>
+    <li>
+      <a href="mailto:kennethmead784@gmail.com" class="text-link">{{
+        "kennethmead784@gmail.com"
+      }}</a>
+    </li>
+    <li>
+      <a href="https://github.com/xerner" target="_blank" class="text-link"
+        >github.com/xerner</a
+      >
+    </li>
+  </ul>
 </div>

@@ -1,6 +1,8 @@
-@for (occupation of occupations(); track $index) {
+@for (occupation of occupations(); track $index) { @let jobs =
+dataService.filterJobs(occupation);
 <app-occupation
   [occupation]="occupation"
+  [hasUnderline]="jobs.length > 0"
   [ngClass]="{
     'ml-3 text-sm': dataService.hasParent(occupation),
     'flex flex-col gap-1': true,
@@ -12,10 +14,10 @@
   }}</a>
   }
   <!-- Jobs -->
-  @let jobs = dataService.filterJobs(occupation); @if (jobs.length === 1) {
-    <div class="text-xs">{{ jobs[0].description }}</div>
+  @if (jobs.length === 1) {
+  <div class="text-xs">{{ jobs[0].description }}</div>
   } @else if (jobs.length > 0) {
-  <ul class="list-disc ml-4 text-xs">
+  <ul class="list-disc ml-4 text-xs leading-5">
     @for (job of jobs; track $index) {
     <li>{{ job.description }}</li>
     }
@@ -23,7 +25,7 @@
   }
 
   <!-- Skills -->
-  <div
+  <!-- <div
     [ngClass]="{
     'flex flex-col divide-y divide-slate-100 divide-dotted text-[0.66rem]': true,
   }"
@@ -50,6 +52,6 @@
         dataService.getSkillsForOccupation(occupation, SkillType.Concept)
       "
     ></app-skills>
-  </div>
+  </div> -->
 </app-occupation>
 }

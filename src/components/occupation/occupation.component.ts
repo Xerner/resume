@@ -17,6 +17,7 @@ import { DataService } from '../../services/data.service';
 export class OccupationComponent {
   occupation = input.required<IOccupation>();
   hasParent = computed(() => typeof this.occupation().parentId === "string");
+  hasUnderline = input<boolean>(true);
   duration = computed(() => this.getDurationAtOccupation());
   dateFormat = "MMM yyyy";
 

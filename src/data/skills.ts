@@ -29,8 +29,9 @@ export const SKILLS: ISkill[] = [
   { name: "ASP.Net",          type: SkillType.Framework, icon: "assets/icons/net-core.png" },
   { name: "NUnit",            type: SkillType.Framework, icon: "assets/icons/nunit.png" },
   { name: "SignalR",          type: SkillType.Framework, icon: "assets/icons/signalr.png" },
-  { name: "Entity Framework",  type: SkillType.Framework, icon: "assets/icons/net-core.png" },
+  { name: "Entity Framework", type: SkillType.Framework, icon: "assets/icons/net-core.png" },
   { name: "J2534",            type: SkillType.Framework, icon: "assets/icons/signal-icon.png" },
+  { name: "Service Workers",  type: SkillType.Framework },
 
   { name: "Docker",           type: SkillType.Tool, icon: "assets/icons/docker.png" },
   { name: "Git",              type: SkillType.Tool, icon: "assets/icons/git.png" },
@@ -44,7 +45,6 @@ export const SKILLS: ISkill[] = [
   { name: "Visual Studio",    type: SkillType.Tool, icon: "assets/icons/visual-studio.png" },
   { name: "VS Code",          type: SkillType.Tool, icon: "assets/icons/vs-code.png" },
   { name: "SSMS",             type: SkillType.Tool, icon: "assets/icons/ssms.png" },
-  { name: "Service Workers",  type: SkillType.Tool },
   { name: "Chart.js",  type: SkillType.Tool },
 
   { name: "Communication",     type: SkillType.Social },

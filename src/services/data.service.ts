@@ -109,7 +109,8 @@ export class DataService {
       .map(skill => this.getSkill(skill.skillId))
       .filter(skill => skill !== null)
       .filter(skill => skill.type === type)
-      .reduce((accumulator: ISkill[], skill) => accumulator.some(s => s.name === skill.name) ? accumulator : [...accumulator, skill], []);
+      .reduce((accumulator: ISkill[], skill) => accumulator.some(s => s.name === skill.name) ? accumulator : [...accumulator, skill], [])
+      .sort((a, b) => a.name.localeCompare(b.name));
     return skills;
   }
 }

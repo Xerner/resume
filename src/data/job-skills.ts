@@ -1,6 +1,14 @@
 import { IJobSkill } from "../models/IOccupationLanguage";
 
 export const JOB_SKILLS: IJobSkill[] = [
+  // people skills
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Communication",    },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Leadership",       },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Teamwork",         },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Critical Thinking",},
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Time Management",  },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Adaptability",     },
+
   // universal logistics jobs
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "C#" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "HTML" },
@@ -12,9 +20,9 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Angular" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "TailwindCss" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Storybook" },
-  // { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: ".Net" },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: ".Net" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "ASP.Net" },
-  // { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "SignalR" },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "SignalR" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Entity Framework" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "NUnit" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Visual Studio" },

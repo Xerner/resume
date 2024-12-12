@@ -6,174 +6,54 @@ dataService.filterOccupations(OccupationType.Employment);
   <app-print-button></app-print-button>
 </div>
 
-<app-letter-page class="shadow-2xl flex justify-between m-auto mb-20">
-  <!-- Main content -->
-  <div class="text-sm w-[70%] flex flex-col">
-    <app-header
-      class="p-4 border-slate-300 print:bg-none border-b border-slate-200"
-    ></app-header>
+<app-letter-page class="shadow-2xl flex flex-col gap-3 m-auto mb-20 text-sm">
+  <app-header
+    class=""
+  ></app-header>
 
+  <!-- Skills -->
+  <div class="grid grid-cols-2 gap-3 text-xs">
+    <!-- Languages -->
+    @let languages = dataService.getAllSkillsOfType(SkillType.Language);
+    <app-skills title="Languages" [skills]="languages"></app-skills>
+
+    <!-- Frameworks -->
+    @let frameworks = dataService.getAllSkillsOfType(SkillType.Framework);
+    <app-skills title="Frameworks" [skills]="frameworks"></app-skills>
+
+    <!-- Tools -->
+    @let tools = dataService.getAllSkillsOfType(SkillType.Tool);
+    <app-skills title="Tools" [skills]="tools"></app-skills>
+
+    <!-- People Skills -->
+    @let socialSkills = dataService.getAllSkillsOfType(SkillType.Social);
+    <app-skills title="People Skills" [skills]="socialSkills"></app-skills>
+  </div>
+
+  <!-- Main content -->
+  <div class="flex flex-col gap-3">
     <!-- Work -->
     <app-occupation-type
       [occupationType]="OccupationType.Employment"
       icon="work"
-      class="p-4 border-slate-300 flex flex-col gap-2"
+      class="border-slate-300 flex flex-col gap-2"
     >
-      <app-occupations
-        [occupations]="employmentOccupations.slice(0, 5)"
+      <app-occupations class="flex flex-col gap-3" [occupations]="employmentOccupations"></app-occupations>
+    </app-occupation-type>
+
+    <app-occupation-type
+      [occupationType]="OccupationType.Education"
+      icon="school"
+      class="border-slate-300 flex flex-col gap-2"
+    >
+      <app-occupations class="flex flex-col gap-6"
+        [occupations]="dataService.filterOccupations(OccupationType.Education)"
       ></app-occupations>
     </app-occupation-type>
   </div>
-
-  <!-- Side bar -->
-  <div
-    class="w-[30%] print:bg-none border-slate-300 border-l-2 text-primary flex flex-col gap-3 p-4"
-  >
-    <!-- Info -->
-    <div>
-      <ul class="text-xs">
-        <li>Fraser MI, 48026</li>
-        <li>+1 (248) 882-7006</li>
-        <li>
-          <a href="mailto:kennethmead784@gmail.com" class="text-link">{{
-            "kennethmead784@gmail.com"
-          }}</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Education -->
-    <div>
-      <div class="font-medium mb-2 border-b border-dotted">Education</div>
-      <div class="text-xs flex flex-col gap-3">
-        <img
-          src="assets/icons/oakland-university-logo-and-bear.png"
-          alt="ou-icon"
-        />
-        <div>
-          <div>Oakland University, Auburn Hills MI</div>
-          <div>Bachelors of Computer Science</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Links -->
-    <div>
-      <div class="font-medium mb-2 border-b border-dotted">Links</div>
-      <ul class="text-[0.7em] text-right">
-        <li class="text-link">
-          <a href="https://github.com/xerner" target="_blank"
-            >github.com/xerner</a
-          >
-        </li>
-        <li class="text-link">
-          <a href="www.linkedin.com/in/kennethmead784" target="_blank"
-            >linkedin.com/kennethmead784</a
-          >
-        </li>
-        <li class="text-link">
-          <span>
-            <a href="https://www.kennethmead.dev/" target="_blank"
-              >kennethmead.dev</a
-            >
-          </span>
-        </li>
-        <li class="text-link">
-          <a href="https://www.resume.kennethmead.dev/" target="_blank"
-            >resume.kennethmead.dev</a
-          >
-        </li>
-        <li class="text-link">
-          <a href="https://www.color-slicer.kennethmead.dev/" target="_blank"
-            >color-slicer.kennethmead.dev</a
-          >
-        </li>
-        <li class="text-link">
-          <a
-            href="https://www.bitbucket-dashboard.kennethmead.dev/"
-            target="_blank"
-            >bitbucket-dashboard.kennethmead.dev</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <!-- Languages -->
-    <div>
-      <div class="font-medium mb-2 border-b border-dotted">Languages</div>
-      <div class="grid grid-cols-2 gap-1 text-sm">
-        @for (language of dataService.getAllSkillsOfType(SkillType.Language);
-        track $index) {
-        <app-skill [skill]="language" class="text-xs"></app-skill>
-        }
-        <!-- <app-skill
-            [skill]="dataService.getSkill('TypeScript')"
-            version="v5.5"
-          ></app-skill>
-          <app-skill [skill]="dataService.getSkill('JavaScript')"></app-skill>
-          <app-skill
-            [skill]="dataService.getSkill('C#')"
-            version="v10"
-          ></app-skill>
-          <app-skill
-            [skill]="dataService.getSkill('Python')"
-            version="v3.11"
-          ></app-skill>
-          <app-skill [skill]="dataService.getSkill('SQL')"></app-skill>
-          <app-skill [skill]="dataService.getSkill('C')"></app-skill>
-          <app-skill [skill]="dataService.getSkill('Java')"></app-skill>
-          <app-skill [skill]="dataService.getSkill('Shell')"></app-skill>
-          <app-skill [skill]="dataService.getSkill('SCSS')"></app-skill> -->
-      </div>
-    </div>
-
-    <!-- Frameworks -->
-    <div>
-      <div class="font-medium mb-2 border-b border-dotted">Frameworks</div>
-      <div class="grid grid-cols-2 gap-1 text-sm">
-        @for (language of dataService.getAllSkillsOfType(SkillType.Framework);
-        track $index) {
-        <app-skill [skill]="language" class="text-xs"></app-skill>
-        }
-      </div>
-    </div>
-
-    <!-- Software Skills -->
-    <div>
-      <div class="font-medium mb-2 border-b border-dotted">Tools</div>
-      <div class="grid grid-cols-2 gap-1 text-sm">
-        @for (language of dataService.getAllSkillsOfType(SkillType.Tool); track
-        $index) {
-        <app-skill [skill]="language" class="text-xs"></app-skill>
-        }
-      </div>
-    </div>
-
-    <!-- People Skills -->
-    <div>
-      <div class="font-medium mb-2 border-b border-dotted">People Skills</div>
-      <ul class="text-xs">
-        <li>Communication</li>
-        <li>Leadership</li>
-        <li>Teamwork</li>
-        <li>Problem Solving</li>
-        <li>Time Management</li>
-        <li>Adaptability</li>
-      </ul>
-    </div>
-
-    <!-- Hobbies -->
-    <div>
-      <div class="font-medium mb-2 border-b border-dotted">Hobbies</div>
-      <ul class="text-xs">
-        <li>Making Apps/Games</li>
-        <li>3D Printing</li>
-      </ul>
-    </div>
-  </div>
 </app-letter-page>
 
-<app-letter-page class="shadow-2xl flex flex-col m-auto">
+<!-- <app-letter-page class="shadow-2xl flex flex-col m-auto">
   <app-occupations
     class="p-4"
     [occupations]="employmentOccupations.slice(5)"
@@ -188,4 +68,4 @@ dataService.filterOccupations(OccupationType.Employment);
       [occupations]="dataService.filterOccupations(OccupationType.Personal)"
     ></app-occupations>
   </app-occupation-type>
-</app-letter-page>
+</app-letter-page> -->

@@ -77,7 +77,6 @@ export const OCCUPATIONS: IOccupation[] = [
     title: "Bachelor of Computer Science",
     company: "Oakland University",
     location: "Auburn Hills MI",
-    commute: "Onsite",
     startDate: DateTime.utc(2016, 9, 1),
     endDate: DateTime.utc(2021, 4, 1),
     image: "assets/icons/oakland-university-logo-and-bear.png",

@@ -13,6 +13,7 @@ import { PrintButtonComponent } from "../print-button/print-button.component";
 import { SkillType } from "../../models/SkillType";
 import { OccupationType } from "../../models/OccupationType";
 import { OccupationsComponent } from "../occupations/occupations.component";
+import { SkillsComponent } from "../skills/skills.component";
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,8 @@ import { OccupationsComponent } from "../occupations/occupations.component";
     SkillComponent,
     MatTooltipModule,
     PrintButtonComponent,
-    OccupationsComponent
+    OccupationsComponent,
+    SkillsComponent
 ],
   templateUrl: './app.component.html',
 })
