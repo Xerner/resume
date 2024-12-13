@@ -18,8 +18,6 @@ export const OCCUPATIONS: IOccupation[] = [
     type: OccupationType.Employment,
     title: "TRACK Rotational Program",
     company: "General Motors",
-    location: "Warren MI",
-    commute: "Hybrid",
     startDate: DateTime.utc(2022, 1, 1),
     endDate: DateTime.utc(2023, 6, 1),
     image: "assets/icons/gm-logo.png",

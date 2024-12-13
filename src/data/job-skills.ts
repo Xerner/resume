@@ -8,6 +8,16 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Critical Thinking",},
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Time Management",  },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Adaptability",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Chart.js",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "MSSQL",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "MySQL",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "PostgreSQL",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "MongoDB",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "SASS",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Bash",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "C",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Java",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "ABP.io",     },
 
   // universal logistics jobs
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "C#" },

@@ -9,6 +9,7 @@ export const SKILLS: ISkill[] = [
   { name: "TypeScript",          type: SkillType.Language, icon: "assets/icons/typescript.png"         , color: "#2b7489", },
   { name: "Jupyter Notebook",    type: SkillType.Language, icon: "assets/icons/Jupyter Notebook.png"   , color: "#DA5B0B", },
   { name: "Shell",               type: SkillType.Language, icon: "assets/icons/bash.png"               , color: "#89e051", },
+  { name: "Bash",                type: SkillType.Language, icon: "assets/icons/bash.png"               , color: "#89e051", },
   { name: "Visual Basic",        type: SkillType.Language, icon: "assets/icons/visual-basic.png"       , color: "#945db7", },
   { name: "Java",                type: SkillType.Language, icon: "assets/icons/java.png"               , color: "#b07219", },
   { name: "HTML",                type: SkillType.Language, icon: "assets/icons/html.png"               , color: "#e44b23", },
@@ -32,6 +33,7 @@ export const SKILLS: ISkill[] = [
   { name: "Entity Framework", type: SkillType.Framework, icon: "assets/icons/net-core.png" },
   { name: "J2534",            type: SkillType.Framework, icon: "assets/icons/signal-icon.png" },
   { name: "Service Workers",  type: SkillType.Framework },
+  { name: "ABP.io",           type: SkillType.Framework },
 
   { name: "Docker",           type: SkillType.Tool, icon: "assets/icons/docker.png" },
   { name: "Git",              type: SkillType.Tool, icon: "assets/icons/git.png" },
@@ -42,10 +44,16 @@ export const SKILLS: ISkill[] = [
   { name: "Blender",          type: SkillType.Tool, icon: "assets/icons/blender.webp" },
   { name: "Linux",            type: SkillType.Tool, icon: "assets/icons/linux.png" },
   { name: "Bitbucket",        type: SkillType.Tool, icon: "assets/icons/bitbucket.svg" },
+  { name: "Github",           type: SkillType.Tool },
+  { name: "Github Actions",   type: SkillType.Tool },
   { name: "Visual Studio",    type: SkillType.Tool, icon: "assets/icons/visual-studio.png" },
   { name: "VS Code",          type: SkillType.Tool, icon: "assets/icons/vs-code.png" },
   { name: "SSMS",             type: SkillType.Tool, icon: "assets/icons/ssms.png" },
-  { name: "Chart.js",  type: SkillType.Tool },
+  { name: "Chart.js",         type: SkillType.Tool },
+  { name: "MSSQL",            type: SkillType.Tool },
+  { name: "MySQL",            type: SkillType.Tool },
+  { name: "PostgreSQL",       type: SkillType.Tool },
+  { name: "MongoDB",          type: SkillType.Tool },
 
   { name: "Communication",     type: SkillType.Social },
   { name: "Leadership",        type: SkillType.Social },
@@ -55,5 +63,7 @@ export const SKILLS: ISkill[] = [
   { name: "Adaptability",      type: SkillType.Social },
 
   { name: "Machine Learning",      type: SkillType.Concept },
-  { name: "Kmeans",      type: SkillType.Concept },
+  { name: "Kmeans",                type: SkillType.Concept },
+  { name: "Domain Driven Design",  type: SkillType.Concept },
+  { name: "Model View Controller", type: SkillType.Concept },
 ]
