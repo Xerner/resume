@@ -90,5 +90,10 @@ export const JOBS: IJob[] = [
     id: "67F4B72A-14B4-4DA6-84EA-F921F8A14ED8",
     occupationId: "FFEA4FF4-1801-4A92-8A8C-1975E8E90261",
     description: "A city building game with simulation traffic and pedestrians that gives the player feedback on their city's efficiency"
-  }
+  },
+  // {
+  //   id: "1901A9D6-3733-42B0-BB95-D1DD75B05F42",
+  //   occupationId: "59C0B158-7068-45F1-A437-0D7BE1BE34ED",
+  //   description: "Software Engineering, Computer Architecture, Operating Systems, Algorithms, Data Structures, Database Management, Artificial Intelligence, Advanced Systems Administration"
+  // }
 ];

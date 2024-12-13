@@ -1,8 +1,8 @@
 <div
   [ngClass]="{
-  'mb-1': true,
-  'border-b': hasUnderline(),
-  'border-dotted border-b': hasParent() && hasUnderline(),
+  'border-b': true,
+  'border-none': hasUnderline() == false,
+  'border-dotted': hasParent() && hasUnderline(),
 }"
 >
   <div class="flex justify-between items-center">

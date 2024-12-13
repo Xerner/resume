@@ -6,7 +6,6 @@ import { DateTime } from "luxon";
 import { HeaderComponent } from "../header/header.component";
 import { OccupationTypeComponent } from "../occupation-type/occupation-type.component";
 import { LetterPageComponent } from "../page/letter-page.component";
-import { SkillComponent } from "../skill/skill.component";
 import { CommonModule } from "@angular/common";
 import { DataService } from "../../services/data.service";
 import { PrintButtonComponent } from "../print-button/print-button.component";
@@ -24,12 +23,11 @@ import { SkillsComponent } from "../skills/skills.component";
     HeaderComponent,
     OccupationTypeComponent,
     MatIconModule,
-    SkillComponent,
     MatTooltipModule,
     PrintButtonComponent,
     OccupationsComponent,
-    SkillsComponent
-],
+    SkillsComponent,
+  ],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
