@@ -6,7 +6,7 @@ export const OCCUPATIONS: IOccupation[] = [
   {
     id: "7078AFDD-5BC8-4831-90B5-E427273D583E",
     type: OccupationType.Employment,
-    title: "Full Stack Developer, DevOps Architect",
+    title: "Full Stack & DevOps Software Engineer",
     company: "Universal Logistics Holdings",
     location: "Warren MI",
     commute: "Onsite",
