@@ -54,6 +54,7 @@ export const SKILLS: ISkill[] = [
   { name: "MySQL",            type: SkillType.Tool },
   { name: "PostgreSQL",       type: SkillType.Tool },
   { name: "MongoDB",          type: SkillType.Tool },
+  { name: "Google Cloud Platform (GCP)",          type: SkillType.Tool },
 
   { name: "Communication",     type: SkillType.Social },
   { name: "Leadership",        type: SkillType.Social },

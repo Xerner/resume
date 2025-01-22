@@ -1,13 +1,7 @@
 import { IJobSkill } from "../models/IOccupationLanguage";
 
 export const JOB_SKILLS: IJobSkill[] = [
-  // people skills
-  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Communication",    },
-  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Leadership",       },
-  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Teamwork",         },
-  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Critical Thinking",},
-  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Time Management",  },
-  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Adaptability",     },
+  // one-off skills probably from a personal project
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Chart.js",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "MSSQL",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "PostgreSQL",     },
@@ -19,6 +13,15 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Java",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "ABP.io",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Github Actions",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Google Cloud Platform (GCP)",     },
+
+  // people skills
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Communication",    },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Leadership",       },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Teamwork",         },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Critical Thinking",},
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Time Management",  },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Adaptability",     },
 
   // universal logistics jobs
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "C#" },
