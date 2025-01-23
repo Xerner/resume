@@ -4,7 +4,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   // one-off skills probably from a personal project
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Chart.js",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "MSSQL",     },
-  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "PostgreSQL",     },
+  // { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "PostgreSQL",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "MySQL",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "MongoDB",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "SASS",     },
@@ -42,6 +42,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Visual Studio" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "VS Code" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "SSMS" },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Postman" },
 
   { jobId: "D4179F3E-C254-4989-BA3E-EA9E11AF8909", skillId: "C#" },
   { jobId: "D4179F3E-C254-4989-BA3E-EA9E11AF8909", skillId: "Visual Studio" },

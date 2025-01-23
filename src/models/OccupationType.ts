@@ -1,5 +1,5 @@
 export enum OccupationType {
-  Employment = "Experience",
+  Employment = "Professional Experience",
   Education = "Education",
   Personal = "Personal Projects",
 }

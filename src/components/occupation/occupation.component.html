@@ -8,19 +8,19 @@
   <div class="flex justify-between items-center">
     <div
       [ngClass]="{
-    'text-lg': hasParent() === false,
-    'text-md': hasParent(),
+    'text-lg': false,
+    'text-md': true,
     'font-medium': true,
   }"
     >
       {{ occupation().title }}
     </div>
-    @if (occupation().image !== undefined && hasParent() == false) { @if
+    <!-- @if (occupation().image !== undefined && hasParent() == false) { @if
     (hasSlash(occupation().image!)) {
     <img class="h-6 w-auto" [src]="occupation().image" alt="Company Logo" />
     } @else {
     <mat-icon class="h-6 w-auto">{{ occupation().image }}</mat-icon>
-    } }
+    } } -->
   </div>
   <div class="flex justify-between text-xs text-blue-700">
     <div>
