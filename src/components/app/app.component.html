@@ -59,6 +59,15 @@ dataService.filterOccupations(OccupationType.Employment);
   <!-- Main content -->
   <div class="flex flex-col gap-3">
     <app-occupation-type
+      [occupationType]="OccupationType.Websites"
+      icon="home"
+      class="border-slate-300 flex flex-col gap-2"
+    >
+      <app-occupations class="flex flex-col gap-6"
+        [occupations]="dataService.filterOccupations(OccupationType.Websites)"
+      ></app-occupations>
+    </app-occupation-type>
+    <app-occupation-type
       [occupationType]="OccupationType.Personal"
       icon="home"
       class="border-slate-300 flex flex-col gap-2"

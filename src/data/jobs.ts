@@ -90,22 +90,22 @@ export const JOBS: IJob[] = [
   {
     id: "328F8A20-8A7C-4BB0-9E91-9160268B7A55",
     occupationId: "9B397841-00AE-4CB0-99C6-A18090904F42",
-    description: "A web app for slicing images into different layers based on the presence of colors in the image. Built with Angular v19, Angular Material, and TailwindCss"
+    description: "A web app for slicing images into different layers based on the presence of colors in the image. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace."
   },
   {
     id: "51C7EB29-EEAD-4934-AF90-DA31048D8A25",
     occupationId: "74C56F46-0DA6-4372-8E28-0CBE64A3F172",
-    description: "A Web app containing a dashboard displaying time related info on Bitbucket PRs, and a Git commit graph similar to Githubs. Built with Bitbuckets REST API, Angular v19, Angular Material, and TailwindCss."
+    description: "A Web app containing a dashboard displaying time related info on Bitbucket PRs, and a Git commit graph similar to Githubs. Built with Bitbuckets REST API, Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace."
   },
   {
     id: "BCDBDF65-5671-40C0-9B56-9A4D51399EC0",
     occupationId: "2A64DECE-E5A8-476B-89BD-5C67BFB8144E",
-    description: "A Web app that displays spending over time, and projected future spending based on known costs and income. Built with Airtables developer API, Angular v19, Angular Material, and TailwindCss."
+    description: "A Web app that displays spending over time, and projected future spending based on known costs and income. Built with Airtables developer API, Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace."
   },
   {
     id: "D24AA061-8AA6-444F-A6A6-0282DFFB8C7A",
     occupationId: "29254BEF-4991-4BD3-BCCB-0F123893F4F3",
-    description: "My resume! Built in HTML to be viewed and printable like a normal letter sized PDF document."
+    description: "My resume! Built in Angular v19 and styled to be viewed and printable like a normal letter sized PDF document. Hosted with Github Pages and Squarespace."
   },
   {
     id: "797AE482-0232-475D-AB41-16040C52F7C4",
@@ -121,5 +121,15 @@ export const JOBS: IJob[] = [
     id: "1901A9D6-3733-42B0-BB95-D1DD75B05F42",
     occupationId: "59C0B158-7068-45F1-A437-0D7BE1BE34ED",
     description: "Software Engineering, Computer Architecture, Operating Systems, Algorithms, Data Structures, Database Management, Artificial Intelligence, Advanced Systems Administration."
+  },
+  {
+    id: "86826EFD-23FB-467C-8F7B-078A76B1B796",
+    occupationId: "E695D3BA-87A8-4FEE-A492-0E3F9767B7A0",
+    description: "A web app for a local cafe that displays their menu, hours, and location. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace."
+  },
+  {
+    id: "817AF3FD-140B-4075-98EE-C5A1C86290CA",
+    occupationId: "5F030AD0-3BB9-4777-9DC8-A0157FB91911",
+    description: "My portfolio site! This website is a showcase of my work and skills. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace."
   }
 ];
