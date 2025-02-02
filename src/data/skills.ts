@@ -21,6 +21,7 @@ export const SKILLS: ISkill[] = [
   { name: "JavaScript",          type: SkillType.Language, icon: "assets/icons/javascript.png"         , color: "#f1e05a", },
   { name: "Python",              type: SkillType.Language, icon: "assets/icons/python.png"             , color: "#3572A5", },
   { name: "Game Maker Language", type: SkillType.Language, icon: "assets/icons/game-maker-language.png", color: "#8fb200", },
+  { name: "Swagger", type: SkillType.Tool },
 
   { name: "Angular",          type: SkillType.Framework, icon: "assets/icons/angular.png" },
   { name: "React",            type: SkillType.Framework, icon: "assets/icons/react.png" },

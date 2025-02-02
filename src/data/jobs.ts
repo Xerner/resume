@@ -5,7 +5,7 @@ export const JOBS: IJob[] = [
   {
     id: "4B136A3D-6F37-457B-8692-2DDE8FC2312B",
     occupationId: "7078AFDD-5BC8-4831-90B5-E427273D583E",
-    description: "Develop, unit test, and maintain features across a C# ASP.Net Core REST back-end, modern Angular and Angular Material front-end, and Microsoft SQL database for an internal logistics ERP web app."
+    description: "Develop, unit & integration test, and maintain features across a C# ASP.Net Core REST back-end, modern Angular and Angular Material front-end, and Microsoft SQL database for an internal logistics ERP web app."
   },
   {
     id: "4B136A3D-6F37-457B-8692-2DDE8FC2312B",
@@ -125,11 +125,11 @@ export const JOBS: IJob[] = [
   {
     id: "86826EFD-23FB-467C-8F7B-078A76B1B796",
     occupationId: "E695D3BA-87A8-4FEE-A492-0E3F9767B7A0",
-    description: "A web app for a local cafe that displays their menu, hours, and location. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace."
+    description: "A web app for a local cafe that displays their menu, hours, and location. Improvements from their previous websites include organization, maintainability, user experience. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace."
   },
   {
     id: "817AF3FD-140B-4075-98EE-C5A1C86290CA",
     occupationId: "5F030AD0-3BB9-4777-9DC8-A0157FB91911",
-    description: "My portfolio site! This website is a showcase of my work and skills. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace."
+    description: "My portfolio site! This website is a showcase of my work and skills. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace. This website was previously created with Reactjs v17."
   }
 ];

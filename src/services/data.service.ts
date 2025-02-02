@@ -53,7 +53,7 @@ export class DataService {
     return this.skills().find(language => language.name === name) ?? null;
   }
 
-  private getTotalProfessionalExperience() {
+  private getTotalProfessionalExperience(): string {
     var totalExperience = this.occupations()
       .filter(occupation => occupation.type === OccupationType.Employment)
       .reduce((accumulator: Duration, occupation: IOccupation) => {
@@ -67,7 +67,8 @@ export class DataService {
         }
         return accumulator.plus(diff);
       }, undefined as unknown as Duration);
-    var monthsInYears = Math.ceil(totalExperience.months / 12);
+      // TODO: change
+    var monthsInYears = totalExperience.months / 12;
     totalExperience = totalExperience.plus({ years: monthsInYears });
     totalExperience = totalExperience.minus({ months: totalExperience.months });
     return this.formatDuration(totalExperience);

@@ -14,6 +14,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "ABP.io",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Github Actions",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Google Cloud Platform (GCP)",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Swagger",     },
 
   // people skills
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Communication",    },
