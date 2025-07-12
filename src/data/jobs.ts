@@ -20,7 +20,7 @@ export const JOBS: IJob[] = [
   {
     id: "DD442D77-9BF8-4BE5-B737-123013EB0385",
     occupationId: "CF3B54C1-6687-4A49-9C23-A710310BF0EC",
-    description: "Architect and develop a full-stack customer experience dashboard for Ford using Angular, Python FastAPI, and Google Cloud Platform's (GCP) Big Query database"
+    description: "Architect and develop a full-stack customer experience BI dashboard for Ford using Angular, Python FastAPI, and Google Cloud Platform's (GCP) Big Query database"
     },
   {
     id: "36D729D3-C1E2-40D4-A345-A05E7FA7F25F",

@@ -21,6 +21,7 @@ export const OCCUPATIONS: IOccupation[] = [
     location: "Warren MI",
     commute: "Onsite",
     startDate: DateTime.utc(2023, 6, 1),
+    endDate: DateTime.utc(2025, 2, 1),
     image: "assets/icons/universal-logistics-logo.png",
   },
   // {
