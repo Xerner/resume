@@ -11,8 +11,8 @@ import { DataService } from "../../services/data.service";
 import { PrintButtonComponent } from "../print-button/print-button.component";
 import { SkillType } from "../../models/SkillType";
 import { OccupationType } from "../../models/OccupationType";
-import { OccupationsComponent } from "../occupations/occupations.component";
 import { SkillsComponent } from "../skills/skills.component";
+import { AppOccupationWithJobsComponent } from "../occupation-with-jobs/occupation-with-jobs.component";
 
 @Component({
   selector: 'app-root',
@@ -25,9 +25,9 @@ import { SkillsComponent } from "../skills/skills.component";
     MatIconModule,
     MatTooltipModule,
     PrintButtonComponent,
-    OccupationsComponent,
     SkillsComponent,
-  ],
+    AppOccupationWithJobsComponent
+],
   templateUrl: './app.component.html',
 })
 export class AppComponent {

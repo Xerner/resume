@@ -1,6 +1,47 @@
 import { IJob } from "../models/IJob";
 
 export const JOBS: IJob[] = [
+    // onemagnify
+  {
+    id: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F",
+    occupationId: "CF3B54C1-6687-4A49-9C23-A710310BF0EC",
+    description: "Provide leadership and technical guidance to a team of four developers"
+    },
+  {
+    id: "CAB4F5CF-26AB-483B-B55C-035BEF8BE517",
+    occupationId: "CF3B54C1-6687-4A49-9C23-A710310BF0EC",
+    description: "Lead daily developer standups and collaborate with project management to define, plan, and manage project workflows in Jira"
+    },
+  {
+    id: "EB5B9BEC-6521-4332-A4D6-6C2B91A4DCA8",
+    occupationId: "CF3B54C1-6687-4A49-9C23-A710310BF0EC",
+    description: "Coordinate with software architects and other software dev leads to ensure our project is following best practices and company standards"
+    },
+  {
+    id: "DD442D77-9BF8-4BE5-B737-123013EB0385",
+    occupationId: "CF3B54C1-6687-4A49-9C23-A710310BF0EC",
+    description: "Architect and develop a full-stack customer experience dashboard for Ford using Angular, Python FastAPI, and Google Cloud Platform's (GCP) Big Query database"
+    },
+  {
+    id: "36D729D3-C1E2-40D4-A345-A05E7FA7F25F",
+    occupationId: "CF3B54C1-6687-4A49-9C23-A710310BF0EC",
+    description: "Implement and maintain a Docker-based development container to ensure a consistent and reliable environment across the team"
+    },
+  {
+    id: "5514EEB2-69B2-4648-8A11-0F1BDF0FFF7C",
+    occupationId: "CF3B54C1-6687-4A49-9C23-A710310BF0EC",
+    description: "Achieve over 90% unit test coverage using Python's pytest framework, ensuring code reliability and maintainability"
+    },
+  {
+    id: "3692142C-84A7-4EBE-8B8B-A1627B6AA3C2",
+    occupationId: "CF3B54C1-6687-4A49-9C23-A710310BF0EC",
+    description: "Integrate Tekton pipelines with Google Cloud Platform's (GCP) Cloud Run service to enable a streamlined CI/CD process"
+    },
+  {
+    id: "EAFE5C7B-B29D-4488-A9D7-54E69A8F9C35",
+    occupationId: "CF3B54C1-6687-4A49-9C23-A710310BF0EC",
+    description: "Maintain compliance with FOSSA, SonarQube, and 42Crunch standards to ensure security and quality in the codebase and OpenAPI specifications"
+  },
   // universal logistics
   {
     id: "4B136A3D-6F37-457B-8692-2DDE8FC2312B",

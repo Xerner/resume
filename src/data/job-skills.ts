@@ -3,7 +3,38 @@ import { IJobSkill } from "../models/IOccupationLanguage";
 export const JOB_SKILLS: IJobSkill[] = [
   // one-off skills probably from a personal project
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Chart.js",     },
-  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "MSSQL",     },
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "MSSQL", },
+  
+    // onemagnify
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Dependency Injection" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "MVC" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Django" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "FastAPI" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "TypeScript" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Python" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Angular" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "SQL" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "CSS" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "HTML" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "TailwindCss" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Docker" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Git" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Jira" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Tekton" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Linux" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Github" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "VS Code" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "PrimeNG" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Apache ECharts" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Google Cloud Platform (GCP)" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Hoppscotch" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "GCP BigQuery" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Swagger UI" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Project Management", },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Cross-functional Integration", },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Unit Testing" },
+  { jobId: "D36CC279-A595-43E1-88C7-5EB3CE0BBC9F", skillId: "Integration Testing" },
+  
   // { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "PostgreSQL",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "MySQL",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "MongoDB",     },
@@ -14,8 +45,9 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "ABP.io",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Github Actions",     },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Google Cloud Platform (GCP)",     },
-  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Swagger",     },
-
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Swagger", },
+  
+  
   // people skills
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Communication",    },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Leadership",       },
@@ -23,8 +55,13 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Critical Thinking",},
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Time Management",  },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Adaptability",     },
-
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Project Management", },
+  
   // universal logistics jobs
+    { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Unit Testing" },
+    { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Integration Testing" },
+  
+  { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "Domain Driven Design" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "C#" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "HTML" },
   { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "CSS" },

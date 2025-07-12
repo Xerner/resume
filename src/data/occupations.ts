@@ -4,6 +4,16 @@ import { OccupationType } from "../models/OccupationType";
 
 export const OCCUPATIONS: IOccupation[] = [
   {
+    id: "CF3B54C1-6687-4A49-9C23-A710310BF0EC",
+    type: OccupationType.Employment,
+    title: "Senior Full Stack & DevOps Software Engineer",
+    company: "Ford @ OneMagnify",
+    location: "Detroit MI",
+    commute: "Hybrid",
+    startDate: DateTime.utc(2025, 2, 1),
+    image: "",
+  },
+  {
     id: "7078AFDD-5BC8-4831-90B5-E427273D583E",
     type: OccupationType.Employment,
     title: "Full Stack & DevOps Software Engineer",

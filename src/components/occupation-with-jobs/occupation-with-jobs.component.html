@@ -1,16 +1,16 @@
-@for (occupation of occupations(); track $index) { @let jobs =
-dataService.filterJobs(occupation);
+@let jobs =
+dataService.filterJobs(occupation());
 <app-occupation
-  [occupation]="occupation"
+  [occupation]="occupation()"
   [hasUnderline]="jobs.length > 0"
   [ngClass]="{
-    'ml-3 text-sm': dataService.hasParent(occupation),
+    'ml-3 text-sm': dataService.hasParent(occupation()),
     'flex flex-col gap-1': true,
   }"
 >
-  @if (occupation.url) {
-  <a href="{{ occupation.url }}" target="_blank" class="text-link text-xs">{{
-    occupation.url
+  @if (occupation().url) {
+  <a href="{{ occupation().url }}" target="_blank" class="text-link text-xs">{{
+    occupation().url
   }}</a>
   }
   <!-- Jobs -->
@@ -54,4 +54,3 @@ dataService.filterJobs(occupation);
     ></app-skills>
   </div> -->
 </app-occupation>
-}

@@ -1,0 +1,31 @@
+{
+  "name": "angular",
+  "runArgs": [
+    "--env-file", "${localWorkspaceFolder}/.devcontainer/.env"
+  ],
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "containerEnv": {
+    "WORKSPACE_FOLDER": "${containerWorkspaceFolder}"
+  },
+  "mounts": [
+    { "type": "bind", "source": "${localEnv:HOME}${localEnv:USERPROFILE}/.ssh", "target": "/root/.ssh" },
+    { "type": "bind", "source": "${localWorkspaceFolder}/.devcontainer/home/.bashrc", "target": "/root/.bashrc" },
+    { "type": "bind", "source": "${localWorkspaceFolder}/.devcontainer/home/bash", "target": "/root/bash" }
+	],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "PKief.material-icon-theme",
+        "usernamehw.errorlens",
+        "eamodio.gitlens",
+        "ms-azuretools.vscode-docker",
+        "cyrilletuzi.angular-schematics",
+        "Angular.ng-template",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
