@@ -12,21 +12,27 @@ import { SkillType } from '../models/SkillType';
 import { OccupationType } from '../models/OccupationType';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-  occupations = signal<IOccupation[]>(this.sortOccupationsByParent(OCCUPATIONS));
+  occupations = signal<IOccupation[]>(
+    this.sortOccupationsByParent(OCCUPATIONS)
+  );
   jobs = signal<IJob[]>(JOBS);
   skills = signal<ISkill[]>(SKILLS);
   jobSkills = signal<IJobSkill[]>(JOB_SKILLS);
-  totalProfessionalExperience = computed<string>(() => this.getTotalProfessionalExperience());
+  totalProfessionalExperience = computed<string>(() =>
+    this.getTotalProfessionalExperience()
+  );
 
   filterOccupations(occupationType: OccupationType) {
-    return this.occupations().filter(occupation => occupation.type === occupationType);
+    return this.occupations().filter(
+      (occupation) => occupation.type === occupationType
+    );
   }
 
   filterJobs(occupation: IOccupation) {
-    return this.jobs().filter(job => job.occupationId === occupation.id);
+    return this.jobs().filter((job) => job.occupationId === occupation.id);
   }
 
   sortOccupationsByParent(occupations: IOccupation[]) {
@@ -42,32 +48,35 @@ export class DataService {
   }
 
   hasParent(occupation: IOccupation) {
-    return typeof occupation.parentId === "string";
+    return typeof occupation.parentId === 'string';
   }
 
   hasChildren(occupation: IOccupation) {
-    return this.occupations().some(o => o.parentId === occupation.id);
+    return this.occupations().some((o) => o.parentId === occupation.id);
   }
 
   getSkill(name: string): ISkill | null {
-    return this.skills().find(language => language.name === name) ?? null;
+    return this.skills().find((language) => language.name === name) ?? null;
   }
 
   private getTotalProfessionalExperience(): string {
     var totalExperience = this.occupations()
-      .filter(occupation => occupation.type === OccupationType.Employment)
+      .filter((occupation) => occupation.type === OccupationType.Employment)
       .reduce((accumulator: Duration, occupation: IOccupation) => {
         if (this.hasChildren(occupation)) {
           return accumulator;
         }
         var endDate = occupation.endDate ?? DateTime.now();
-        var diff = endDate.diff(occupation.startDate ?? DateTime.now(), ['years', 'months']);
+        var diff = endDate.diff(occupation.startDate ?? DateTime.now(), [
+          'years',
+          'months',
+        ]);
         if (accumulator === undefined) {
-          return diff
+          return diff;
         }
         return accumulator.plus(diff);
       }, undefined as unknown as Duration);
-      // TODO: change
+    // TODO: change
     var monthsInYears = totalExperience.months / 12;
     totalExperience = totalExperience.plus({ years: monthsInYears });
     totalExperience = totalExperience.minus({ months: totalExperience.months });
@@ -75,10 +84,10 @@ export class DataService {
   }
 
   formatDuration(duration: Duration) {
-    var months = Math.round(duration.months);
-    var years = Math.floor(duration.years);
-    var yearsText = duration.years === 1 ? "year" : "years";
-    var monthsText = duration.months === 1 ? "month" : "months";
+    var months = Math.ceil(duration.months);
+    var years = Math.ceil(duration.years);
+    var yearsText = duration.years === 1 ? 'year' : 'years';
+    var monthsText = duration.months === 1 ? 'month' : 'months';
     var str = [];
     if (years > 0) {
       str.push(`${years} ${yearsText}`);
@@ -86,31 +95,45 @@ export class DataService {
     if (months > 0) {
       str.push(`${months} ${monthsText}`);
     }
-    return str.join(" ");
+    return str.join(' ');
   }
 
   filterSkills(job: IJob) {
-    var skills = this.jobSkills().filter(skill => skill.jobId === job.id);
-    return this.skills().filter(skill => skills.some(s => s.skillId === skill.name));
+    var skills = this.jobSkills().filter((skill) => skill.jobId === job.id);
+    return this.skills().filter((skill) =>
+      skills.some((s) => s.skillId === skill.name)
+    );
   }
 
   getSkillsForOccupation(occupation: IOccupation, type: SkillType) {
     var jobs = this.filterJobs(occupation);
     var skills = jobs
-      .map(job => this.filterSkills(job))
+      .map((job) => this.filterSkills(job))
       .flat()
-      .filter(skill => skill.type === type)
-      .reduce((accumulator: ISkill[], skill) => accumulator.some(s => s.name === skill.name) ? accumulator : [...accumulator, skill], [])
+      .filter((skill) => skill.type === type)
+      .reduce(
+        (accumulator: ISkill[], skill) =>
+          accumulator.some((s) => s.name === skill.name)
+            ? accumulator
+            : [...accumulator, skill],
+        []
+      )
       .sort((a, b) => a.name.localeCompare(b.name));
     return skills;
   }
 
   getAllSkillsOfType(type: SkillType) {
     var skills = this.jobSkills()
-      .map(skill => this.getSkill(skill.skillId))
-      .filter(skill => skill !== null)
-      .filter(skill => skill.type === type)
-      .reduce((accumulator: ISkill[], skill) => accumulator.some(s => s.name === skill.name) ? accumulator : [...accumulator, skill], [])
+      .map((skill) => this.getSkill(skill.skillId))
+      .filter((skill) => skill !== null)
+      .filter((skill) => skill.type === type)
+      .reduce(
+        (accumulator: ISkill[], skill) =>
+          accumulator.some((s) => s.name === skill.name)
+            ? accumulator
+            : [...accumulator, skill],
+        []
+      )
       .sort((a, b) => a.name.localeCompare(b.name));
     return skills;
   }

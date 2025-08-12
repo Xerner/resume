@@ -9,23 +9,33 @@ dataService.filterOccupations(OccupationType.Employment);
 <div class="h-8 print:hidden"></div>
 
 <app-letter-page class="shadow-2xl flex flex-col gap-3 m-auto text-sm mb-20">
-  <app-header
-    class=""
-  ></app-header>
+  <app-header class=""></app-header>
 
   <!-- Skills -->
   <div class="grid grid-cols-6 gap-3 text-xs">
     <!-- Languages -->
     @let languages = dataService.getAllSkillsOfType(SkillType.Language);
-    <app-skills class="col-span-2" title="Languages" [skills]="languages"></app-skills>
+    <app-skills
+      class="col-span-2"
+      title="Languages"
+      [skills]="languages"
+    ></app-skills>
 
     <!-- Frameworks -->
     @let frameworks = dataService.getAllSkillsOfType(SkillType.Framework);
-    <app-skills class="col-span-2" title="Frameworks" [skills]="frameworks"></app-skills>
-    
+    <app-skills
+      class="col-span-2"
+      title="Frameworks"
+      [skills]="frameworks"
+    ></app-skills>
+
     <!-- concepts -->
     @let concepts = dataService.getAllSkillsOfType(SkillType.Concept);
-    <app-skills class="col-span-2" title="Concepts" [skills]="concepts"></app-skills>
+    <app-skills
+      class="col-span-2"
+      title="Concepts"
+      [skills]="concepts"
+    ></app-skills>
 
     <!-- Tools -->
     @let tools = dataService.getAllSkillsOfType(SkillType.Tool);
@@ -33,7 +43,11 @@ dataService.filterOccupations(OccupationType.Employment);
 
     <!-- People Skills -->
     @let socialSkills = dataService.getAllSkillsOfType(SkillType.Social);
-    <app-skills class="col-span-3" title="People Skills" [skills]="socialSkills"></app-skills>
+    <app-skills
+      class="col-span-3"
+      title="People Skills"
+      [skills]="socialSkills"
+    ></app-skills>
   </div>
 
   <!-- Main content -->
@@ -46,32 +60,44 @@ dataService.filterOccupations(OccupationType.Employment);
     >
     </app-occupation-type>
     <div class="flex flex-col gap-3">
-        @for (occupation of dataService.filterOccupations(OccupationType.Employment).slice(0, 4); track $index) {
-            <app-occupation-with-jobs [occupation]="occupation"></app-occupation-with-jobs>
-        }
+      @for (occupation of
+      dataService.filterOccupations(OccupationType.Employment).slice(0, 4);
+      track $index) {
+      <app-occupation-with-jobs
+        [occupation]="occupation"
+      ></app-occupation-with-jobs>
+      }
     </div>
   </div>
 </app-letter-page>
 
-<app-letter-page class="shadow-2xl flex flex-col gap-3 m-auto text-sm">
+<app-letter-page class="shadow-2xl flex flex-col gap-3 m-auto text-sm mb-20">
   <!-- Main content -->
   <div class="flex flex-col gap-3">
     <div class="flex flex-col gap-3">
-        @for (occupation of dataService.filterOccupations(OccupationType.Employment).slice(4); track $index) {
-            <app-occupation-with-jobs [occupation]="occupation"></app-occupation-with-jobs>
-        }
+      @for (occupation of
+      dataService.filterOccupations(OccupationType.Employment).slice(4); track
+      $index) {
+      <app-occupation-with-jobs
+        [occupation]="occupation"
+      ></app-occupation-with-jobs>
+      }
     </div>
 
     <div>
       <app-occupation-type
-        [occupationType]="OccupationType.Education"
-        icon="school"
+        [occupationType]="OccupationType.Community"
+        icon="groups"
         class="border-slate-300 flex flex-col gap-2"
-      ></app-occupation-type>
+      >
+      </app-occupation-type>
       <div class="flex flex-col gap-6">
-          @for (occupation of dataService.filterOccupations(OccupationType.Education); track $index) {
-              <app-occupation-with-jobs [occupation]="occupation"></app-occupation-with-jobs>
-          }
+        @for (occupation of
+        dataService.filterOccupations(OccupationType.Community); track $index) {
+        <app-occupation-with-jobs
+          [occupation]="occupation"
+        ></app-occupation-with-jobs>
+        }
       </div>
     </div>
 
@@ -82,12 +108,19 @@ dataService.filterOccupations(OccupationType.Employment);
         class="border-slate-300 flex flex-col gap-2"
       ></app-occupation-type>
       <div class="flex flex-col gap-6">
-          @for (occupation of dataService.filterOccupations(OccupationType.Websites); track $index) {
-              <app-occupation-with-jobs [occupation]="occupation"></app-occupation-with-jobs>
-          }
+        @for (occupation of
+        dataService.filterOccupations(OccupationType.Websites); track $index) {
+        <app-occupation-with-jobs
+          [occupation]="occupation"
+        ></app-occupation-with-jobs>
+        }
       </div>
     </div>
+  </div>
+</app-letter-page>
 
+<app-letter-page class="shadow-2xl flex flex-col gap-3 m-auto text-sm">
+  <div class="flex flex-col gap-3">
     <div>
       <app-occupation-type
         [occupationType]="OccupationType.Personal"
@@ -96,9 +129,28 @@ dataService.filterOccupations(OccupationType.Employment);
       >
       </app-occupation-type>
       <div class="flex flex-col gap-6">
-          @for (occupation of dataService.filterOccupations(OccupationType.Personal); track $index) {
-              <app-occupation-with-jobs [occupation]="occupation"></app-occupation-with-jobs>
-          }
+        @for (occupation of
+        dataService.filterOccupations(OccupationType.Personal); track $index) {
+        <app-occupation-with-jobs
+          [occupation]="occupation"
+        ></app-occupation-with-jobs>
+        }
+      </div>
+    </div>
+
+    <div>
+      <app-occupation-type
+        [occupationType]="OccupationType.Education"
+        icon="school"
+        class="border-slate-300 flex flex-col gap-2"
+      ></app-occupation-type>
+      <div class="flex flex-col gap-6">
+        @for (occupation of
+        dataService.filterOccupations(OccupationType.Education); track $index) {
+        <app-occupation-with-jobs
+          [occupation]="occupation"
+        ></app-occupation-with-jobs>
+        }
       </div>
     </div>
   </div>

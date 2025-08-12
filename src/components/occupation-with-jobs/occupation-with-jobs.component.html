@@ -1,5 +1,4 @@
-@let jobs =
-dataService.filterJobs(occupation());
+@let jobs = dataService.filterJobs(occupation());
 <app-occupation
   [occupation]="occupation()"
   [hasUnderline]="jobs.length > 0"
@@ -15,7 +14,7 @@ dataService.filterJobs(occupation());
   }
   <!-- Jobs -->
   @if (jobs.length === 1) {
-  <div class="text-xs">{{ jobs[0].description }}</div>
+  <div class="text-xs whitespace-pre-line">{{ jobs[0].description }}</div>
   } @else if (jobs.length > 0) {
   <ul class="list-disc ml-4 text-xs leading-5">
     @for (job of jobs; track $index) {
