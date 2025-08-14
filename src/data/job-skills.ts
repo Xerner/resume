@@ -144,6 +144,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'HTML' },
   { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'CSS' },
   { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'J2534' },
+  { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'CAN' },
   { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'VS Code' },
 
   // GM performance testing

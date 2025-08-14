@@ -150,6 +150,11 @@ export const SKILLS: ISkill[] = [
     type: SkillType.Framework,
     icon: 'assets/icons/signal-icon.png',
   },
+  {
+    name: 'CAN',
+    type: SkillType.Framework,
+    icon: 'assets/icons/signal-icon.png',
+  },
   { name: 'Service Workers', type: SkillType.Framework },
   { name: 'ABP.io', type: SkillType.Framework },
   { name: 'FastAPI', type: SkillType.Framework },
