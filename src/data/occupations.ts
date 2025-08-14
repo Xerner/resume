@@ -14,6 +14,17 @@ export const OCCUPATIONS: IOccupation[] = [
     image: '',
   },
   {
+    id: '529F46E8-8F15-4E29-B745-610FC3FD1A5F',
+    type: OccupationType.Employment,
+    title: 'Senior Full Stack & DevOps Software Engineer',
+    company: 'Universal Logistics Holdings',
+    location: 'Warren MI',
+    commute: 'Onsite',
+    startDate: DateTime.utc(2024, 1, 1),
+    endDate: DateTime.utc(2025, 2, 1),
+    image: 'assets/icons/universal-logistics-logo.png',
+  },
+  {
     id: '7078AFDD-5BC8-4831-90B5-E427273D583E',
     type: OccupationType.Employment,
     title: 'Full Stack & DevOps Software Engineer',
@@ -21,7 +32,7 @@ export const OCCUPATIONS: IOccupation[] = [
     location: 'Warren MI',
     commute: 'Onsite',
     startDate: DateTime.utc(2023, 6, 1),
-    endDate: DateTime.utc(2025, 2, 1),
+    endDate: DateTime.utc(2024, 1, 1),
     image: 'assets/icons/universal-logistics-logo.png',
   },
   // {

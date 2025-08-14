@@ -66,53 +66,72 @@ I gained their trust and then upgraded their Unity input system from version 1 t
     description:
       'Maintain compliance with FOSSA, SonarQube, and 42Crunch standards to ensure security and quality in the codebase and OpenAPI specifications',
   },
-  // universal logistics
+  // universal logistics - senior
   {
     id: '4B136A3D-6F37-457B-8692-2DDE8FC2312B',
-    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
+    occupationId: '529F46E8-8F15-4E29-B745-610FC3FD1A5F',
     description:
       'Develop, unit & integration test, and maintain features across a C# ASP.Net Core REST back-end, modern Angular and Angular Material front-end, and Microsoft SQL database for an internal logistics ERP web app.',
   },
   {
     id: '4B136A3D-6F37-457B-8692-2DDE8FC2312B',
-    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
+    occupationId: '529F46E8-8F15-4E29-B745-610FC3FD1A5F',
     description:
       'Developed code adhering to design patterns such as MVC, CQRS, Repository, dependency injection, and pub/sub',
   },
   {
     id: '4B136A3D-6F37-457B-8692-2DDE8FC2312B',
-    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
+    occupationId: '529F46E8-8F15-4E29-B745-610FC3FD1A5F',
     description:
       'Debugged full-stack issues with tools such as Postman, Chrome Devtools/VS Code debugger, Storybook, and Serilog',
   },
   {
     id: 'D4179F3E-C254-4989-BA3E-EA9E11AF8909',
-    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
+    occupationId: '529F46E8-8F15-4E29-B745-610FC3FD1A5F',
     description:
       'Re-architected the applications legacy payment system reducing technical debt by 50%.',
   },
   {
     id: '3C5570AE-3A93-4EB8-AA92-CA9DA003C3B6',
-    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
+    occupationId: '529F46E8-8F15-4E29-B745-610FC3FD1A5F',
     description:
       'Created a SQL migrations change tracker to automate deploying migrations, saving 4 hours/dev/week.',
   },
   {
     id: 'AA19EB59-45F3-4E19-A5F5-96D6A54C0643',
-    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
+    occupationId: '529F46E8-8F15-4E29-B745-610FC3FD1A5F',
     description:
       'Architected the CI/CD pipeline for deploying with Docker containers that reduced deployment time by 90%.',
   },
   {
     id: 'CFBEF422-BA25-48C7-86FA-900E28BA8075',
-    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
+    occupationId: '529F46E8-8F15-4E29-B745-610FC3FD1A5F',
     description: 'Lead code reviews and mentored junior developers.',
   },
   {
     id: 'A0099304-21A5-46F1-8E82-970FE589A725',
-    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
+    occupationId: '529F46E8-8F15-4E29-B745-610FC3FD1A5F',
     description:
       'Took part in technical debt review, refinement, and code etiquette enforcement.',
+  },
+  // universal logistics - junior
+  {
+    id: '4A957BD2-1B76-4D8D-AC0A-8F2A4AFB5783',
+    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
+    description:
+      'Develop, unit & integration test, and maintain features across a C# ASP.Net Core REST back-end, modern Angular and Angular Material front-end, and Microsoft SQL database for an internal logistics ERP web app.',
+  },
+  {
+    id: '50E70353-23DD-484F-B030-396F6BF997EE',
+    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
+    description:
+      'Developed code adhering to design patterns such as MVC, CQRS, Repository, dependency injection, and pub/sub',
+  },
+  {
+    id: '03D73FAB-2E72-4199-80FB-987EC38C843B',
+    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
+    description:
+      'Debugged full-stack issues with tools such as Postman, Chrome Devtools/VS Code debugger, Storybook, and Serilog',
   },
   // general motors - signal validation
   {
@@ -183,7 +202,7 @@ I gained their trust and then upgraded their Unity input system from version 1 t
     id: '328F8A20-8A7C-4BB0-9E91-9160268B7A55',
     occupationId: '9B397841-00AE-4CB0-99C6-A18090904F42',
     description:
-      'A web app for slicing images into different layers based on the presence of colors in the image. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace.',
+      'A web app for slicing images into different layers based on the presence of colors in the image using an AI technique I implemented by hand called K-means clustering. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace.',
   },
   {
     id: '51C7EB29-EEAD-4934-AF90-DA31048D8A25',
