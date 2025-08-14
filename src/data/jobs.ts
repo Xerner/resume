@@ -167,10 +167,16 @@ I gained their trust and then upgraded their Unity input system from version 1 t
   },
   // general motors - technical project manager
   {
+    id: '93d4a7f2-9383-4e62-93f5-65c5121c21b1',
+    occupationId: '85DA0D72-94C4-4A0D-A224-CAEF40ED6B09',
+    description:
+      'Integrated ISO 26262 Functional Safety and ISO 21448 Road Vehicle Safety of the Intended Functionality between managers and engineers',
+  },
+  {
     id: '10ABC141-C638-4D9C-BEE3-787685D19845',
     occupationId: '85DA0D72-94C4-4A0D-A224-CAEF40ED6B09',
     description:
-      'Collaborated with management across the Ultra Cruise project to analyze and report gaps in current and expected operational design domains.',
+      'Collaborated with management across the Ultra Cruise project to discover gaps in actual and expected operational design domains.',
   },
   // Mahle
   {

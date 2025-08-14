@@ -153,6 +153,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: 'F5E33D93-ACD1-470D-9C33-265FA084E5E0', skillId: 'VS Code' },
 
   // GM assistant manager
+  { jobId: '10ABC141-C638-4D9C-BEE3-787685D19845', skillId: 'ISO 26262' },
   { jobId: '10ABC141-C638-4D9C-BEE3-787685D19845', skillId: 'Jira' },
   { jobId: '10ABC141-C638-4D9C-BEE3-787685D19845', skillId: 'Python' },
   {
@@ -225,6 +226,6 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: '797AE482-0232-475D-AB41-16040C52F7C4', skillId: 'SQL' },
 
   // gologo
-  { jobId: '67F4B72A-14B4-4DA6-84EA-F921F8A14ED8', skillId: 'Unity' },
+  { jobId: '67F4B72A-14B4-4DA6-84EA-F921F8A14ED8', skillId: 'Unity 3D' },
   { jobId: '67F4B72A-14B4-4DA6-84EA-F921F8A14ED8', skillId: 'C#' },
 ];

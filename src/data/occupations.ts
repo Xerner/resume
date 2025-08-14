@@ -72,7 +72,7 @@ export const OCCUPATIONS: IOccupation[] = [
     id: '85DA0D72-94C4-4A0D-A224-CAEF40ED6B09',
     // parentId: "8CBBCA55-06CF-4638-86B5-58F54F782563",
     type: OccupationType.Employment,
-    title: 'Assistant Technical Project Manager',
+    title: 'Assistant Technical Project Manager - Safety',
     company: 'General Motors',
     location: 'Warren MI',
     commute: 'Hybrid',
@@ -114,21 +114,21 @@ export const OCCUPATIONS: IOccupation[] = [
     url: 'https://www.kennethmead.dev',
   },
   {
-    id: '74C56F46-0DA6-4372-8E28-0CBE64A3F172',
-    type: OccupationType.Websites,
-    title: 'Bitbucket Dashboard',
-    url: 'https://www.bitbucket-dashboard.kennethmead.dev',
-  },
-  {
     id: '9B397841-00AE-4CB0-99C6-A18090904F42',
     type: OccupationType.Websites,
     title: 'Color Slicer',
     url: 'https://www.color-slicer.kennethmead.dev',
   },
   {
+    id: '74C56F46-0DA6-4372-8E28-0CBE64A3F172',
+    type: OccupationType.Websites,
+    title: 'Bitbucket Dashboard (Not available right now)',
+    url: 'https://www.bitbucket-dashboard.kennethmead.dev',
+  },
+  {
     id: '2A64DECE-E5A8-476B-89BD-5C67BFB8144E',
     type: OccupationType.Websites,
-    title: 'Budget Projection Dashboard',
+    title: 'Budget Projection Dashboard (Not available right now)',
     url: 'https://www.budget-projection.kennethmead.dev',
   },
   {

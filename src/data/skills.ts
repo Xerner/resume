@@ -158,7 +158,7 @@ export const SKILLS: ISkill[] = [
   { name: 'Docker', type: SkillType.Tool, icon: 'assets/icons/docker.png' },
   { name: 'Git', type: SkillType.Tool, icon: 'assets/icons/git.png' },
   { name: 'Jira', type: SkillType.Tool, icon: 'assets/icons/jira.png' },
-  { name: 'Unity', type: SkillType.Tool, icon: 'assets/icons/unity.png' },
+  { name: 'Unity 3D', type: SkillType.Tool, icon: 'assets/icons/unity.png' },
   {
     name: 'Microsoft Office',
     type: SkillType.Tool,
@@ -214,6 +214,7 @@ export const SKILLS: ISkill[] = [
   { name: 'Time Management', type: SkillType.Social },
   { name: 'Adaptability', type: SkillType.Social },
 
+  { name: 'ISO 26262', type: SkillType.Concept },
   { name: 'Test Driven Development', type: SkillType.Concept },
   { name: 'Machine Learning', type: SkillType.Concept },
   { name: 'AI', type: SkillType.Concept },
