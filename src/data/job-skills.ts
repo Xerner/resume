@@ -49,6 +49,10 @@ export const JOB_SKILLS: IJobSkill[] = [
     jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F',
     skillId: 'Integration Testing',
   },
+  {
+    jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F',
+    skillId: 'Test Driven Development',
+  },
 
   // { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "PostgreSQL",     },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'MySQL' },

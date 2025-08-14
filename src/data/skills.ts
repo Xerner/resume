@@ -214,6 +214,7 @@ export const SKILLS: ISkill[] = [
   { name: 'Time Management', type: SkillType.Social },
   { name: 'Adaptability', type: SkillType.Social },
 
+  { name: 'Test Driven Development', type: SkillType.Concept },
   { name: 'Machine Learning', type: SkillType.Concept },
   { name: 'AI', type: SkillType.Concept },
   { name: 'Kmeans', type: SkillType.Concept },
