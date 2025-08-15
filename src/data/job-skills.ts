@@ -33,7 +33,6 @@ export const JOB_SKILLS: IJobSkill[] = [
     jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F',
     skillId: 'Google Cloud Platform (GCP)',
   },
-  { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Hoppscotch' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'GCP BigQuery' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Swagger UI' },
   {
@@ -55,7 +54,6 @@ export const JOB_SKILLS: IJobSkill[] = [
   },
 
   // { jobId: "4B136A3D-6F37-457B-8692-2DDE8FC2312B", skillId: "PostgreSQL",     },
-  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'MySQL' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'MongoDB' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'SASS' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Bash' },
