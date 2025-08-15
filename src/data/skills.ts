@@ -160,6 +160,10 @@ export const SKILLS: ISkill[] = [
   { name: 'FastAPI', type: SkillType.Framework },
   { name: 'Django', type: SkillType.Framework },
 
+  {
+    name: 'RabbitMQ',
+    type: SkillType.Tool,
+  },
   { name: 'Docker', type: SkillType.Tool, icon: 'assets/icons/docker.png' },
   { name: 'Git', type: SkillType.Tool, icon: 'assets/icons/git.png' },
   { name: 'Jira', type: SkillType.Tool, icon: 'assets/icons/jira.png' },

@@ -85,6 +85,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   },
 
   // universal logistics jobs
+  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'RabbitMQ' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Unit Testing' },
   {
     jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B',
@@ -205,7 +206,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   // budget projection
   { jobId: 'BCDBDF65-5671-40C0-9B56-9A4D51399EC0', skillId: 'TypeScript' },
   { jobId: 'BCDBDF65-5671-40C0-9B56-9A4D51399EC0', skillId: 'Angular' },
-  { jobId: 'BCDBDF65-5671-40C0-9B56-9A4D51399EC0', skillId: 'Chart.js' },
+  //   { jobId: 'BCDBDF65-5671-40C0-9B56-9A4D51399EC0', skillId: 'Chart.js' },
   { jobId: 'BCDBDF65-5671-40C0-9B56-9A4D51399EC0', skillId: 'Docker' },
 
   // resume
