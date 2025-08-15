@@ -28,7 +28,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Github' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'VS Code' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'PrimeNG' },
-  { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Apache ECharts' },
+  //   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Apache ECharts' },
   {
     jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F',
     skillId: 'Google Cloud Platform (GCP)',
