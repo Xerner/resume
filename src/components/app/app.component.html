@@ -1,6 +1,3 @@
-@let employmentOccupations =
-dataService.filterOccupations(OccupationType.Employment);
-
 <!-- Print Button -->
 <div class="hidden sm:block lg:block xl:block absolute p-4 noprint">
   <app-print-button></app-print-button>
@@ -59,9 +56,10 @@ dataService.filterOccupations(OccupationType.Employment);
       class="border-slate-300 flex flex-col gap-3"
     >
     </app-occupation-type>
+
     <div class="flex flex-col gap-2">
       @for (occupation of
-      dataService.filterOccupations(OccupationType.Employment).slice(0, 4);
+      dataService.filterOccupations(OccupationType.Employment).slice(0, -1);
       track $index) {
       <app-occupation-with-jobs
         [occupation]="occupation"
@@ -76,7 +74,7 @@ dataService.filterOccupations(OccupationType.Employment);
   <div class="flex flex-col gap-3">
     <div class="flex flex-col gap-2">
       @for (occupation of
-      dataService.filterOccupations(OccupationType.Employment).slice(4); track
+      dataService.filterOccupations(OccupationType.Employment).slice(-1); track
       $index) {
       <app-occupation-with-jobs
         [occupation]="occupation"
@@ -91,7 +89,7 @@ dataService.filterOccupations(OccupationType.Employment);
         class="border-slate-300 flex flex-col gap-2"
       >
       </app-occupation-type>
-      <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-3">
         @for (occupation of
         dataService.filterOccupations(OccupationType.Community); track $index) {
         <app-occupation-with-jobs
@@ -109,37 +107,7 @@ dataService.filterOccupations(OccupationType.Employment);
         class="border-slate-300 flex flex-col gap-3"
       ></app-occupation-type>
       <div class="flex flex-col gap-2">
-        @for (occupation of websites.slice(0, websites.length - 1); track
-        $index) {
-        <app-occupation-with-jobs
-          [occupation]="occupation"
-        ></app-occupation-with-jobs>
-        }
-      </div>
-    </div>
-  </div>
-</app-letter-page>
-
-<app-letter-page class="shadow-2xl flex flex-col gap-3 m-auto text-sm">
-  <div class="flex flex-col gap-3">
-    <div class="flex flex-col gap-2">
-      @for (occupation of websites.slice(websites.length - 1); track $index) {
-      <app-occupation-with-jobs
-        [occupation]="occupation"
-      ></app-occupation-with-jobs>
-      }
-    </div>
-
-    <div>
-      <app-occupation-type
-        [occupationType]="OccupationType.Personal"
-        icon="home"
-        class="border-slate-300 flex flex-col gap-2"
-      >
-      </app-occupation-type>
-      <div class="flex flex-col gap-2">
-        @for (occupation of
-        dataService.filterOccupations(OccupationType.Personal); track $index) {
+        @for (occupation of websites; track $index) {
         <app-occupation-with-jobs
           [occupation]="occupation"
         ></app-occupation-with-jobs>
@@ -166,20 +134,3 @@ dataService.filterOccupations(OccupationType.Employment);
 </app-letter-page>
 
 <div class="h-12 print:hidden"></div>
-
-<!-- <app-letter-page class="shadow-2xl flex flex-col m-auto">
-  <app-occupations
-    class="p-4"
-    [occupations]="employmentOccupations.slice(5)"
-  ></app-occupations>
-
-  <app-occupation-type
-    [occupationType]="OccupationType.Personal"
-    icon="work"
-    class="border-slate-300 flex flex-col gap-2 border-t-2 p-4"
-  >
-    <app-occupations
-      [occupations]="dataService.filterOccupations(OccupationType.Personal)"
-    ></app-occupations>
-  </app-occupation-type>
-</app-letter-page> -->

@@ -1,21 +1,22 @@
 import { IJob } from '../models/IJob';
 
 export const JOBS: IJob[] = [
-  // Eclipse uProtocol
+  // Eclipse Foundation
   {
     id: 'AA782158-00C0-4C5A-9ECB-743A5223BC0E',
     occupationId: '734DCA21-C59F-4CEB-AECE-75F71CADABC4',
-    description: `A passionate group of automotive engineers from across the globe that are working to create a unified communication protocol and interface for that protocol for any and all vehicle functions with a focus on ISO safety through programming in Rust
-
-I updated their up-rust Docker development container to support multi-platform builds, and plan on continuing to contribute to their repository in any way I can.`,
+    description: `Created a Rust implementation of Eclipse Iceoryx2 transport for their Eclipse uProtocol library`,
+  },
+  {
+    id: 'AA782158-00C0-4C5A-9ECB-743A5223BC0E',
+    occupationId: '734DCA21-C59F-4CEB-AECE-75F71CADABC4',
+    description: `Refactored their Service-to-Signal SDV blueprint with a focus on code readability`,
   },
   // project pheonix
   {
     id: 'E699C901-AA83-4256-A0CF-AADF6F10342A',
     occupationId: '1E960E2C-BB90-40A2-9D75-FCF669915BA9',
-    description: `A closed source community of passionate game developers working on creating a Pokemon game engine in Unity. 
-
-I gained their trust and then upgraded their Unity input system from version 1 to version 2 throughout their entire project. The input system is what handles reading in input from external digital or analogue devices`,
+    description: `A closed source community of passionate game developers. I gained their trust and then upgraded their Unity input system from version 1 to version 2 throughout their entire project`,
   },
   // onemagnify
   {
@@ -66,7 +67,7 @@ I gained their trust and then upgraded their Unity input system from version 1 t
     description:
       'Maintain compliance with FOSSA, SonarQube, and 42Crunch standards to ensure security and quality in the codebase and OpenAPI specifications',
   },
-  // universal logistics - senior
+  // universal logistics
   {
     id: '4B136A3D-6F37-457B-8692-2DDE8FC2312B',
     occupationId: '529F46E8-8F15-4E29-B745-610FC3FD1A5F',
@@ -114,54 +115,35 @@ I gained their trust and then upgraded their Unity input system from version 1 t
     description:
       'Took part in technical debt review, refinement, and code etiquette enforcement.',
   },
-  // universal logistics - junior
-  {
-    id: '4A957BD2-1B76-4D8D-AC0A-8F2A4AFB5783',
-    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
-    description:
-      'Develop, unit & integration test, and maintain features across a C# ASP.Net Core REST back-end, modern Angular and Angular Material front-end, and Microsoft SQL database for an internal logistics ERP web app.',
-  },
-  {
-    id: '50E70353-23DD-484F-B030-396F6BF997EE',
-    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
-    description:
-      'Developed code adhering to design patterns such as MVC, CQRS, Repository, dependency injection, and pub/sub',
-  },
-  {
-    id: '03D73FAB-2E72-4199-80FB-987EC38C843B',
-    occupationId: '7078AFDD-5BC8-4831-90B5-E427273D583E',
-    description:
-      'Debugged full-stack issues with tools such as Postman, Chrome Devtools/VS Code debugger, Storybook, and Serilog',
-  },
   // general motors - signal validation
   {
     id: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0',
-    occupationId: 'F0B86406-B303-4DE2-9F58-F384C54B9329',
+    occupationId: '85DA0D72-94C4-4A0D-A224-CAEF40ED6B09',
     description:
       'Architected, developed, and documented a validation and reporting application in Python for J2534 (CAN) signals. The application saved validation engineers 8 hours per week of testing.',
   },
   {
     id: '9C4E4105-7B95-492F-BEEA-7CA8ECB05C23',
-    occupationId: 'F0B86406-B303-4DE2-9F58-F384C54B9329',
+    occupationId: '85DA0D72-94C4-4A0D-A224-CAEF40ED6B09',
     description:
       'Worked directly with validation engineers to understand and develop business requirements',
   },
   // general motors - localization engineer
   {
     id: 'F5E33D93-ACD1-470D-9C33-265FA084E5E0',
-    occupationId: '7B9CD2A8-F374-4CF3-871A-EEEBDA326C14',
+    occupationId: '85DA0D72-94C4-4A0D-A224-CAEF40ED6B09',
     description:
       'Integrated an existing performance testing Python framework into the teams workflow, saving 6 months of development time.',
   },
   {
     id: '34145903-08D7-4A43-8A9D-24542E55069D',
-    occupationId: '7B9CD2A8-F374-4CF3-871A-EEEBDA326C14',
+    occupationId: '85DA0D72-94C4-4A0D-A224-CAEF40ED6B09',
     description:
       'Unit tested the framework to ensure code reliability and provide working examples of how to use the framework for developers',
   },
   {
     id: '606F4A06-E07E-4206-864B-1BC60A06E1A0',
-    occupationId: '7B9CD2A8-F374-4CF3-871A-EEEBDA326C14',
+    occupationId: '85DA0D72-94C4-4A0D-A224-CAEF40ED6B09',
     description:
       'Integrated the framework into a Jenkins CI/CD pipeline. This removed the need for developers to manually run performance tests',
   },
@@ -211,18 +193,6 @@ I gained their trust and then upgraded their Unity input system from version 1 t
       'A web app for slicing images into different layers based on the presence of colors in the image using an AI technique I implemented by hand called K-means clustering. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace.',
   },
   {
-    id: '51C7EB29-EEAD-4934-AF90-DA31048D8A25',
-    occupationId: '74C56F46-0DA6-4372-8E28-0CBE64A3F172',
-    description:
-      'A Web app containing a dashboard displaying time related info on Bitbucket PRs, and a Git commit graph similar to Githubs. Built with Bitbuckets REST API, Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace.',
-  },
-  {
-    id: 'BCDBDF65-5671-40C0-9B56-9A4D51399EC0',
-    occupationId: '2A64DECE-E5A8-476B-89BD-5C67BFB8144E',
-    description:
-      'A Web app that displays spending over time, and projected future spending based on known costs and income. Built with Airtables developer API, Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace.',
-  },
-  {
     id: 'D24AA061-8AA6-444F-A6A6-0282DFFB8C7A',
     occupationId: '29254BEF-4991-4BD3-BCCB-0F123893F4F3',
     description:
@@ -251,11 +221,5 @@ I gained their trust and then upgraded their Unity input system from version 1 t
     occupationId: 'E695D3BA-87A8-4FEE-A492-0E3F9767B7A0',
     description:
       'A web app for a local cafe that displays their menu, hours, and location. Improvements from their previous websites include organization, maintainability, user experience. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace.',
-  },
-  {
-    id: '817AF3FD-140B-4075-98EE-C5A1C86290CA',
-    occupationId: '5F030AD0-3BB9-4777-9DC8-A0157FB91911',
-    description:
-      'My portfolio site! This website is a showcase of my work and skills. Built with Angular v19, Angular Material, and TailwindCss. Hosted with Github Pages and Squarespace. This website was previously created with Reactjs v17.',
   },
 ];

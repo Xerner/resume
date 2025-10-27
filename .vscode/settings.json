@@ -11,5 +11,10 @@
     "angular-page": {
       "skipChangeDetectionOnPush": true
     }
-  }
+},
+"workbench.colorCustomizations": {
+    "activityBar.background": "#093143",
+    "titleBar.activeBackground": "#0D455D",
+    "titleBar.activeForeground": "#F5FBFE"
+}
 }
