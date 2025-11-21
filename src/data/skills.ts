@@ -28,6 +28,12 @@ export const SKILLS: ISkill[] = [
     color: '#2b7489',
   },
   {
+    name: 'Rust',
+    type: SkillType.Language,
+    icon: 'assets/icons/rust.png',
+    color: '#dea584',
+  },
+  {
     name: 'Jupyter Notebook',
     type: SkillType.Language,
     icon: 'assets/icons/Jupyter Notebook.png',
@@ -139,6 +145,10 @@ export const SKILLS: ISkill[] = [
     name: 'SignalR',
     type: SkillType.Framework,
     icon: 'assets/icons/signalr.png',
+  },
+  {
+    name: 'Web Sockets',
+    type: SkillType.Framework,
   },
   {
     name: 'Entity Framework',

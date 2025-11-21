@@ -4,6 +4,8 @@ export const JOB_SKILLS: IJobSkill[] = [
   // one-off skills probably from a personal project
   //   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Chart.js' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'MSSQL' },
+
+  // eclipse foundation
   { jobId: 'AA782158-00C0-4C5A-9ECB-743A5223BC0E', skillId: 'Rust' },
 
   // onemagnify
@@ -12,7 +14,7 @@ export const JOB_SKILLS: IJobSkill[] = [
     skillId: 'Dependency Injection',
   },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'MVC' },
-  { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Django' },
+  //   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Django' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'FastAPI' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'TypeScript' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Python' },
@@ -24,7 +26,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Docker' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Git' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Jira' },
-  { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Tekton' },
+  //   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Tekton' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Linux' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Github' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'VS Code' },
@@ -35,7 +37,7 @@ export const JOB_SKILLS: IJobSkill[] = [
     skillId: 'Google Cloud Platform (GCP)',
   },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'GCP BigQuery' },
-  { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Swagger UI' },
+  //   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Swagger UI' },2
   {
     jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F',
     skillId: 'Project Management',
@@ -58,8 +60,8 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'MongoDB' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'SASS' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Bash' },
-  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'C' },
-  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Java' },
+  //   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'C' },
+  //   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Java' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'ABP.io' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Github Actions' },
   {
@@ -108,6 +110,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: '.Net' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'ASP.Net' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'SignalR' },
+  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Web Sockets' },
   {
     jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B',
     skillId: 'Entity Framework',
@@ -115,7 +118,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'NUnit' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Visual Studio' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'VS Code' },
-  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'SSMS' },
+  //   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'SSMS' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Postman' },
 
   { jobId: 'D4179F3E-C254-4989-BA3E-EA9E11AF8909', skillId: 'C#' },
@@ -143,8 +146,8 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'Shell' },
   { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'HTML' },
   { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'CSS' },
-  { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'J2534' },
-  { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'CAN' },
+  //   { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'J2534' },
+  //   { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'CAN' },
   { jobId: 'E2113BAE-9B52-4E8D-883A-44E612EC3CD0', skillId: 'VS Code' },
 
   // GM performance testing
@@ -154,7 +157,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   { jobId: 'F5E33D93-ACD1-470D-9C33-265FA084E5E0', skillId: 'VS Code' },
 
   // GM assistant manager
-  { jobId: '10ABC141-C638-4D9C-BEE3-787685D19845', skillId: 'ISO 26262' },
+  //   { jobId: '10ABC141-C638-4D9C-BEE3-787685D19845', skillId: 'ISO 26262' },
   { jobId: '10ABC141-C638-4D9C-BEE3-787685D19845', skillId: 'Jira' },
   { jobId: '10ABC141-C638-4D9C-BEE3-787685D19845', skillId: 'Python' },
   {
@@ -170,7 +173,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   },
   { jobId: '9E830D7A-74AC-408E-84A7-6BDBA3E93F23', skillId: 'Visual Studio' },
   { jobId: '9E830D7A-74AC-408E-84A7-6BDBA3E93F23', skillId: 'VS Code' },
-  { jobId: '9E830D7A-74AC-408E-84A7-6BDBA3E93F23', skillId: 'SSMS' },
+  //   { jobId: '9E830D7A-74AC-408E-84A7-6BDBA3E93F23', skillId: 'SSMS' },
   // { jobId: "9E830D7A-74AC-408E-84A7-6BDBA3E93F23", skillId: "LaTeX" },
 
   // Mahle work request mockup
@@ -183,7 +186,7 @@ export const JOB_SKILLS: IJobSkill[] = [
     jobId: '171F43AA-AF86-4B4F-BBE9-D95A776B19F1',
     skillId: 'Microsoft Office',
   },
-  { jobId: '171F43AA-AF86-4B4F-BBE9-D95A776B19F1', skillId: 'Visual Basic' },
+  //   { jobId: '171F43AA-AF86-4B4F-BBE9-D95A776B19F1', skillId: 'Visual Basic' },
 
   // color slicer
   { jobId: '328F8A20-8A7C-4BB0-9E91-9160268B7A55', skillId: 'TypeScript' },

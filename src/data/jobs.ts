@@ -16,14 +16,14 @@ export const JOBS: IJob[] = [
   {
     id: 'E699C901-AA83-4256-A0CF-AADF6F10342A',
     occupationId: '1E960E2C-BB90-40A2-9D75-FCF669915BA9',
-    description: `A closed source community of passionate game developers. I gained their trust and then upgraded their Unity input system from version 1 to version 2 throughout their entire project`,
+    description: `Upgraded their entire Unity projects legacy input system to Unity's new input system`,
   },
   // onemagnify
   {
     id: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F',
     occupationId: 'CF3B54C1-6687-4A49-9C23-A710310BF0EC',
     description:
-      'Provide leadership and technical guidance to a team of four developers',
+      'Provide leadership and technical guidance to a team of four developers with UML diagrams, code documentation, code examples, and architectural guidance',
   },
   {
     id: 'CAB4F5CF-26AB-483B-B55C-035BEF8BE517',
