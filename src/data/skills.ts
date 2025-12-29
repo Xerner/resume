@@ -122,6 +122,10 @@ export const SKILLS: ISkill[] = [
 
   // Frameworks
   {
+    name: 'Jest',
+    type: SkillType.Framework,
+  },
+  {
     name: 'NestJS',
     type: SkillType.Framework,
   },

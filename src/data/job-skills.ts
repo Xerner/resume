@@ -4,6 +4,7 @@ export const JOB_SKILLS: IJobSkill[] = [
   // one-off skills probably from a personal project
   //   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Chart.js' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'MSSQL' },
+  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Jest' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'NestJS' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Nx' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Monorepo' },
