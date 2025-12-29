@@ -4,12 +4,22 @@ export const JOB_SKILLS: IJobSkill[] = [
   // one-off skills probably from a personal project
   //   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Chart.js' },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'MSSQL' },
+  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'NestJS' },
+  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Nx' },
+  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Monorepo' },
+  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'CQRS' },
+  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'SOLID' },
   { jobId: 'AA782158-00C0-4C5A-9ECB-743A5223BC0E', skillId: 'Rust' },
 
   // onemagnify
   {
     jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F',
     skillId: 'Dependency Injection',
+  },
+  { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Big Data' },
+  {
+    jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F',
+    skillId: 'Distributed Systems',
   },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'MVC' },
   { jobId: 'D36CC279-A595-43E1-88C7-5EB3CE0BBC9F', skillId: 'Django' },
@@ -85,6 +95,11 @@ export const JOB_SKILLS: IJobSkill[] = [
 
   // universal logistics jobs
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'RabbitMQ' },
+  { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Message Queues' },
+  {
+    jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B',
+    skillId: 'Distributed Systems',
+  },
   { jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B', skillId: 'Unit Testing' },
   {
     jobId: '4B136A3D-6F37-457B-8692-2DDE8FC2312B',

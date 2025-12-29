@@ -3,6 +3,7 @@ import { SkillType } from '../models/SkillType';
 
 export const DEFAULT_LANGUAGE_COLOR = '#DDDDDD';
 export const SKILLS: ISkill[] = [
+  // Languages
   {
     name: 'SASS',
     type: SkillType.Language,
@@ -14,6 +15,7 @@ export const SKILLS: ISkill[] = [
     type: SkillType.Language,
     icon: 'assets/icons/sass.png',
     color: '#CF649A',
+    isActive: false,
   },
   {
     name: 'SQL',
@@ -112,6 +114,11 @@ export const SKILLS: ISkill[] = [
     color: '#8fb200',
   },
 
+  // Frameworks
+  {
+    name: 'NestJS',
+    type: SkillType.Framework,
+  },
   {
     name: 'Angular',
     type: SkillType.Framework,
@@ -160,6 +167,11 @@ export const SKILLS: ISkill[] = [
   { name: 'FastAPI', type: SkillType.Framework },
   { name: 'Django', type: SkillType.Framework },
 
+  // Tools
+  {
+    name: 'Nx',
+    type: SkillType.Tool,
+  },
   {
     name: 'RabbitMQ',
     type: SkillType.Tool,
@@ -180,6 +192,7 @@ export const SKILLS: ISkill[] = [
     name: 'Bitbucket',
     type: SkillType.Tool,
     icon: 'assets/icons/bitbucket.svg',
+    isActive: false,
   },
   { name: 'Github', type: SkillType.Tool },
   { name: 'Github Actions', type: SkillType.Tool },
@@ -189,7 +202,12 @@ export const SKILLS: ISkill[] = [
     icon: 'assets/icons/visual-studio.png',
   },
   { name: 'VS Code', type: SkillType.Tool, icon: 'assets/icons/vs-code.png' },
-  { name: 'SSMS', type: SkillType.Tool, icon: 'assets/icons/ssms.png' },
+  {
+    name: 'SSMS',
+    type: SkillType.Tool,
+    icon: 'assets/icons/ssms.png',
+    isActive: false,
+  },
   { name: 'Chart.js', type: SkillType.Tool },
   { name: 'MS SQL', type: SkillType.Tool },
   { name: 'PostgreSQL', type: SkillType.Tool },
@@ -212,6 +230,7 @@ export const SKILLS: ISkill[] = [
   { name: 'PrimeNG', type: SkillType.Tool },
   { name: 'Apache ECharts', type: SkillType.Tool },
 
+  // Social
   { name: 'Communication', type: SkillType.Social },
   { name: 'Leadership', type: SkillType.Social },
   { name: 'Teamwork', type: SkillType.Social },
@@ -221,14 +240,21 @@ export const SKILLS: ISkill[] = [
   { name: 'Time Management', type: SkillType.Social },
   { name: 'Adaptability', type: SkillType.Social },
 
-  { name: 'ISO 26262', type: SkillType.Concept },
+  // Concepts
+  { name: 'SOLID', type: SkillType.Concept },
+  { name: 'CQRS', type: SkillType.Concept },
+  { name: 'Monorepo', type: SkillType.Concept },
+  { name: 'ISO 26262', type: SkillType.Concept, isActive: false },
   { name: 'Test Driven Development', type: SkillType.Concept },
   { name: 'Machine Learning', type: SkillType.Concept },
   { name: 'AI', type: SkillType.Concept },
-  { name: 'Kmeans', type: SkillType.Concept },
+  { name: 'Kmeans', type: SkillType.Concept, isActive: false },
   { name: 'Domain Driven Design', type: SkillType.Concept },
   { name: 'MVC', type: SkillType.Concept },
   { name: 'Dependency Injection', type: SkillType.Concept },
-  { name: 'Unit Testing', type: SkillType.Concept },
-  { name: 'Integration Testing', type: SkillType.Concept },
+  { name: 'Unit Testing', type: SkillType.Concept, isActive: false },
+  { name: 'Integration Testing', type: SkillType.Concept, isActive: false },
+  { name: 'Big Data', type: SkillType.Concept, isActive: false },
+  { name: 'Distributed Systems', type: SkillType.Concept },
+  { name: 'Message Queues', type: SkillType.Concept },
 ];

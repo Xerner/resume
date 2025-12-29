@@ -126,6 +126,7 @@ export class DataService {
     var skills = this.jobSkills()
       .map((skill) => this.getSkill(skill.skillId))
       .filter((skill) => skill !== null)
+      .filter((skill) => skill.isActive ?? true)
       .filter((skill) => skill.type === type)
       .reduce(
         (accumulator: ISkill[], skill) =>

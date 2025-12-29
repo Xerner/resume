@@ -1,4 +1,4 @@
-import { SkillType } from "./SkillType";
+import { SkillType } from './SkillType';
 
 export interface ISkill {
   name: string;
@@ -6,4 +6,5 @@ export interface ISkill {
   icon?: string;
   color?: string;
   description?: string;
+  isActive?: boolean;
 }
