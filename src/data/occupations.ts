@@ -6,7 +6,7 @@ export const OCCUPATIONS: IOccupation[] = [
   {
     id: 'CF3B54C1-6687-4A49-9C23-A710310BF0EC',
     type: OccupationType.Employment,
-    title: 'Senior Full Stack Engineer',
+    title: 'Senior Full Stack Software Engineer',
     company: 'Ford @ OneMagnify',
     location: 'Detroit MI',
     commute: 'Hybrid',
@@ -16,7 +16,7 @@ export const OCCUPATIONS: IOccupation[] = [
   {
     id: '529F46E8-8F15-4E29-B745-610FC3FD1A5F',
     type: OccupationType.Employment,
-    title: 'Senior Full Stack & DevOps Software Engineer',
+    title: 'Senior Full Stack Software Engineer',
     company: 'Universal Logistics Holdings',
     location: 'Warren MI',
     commute: 'Onsite',
